@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ПрофоБилдер - Найди свой путь</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&family=Sora:wght@100..800&display=swap');
+  </style>
+  <link rel="stylesheet" href="/css/style.css"> 
+  <link rel="stylesheet" href="/css/main.css"> 
+  <link rel="stylesheet" href="/css/chat.css"> 
+</head>
+<body class="light-theme">
+  <div class="page-wrapper">
+    
+    <div id="homepage" class="page active">
+      
+      <header class="main-header">
+        <nav class="container nav-homepage">
+          <a href="index.html" class="logo-accent"><img src="img/pb_logo1.png" alt="ПрофоБилдер Логотип" class="logo-image"></a>
+          <ul class="nav-links">
+            <li><a href="#" class="nav-item" onclick="showPage('explorer'); return false;">Начать</a></li>
+            <li><a href="about.html" class="nav-item">О нас</a></li>
+            <li><a href="#contact" class="nav-item">Контакты</a></li>
+          </ul>
+        </nav>
+      </header>
+      
+      <main class="hero-new-style"> 
+        
+        <div class="container hero-inner-wrap"> 
+          <div class="hero-content">
+            <p class="hero-subtitle">НАЧНИ СВОЙ ПУТЬ СЕГОДНЯ</p>
+            <h1 class="hero-title">ПрофоБилдер</h1>
+            <p class="hero-description">Открой свой "настоящий потенциал" и выбери профессию мечты. Наш интерактивный тест поможет найти сферу, которая подходит именно тебе.</p>
+            
+            <div class="hero-actions">
+              <a href="#" class="btn primary-accent-new" id="start-assessment-btn-homepage">Начать Тест</a>
+              <a href="#learn-more" class="btn secondary-outline-new">Подробнее</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <img src="/img/main_pic22.png" alt="Профориентация и карьерный рост" class="hero-image">
+        </div>
+
+        <div class="decorative-text-corner">
+          <p>Профориентация, созданная для будущего.</p>
+        </div>
+      </main>
+    </div>
+
+    <div id="explorer" class="page hidden">
+      
+      <header class="main-header">
+        <nav class="container nav-homepage">
+          <a href="index.html" class="logo-accent"><img src="img/pb_logo1.png" alt="ПрофоБилдер Логотип" class="logo-image"></a> 
+          <ul class="nav-links">
+            <li><a href="about.html" class="nav-item">О нас </a></li>
+            <li><a href="#contact" class="nav-item">Контакты</a></li>
+          </ul>
+        </nav>
+      </header>
+      
+      <div class="progress-bar-container">
+        <div id="progress-bar-fill" class="progress-fill" style="width: 0%;"></div>
+      </div>
+      
+      <div class="container assessment-container">
+        <h2 class="page-title">выбери всё, чем бы тебе хотелось заниматься</h2>
+        <p class="description">минимум 3 карточки</p>
+        <div id="explorer-container" class="explorer-grid">
+        </div>
+
+        <div class="explorer-footer">
+          <button id="explorer-finish-btn" class="btn primary-accent-new" disabled>Продолжить к тесту (0)</button>
+          <button id="explorer-reset-btn" class="btn secondary-outline-new">Сбросить выбор</button>
+        </div>
+      </div>
+      <div class="chat-widget" id="chatWidget">
+        <button class="chat-toggle" id="chatToggle">
+          <img src="img/chat_gpt_logo.png" alt="ИИ">
+          Спросить ИИ
+        </button>
+        <div class="chat-window" id="chatWindow">
+          <div class="chat-content">
+            <div class="chat-header">
+              <h2>Ассистент ИИ</h2>
+              <span class="close" id="closeChat">&times;</span>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+            </div>
+            <div class="chat-input">
+              <div class="chat-input-wrapper">
+                <input type="text" id="chatInput" placeholder="Введите ваше сообщение...">
+                <button class="send-btn" id="sendMessage">
+                  <span>&#10148;</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- НОВАЯ СТРАНИЦА РЕЗУЛЬТАТОВ -->
+    <div id="results" class="page hidden">
+      <header class="main-header">
+        <nav class="container nav-homepage">
+          <a href="index.html" class="logo-accent"><img src="img/pb_logo1.png" alt="ПрофоБилдер Логотип" class="logo-image"></a> 
+          <ul class="nav-links">
+            <li><a href="#" class="nav-item" onclick="showPage('explorer'); return false;">Начать заново</a></li>
+            <li><a href="about.html" class="nav-item">О нас</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="container assessment-container">
+        <h2 class="page-title">Ваши персональные рекомендации</h2>
+        <p class="description">Смахните карточку влево или вправо, чтобы увидеть следующую.</p>
+        <!-- Новый контейнер для стека карточек -->
+        <div id="results-stack-container">
+          <!-- Карточки результатов будут добавлены сюда с помощью JS -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- НОВОЕ МОДАЛЬНОЕ ОКНО -->
+  <div id="userInfoModal" class="modal-overlay hidden">
+    <div class="modal-content">
+      <button id="closeModalBtn" class="modal-close-btn">&times;</button>
+      <h2>Расскажите немного о себе</h2>
+      <p>Это поможет нам точнее подобрать профессии. Что вам нравится делать в свободное время? Какие предметы в школе были самыми интересными?</p>
+      <textarea id="userInfoInput" placeholder="Например: Я люблю работать в команде, увлекаюсь рисованием и хочу, чтобы моя работа была связана с творчеством..."></textarea>
+      <button id="showResultsBtn" class="btn primary-accent-new">Узнать результаты</button>
+    </div>
+  </div>
+
+  <script src="/js/block.js"></script> <!-- Подключаем новый скрипт ПЕРЕД main.js -->
+  <script src="/js/main.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,216 @@
+:root {
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #2CC295;
+  --radius: 12px;
+  /* Эти переменные уже могут быть в вашем основном файле стилей,
+     но для самодостаточности компонента чата их можно оставить здесь или удалить,
+     если вы уверены, что они глобальные. */
+}
+
+/* --- Стили для виджета чата --- */
+
+.chat-widget {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 1000;
+}
+
+.chat-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Sora", sans-serif;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.chat-toggle img {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.chat-toggle:hover {
+  background: #a0a0a0;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.chat-window {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: width 0.4s ease, height 0.4s ease, opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.chat-widget.active .chat-window {
+  width: 380px;
+  height: 480px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.chat-widget.active .chat-toggle {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.chat-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.chat-header {
+  padding: 16px;
+  border-bottom: 1px solid #e6e9ef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.chat-header .close {
+  position: static;
+  cursor: pointer;
+  padding: 0;
+  font-size: 28px;
+  font-weight: bold;
+  color: #aaa;
+}
+
+.chat-messages {
+  flex-grow: 1;
+  padding: 16px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.message-wrapper {
+    display: flex;
+    align-items: flex-end; 
+    gap: 8px; 
+    max-width: 80%;
+}
+
+.message-wrapper.bot {
+    align-self: flex-start;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.message-wrapper.user {
+    align-self: flex-end;
+    justify-content: flex-end; 
+    margin-left: auto;
+}
+
+.bot-avatar {
+    width: 25px; 
+    height: 25px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    flex-shrink: 0; 
+}
+
+.message {
+  padding: 8px 12px;
+  border-radius: 12px;
+  max-width: 100%; 
+  line-height: 1.4;
+  font-size: 16px; 
+}
+
+.message.user {
+  background-color: var(--accent);
+  color: white; /* Изменено для лучшей читаемости */
+  border-bottom-right-radius: 4px;
+}
+
+.message.bot {
+  background-color: #f1f5f9;
+  color: #0f172a;
+  border-bottom-left-radius: 4px;
+}
+
+.chat-input {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border-top: 1px solid #e6e9ef;
+}
+
+.chat-input-wrapper {
+  position: relative;
+  flex-grow: 1;
+}
+
+.chat-input-wrapper input {
+  width: 100%;
+  padding: 10px 40px 10px 16px;
+  border-radius: 20px;
+  border: 1px solid #e6e9ef;
+  font-family: "Sora", sans-serif;
+  font-size: 14px;
+}
+
+.chat-input-wrapper input::placeholder {
+    color: #9ca3af;
+}
+
+.send-btn {
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.send-btn:hover {
+  background-color: #25a280; /* Немного темнее при наведении */
+}
+
+.send-btn span {
+  font-size: 15px;
+  line-height: 1;
+}

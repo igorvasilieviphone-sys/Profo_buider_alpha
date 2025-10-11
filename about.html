@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О проекте — ПрофоБилдер</title>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&family=Sora:wght@100..800&display=swap');
+  </style>
+  <link rel="stylesheet" href="/css/style.css"> 
+  <link rel="stylesheet" href="/css/about.css">
+  <link rel="stylesheet" href="/css/chat.css">
+
+</head>
+<body class="light-theme">
+  
+  <div id="loginModal" class="modal" style="display: none;">
+    </div>
+  
+  <div id="profileModal" class="modal" style="display: none;">
+    </div>
+  
+  <div class="page-wrapper">
+    <div id="about-page" class="page active"> 
+        <header class="main-header">
+            <nav class="container nav-homepage">
+                <a href="index.html" class="logo-accent"><img src="img/pb_logo1.png" alt="ПрофоБилдер Логотип" class="logo-image"></a>
+
+                <ul class="nav-links">
+                    <li><a href="index.html#explorer" class="nav-item">Начать</a></li>
+                    <li><a href="#contact" class="nav-item">Контакты</a></li>
+                    </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="container about-section">
+            <h1 class="page-title-about">О проекте «ПрофоБилдер»</h1>
+            
+            <div class="about-cards-row">
+                
+                <div class="card-about">
+                <h2>Наша миссия</h2>
+                <p>«ПрофоБилдер» — это проект, созданный для того, чтобы помогать школьникам и студентам осознанно выбирать свой профессиональный путь. Мы стремимся предоставить точные и актуальные данные, чтобы каждый мог найти профессию, которая соответствует его интересам, навыкам и потенциалу.</p>
+                </div>
+
+                <div class="card-about">
+                <h2>Наша команда</h2>
+                <p>Мы — небольшая команда IT-специалистов, психологов и педагогов, объединённых общей целью. Мы верим, что правильный выбор профессии — это ключ к счастливой и успешной жизни, и готовы делиться своими знаниями и опытом, чтобы помочь вам сделать этот шаг.</p>
+                </div>
+
+                <div class="card-about">
+                <h2>Свяжитесь с нами</h2>
+                <p>Если у вас есть вопросы, предложения или идеи для сотрудничества, пожалуйста, свяжитесь с нами.</p>
+                <ul class="contact-list">
+                    <li><strong>Электронная почта:</strong> <a href="mailto:info@profobuilder.com">info@profobuilder.com</a></li>
+                    <li><strong>Телефон:</strong> +7 (495) 123-45-67</li>
+                </ul>
+                </div>
+            </div>
+            </section>
+            
+            <section class="container about-section">
+            <h1 class="page-title-about">Почему выбирают нас?</h1>
+            
+            <div class="about-cards-row">
+                
+                <div class="card-about">
+                <h2>Персональный подход</h2>
+                <p>Мы анализируем ваши интересы и навыки, чтобы предложить профессии, которые подходят именно вам.</p>
+                </div>
+
+                <div class="card-about">
+                <h2>Актуальность</h2>
+                <div class="card-about-changed1"><p>Наши данные о профессиях обновляются в реальном времени, чтобы вы были в курсе современных трендов.</p></div>
+                </div>
+
+                <div class="card-about">
+                <h2>Помощь ИИ</h2>
+                <p>При возникновении вопросов любого характера: от вопросов о профессии - до функционала сайта, Искуственный Интелект всегда ответит на ваши вопросы.</p>
+                </div>
+            </div>
+            </section>
+            
+            <section class="container cta-section">
+            <h2 class="section-title">Готовы начать?</h2>
+            <p class="cta-text">Присоединяйтесь к ПрофоБилдер и начните строить своё будущее уже сегодня!</p>
+            <a href="index.html#explorer" class="btn primary-accent-new cta-btn">Начать сейчас</a>
+            </section>
+
+        </main>
+        
+        <footer>
+            <div class="container">
+                Макет создан для проекта «Конструктор для профориентации — создай себя будущего».
+            </div>
+        </footer>
+      <div class="chat-widget" id="chatWidget">
+         <button class="chat-toggle" id="chatToggle">
+           <img src="img/chat_gpt_logo.png" alt="ИИ">
+           Спросить ИИ
+         </button>
+         <div class="chat-window" id="chatWindow">
+            <div class="chat-content">
+              <div class="chat-header">
+                <h2>Ассистент ИИ</h2>
+                <span class="close" id="closeChat">&times;</span>
+              </div>
+              <div class="chat-messages" id="chatMessages">
+             </div>
+             <div class="chat-input">
+               <div class="chat-input-wrapper">
+                  <input type="text" id="chatInput" placeholder="Введите ваше сообщение...">
+                 <button class="send-btn" id="sendMessage">
+                   <span>&#10148;</span>
+                  </button>
+                </div>
+             </div>
+           </div>
+          </div>
+        </div>
+     </div>
+    </div>
+  </div>
+
+  <script src="/js/app.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>
