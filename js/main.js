@@ -5,6 +5,22 @@ let explorerContainer, explorerFinishBtn, explorerResetBtn, progressBarFill, sta
 let userInfoModal, closeModalBtn, showResultsBtn, userInfoInput;
 
 function showPage(pageId) {
+    // === НАЧАЛО ИЗМЕНЕНИЙ ===
+    // Получаем доступ к виджету чата
+    const chatWidget = document.getElementById('chatWidget');
+
+    // Проверяем, существует ли виджет на странице
+    if (chatWidget) {
+        // Если мы переключаемся на главную страницу, скрываем чат
+        if (pageId === 'homepage') {
+            chatWidget.classList.add('hidden');
+        } else {
+            // На всех остальных страницах (тест, результаты) показываем чат
+            chatWidget.classList.remove('hidden');
+        }
+    }
+    // === КОНЕЦ ИЗМЕНЕНИЙ ===
+
     document.querySelectorAll('.page').forEach(page => {
         if (page.id === pageId) {
             page.classList.add('active');

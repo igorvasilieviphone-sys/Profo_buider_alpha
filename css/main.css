@@ -228,6 +228,7 @@
   padding: 30px;
   overflow: hidden;
   z-index: 2;
+  margin-top: 20px; /* <-- ДОБАВЛЕННАЯ СТРОКА */
 }
 
 .result-card:active {
@@ -270,6 +271,11 @@
   width: 100%;
   transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
   backface-visibility: hidden;
+  /* --- НАЧАЛО ИЗМЕНЕНИЙ --- */
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 10px; /* Отступ для полосы прокрутки */
+  /* --- КОНЕЦ ИЗМЕНЕНИЙ --- */
 }
 
 .card-ai-description {
@@ -415,12 +421,6 @@
   }
 }
 
-@media (max-width: 600px) {
-  .explorer-grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
 @media (max-width: 768px) {
   .assessment-container {
     padding: 40px 20px;
@@ -435,6 +435,62 @@
   .explorer-footer {
     flex-direction: column;
     gap: 10px;
+  }
+  .page-title {
+    font-size: 38px;
+  }
+  .description {
+    font-size: 22px;
+  }
+  .result-card {
+      height: 600px;
+      max-width: 480px;
+  }
+}
+
+@media (max-width: 600px) {
+  .explorer-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .page-title {
+    font-size: 32px;
+    letter-spacing: -1px;
+  }
+  .description {
+    font-size: 18px;
+  }
+  #results-stack-container {
+    min-height: 90vh;
+  }
+  .swipe-overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  .result-card {
+    width: 90vw;
+    max-width: 90vw;
+    height: 580px;
+    padding: 20px;
+  }
+  .result-card h3 {
+    font-size: 28px;
+  }
+  .card-industry,
+  .card-ai-description,
+  .card-hidden-details,
+  .chart-container,
+  .chart-container h4 {
+    font-size: 17px;
+  }
+  .stat-item {
+    font-size: 15px;
+  }
+  .chart-label {
+    flex-basis: 90px;
+    font-size: 14px;
   }
 }
 

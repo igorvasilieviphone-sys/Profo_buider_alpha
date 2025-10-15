@@ -37,7 +37,7 @@
             
             <div class="hero-actions">
               <a href="#" class="btn primary-accent-new" id="start-assessment-btn-homepage">Начать Тест</a>
-              <a href="#learn-more" class="btn secondary-outline-new">Подробнее</a>
+              <a href="about.html" class="btn secondary-outline-new">Подробнее</a>
             </div>
           </div>
         </div>
@@ -79,30 +79,7 @@
           <button id="explorer-reset-btn" class="btn secondary-outline-new">Сбросить выбор</button>
         </div>
       </div>
-      <div class="chat-widget" id="chatWidget">
-        <button class="chat-toggle" id="chatToggle">
-          <img src="img/chat_gpt_logo.png" alt="ИИ">
-          Спросить ИИ
-        </button>
-        <div class="chat-window" id="chatWindow">
-          <div class="chat-content">
-            <div class="chat-header">
-              <h2>Ассистент ИИ</h2>
-              <span class="close" id="closeChat">&times;</span>
-            </div>
-            <div class="chat-messages" id="chatMessages">
-            </div>
-            <div class="chat-input">
-              <div class="chat-input-wrapper">
-                <input type="text" id="chatInput" placeholder="Введите ваше сообщение...">
-                <button class="send-btn" id="sendMessage">
-                  <span>&#10148;</span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <!-- КОД ЧАТА БЫЛ УДАЛЕН ОТСЮДА -->
     </div>
     
     <!-- НОВАЯ СТРАНИЦА РЕЗУЛЬТАТОВ -->
@@ -125,6 +102,34 @@
         </div>
       </div>
     </div>
+
+    <!-- === НАЧАЛО ИЗМЕНЕНИЙ === -->
+    <!-- ВИДЖЕТ ЧАТА ПЕРЕМЕЩЕН СЮДА, ЧТОБЫ БЫТЬ ВИДИМЫМ НА ВСЕХ СТРАНИЦАХ -->
+    <div class="chat-widget" id="chatWidget">
+      <button class="chat-toggle" id="chatToggle">
+        <img src="img/chat_gpt_logo.png" alt="ИИ">
+        Спросить ИИ
+      </button>
+      <div class="chat-window" id="chatWindow">
+        <div class="chat-content">
+          <div class="chat-header">
+            <h2>Ассистент ИИ</h2>
+            <span class="close" id="closeChat">&times;</span>
+          </div>
+          <div class="chat-messages" id="chatMessages">
+          </div>
+          <div class="chat-input">
+            <div class="chat-input-wrapper">
+              <input type="text" id="chatInput" placeholder="Введите ваше сообщение...">
+              <button class="send-btn" id="sendMessage">
+                <span>&#10148;</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- === КОНЕЦ ИЗМЕНЕНИЙ === -->
 
   </div>
 
