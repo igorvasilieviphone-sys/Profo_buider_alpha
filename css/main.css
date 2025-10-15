@@ -17,12 +17,17 @@
   text-align: center;
   letter-spacing: -2px;
 }
-
+/* Стиль для основного текста загрузки */
 .description {
-  font-size: 25px;
+  font-size: 27px;
   color: var(--text-medium-new);
   margin-bottom: 30px;
   text-align: center;
+}
+
+/* Стиль КОНКРЕТНО для маленького текста (с двумя классами) */
+.description.small-text {
+  font-size: 22px;
 }
 
 .explorer-grid {
@@ -248,7 +253,8 @@
 }
 
 .card-industry {
-  font-size: 16px;
+  font-size: 21px;
+  margin-top: 30px;
   margin-bottom: 25px;
 }
 
@@ -267,7 +273,7 @@
 }
 
 .card-ai-description {
-  font-size: 18px;
+  font-size: 21px;
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 20px;
@@ -279,6 +285,7 @@
 }
 
 .card-stats {
+  margin-top: 30px;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   padding-top: 20px;
 }
@@ -306,7 +313,7 @@
 }
 
 .card-hidden-details {
-  font-size: 16px;
+  font-size: 21px;
   opacity: 0;
   transform: translateY(20px);
   pointer-events: none;
@@ -355,12 +362,12 @@
 .chart-container {
   width: 100%;
   font-family: "Sora", sans-serif;
-  font-size: 17px;
+  font-size: 21px;
 }
 
 .chart-container h4 {
   margin-bottom: 15px;
-  font-size: 17px;
+  font-size: 21px;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.9);
 }
