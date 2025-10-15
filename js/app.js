@@ -6,7 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const chatInput = document.getElementById("chatInput");
     const chatMessages = document.getElementById("chatMessages");
     const sendMessageBtn = document.getElementById("sendMessage");
-    const API_URL = "http://127.0.0.1:5000/api/chat";
+    
+    // === ИЗМЕНЕНИЕ ЗДЕСЬ ===
+    // Используем относительный путь, чтобы браузер сам определил домен
+    const API_URL = "/api/chat";
+    // === КОНЕЦ ИЗМЕНЕНИЯ ===
 
     const addMessage = (text, sender, isTyping = false) => {
         const messageWrapper = document.createElement("div");
