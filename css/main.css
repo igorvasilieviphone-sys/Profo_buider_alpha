@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Рекомендуется для удобной работы с размерами */
+  box-sizing: border-box;
 }
 
 .assessment-container {
@@ -24,11 +24,6 @@
   margin-bottom: 30px;
   text-align: center;
 }
-
-
-/* =================================== */
-/*         СТРАНИЦА ВЫБОРА ТЕМ         */
-/* =================================== */
 
 .explorer-grid {
   display: grid;
@@ -97,11 +92,6 @@
   padding-top: 20px;
   border-top: 1px solid #eee;
 }
-
-
-/* =================================== */
-/*           МОДАЛЬНОЕ ОКНО            */
-/* =================================== */
 
 .modal-overlay {
   position: fixed;
@@ -182,28 +172,21 @@
   color: var(--text-dark-new);
 }
 
-
-/* =================================== */
-/*     СТРАНИЦА РЕЗУЛЬТАТОВ И СВАЙПЫ   */
-/* =================================== */
-
 #results-stack-container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 650px;
-  /* perspective: 1000px; */ /* Оставляем закомментированным, чтобы избежать проблем с контекстом наложения */
   width: 100%;
   overflow: visible;
   border-radius: 0;
-  position: relative; 
-  z-index: 1;         
+  position: relative;
+  z-index: 1;
 }
 
 .swipe-overlay {
   position: absolute;
   top: 0;
-  /* ИЗМЕНЕНО: Смещаем элемент вверх */
   margin-top: -336px;
   margin-left: 20px;
   margin-left: auto;
@@ -218,11 +201,11 @@
 }
 
 .swipe-overlay.left {
-  background-color: rgba(255, 65, 54, 1); /* ИЗМЕНЕНО: Был #ff4136 */
+  background-color: rgba(255, 65, 54, 1);
 }
 
 .swipe-overlay.right {
-  background-color: rgba(11, 218, 81, 1); /* ИЗМЕНЕНО: Был #0BDA51 */
+  background-color: rgba(11, 218, 81, 1);
 }
 
 .result-card {
@@ -239,17 +222,12 @@
   transition: transform 0.5s ease, opacity 0.5s ease;
   padding: 30px;
   overflow: hidden;
-  z-index: 2; /* Карточка всегда выше всего остального */
+  z-index: 2;
 }
 
 .result-card:active {
   cursor: grabbing;
 }
-
-
-/* =================================== */
-/*     ВНУТРЕННЕЕ СОДЕРЖИМОЕ КАРТОЧКИ   */
-/* =================================== */
 
 .card-content-wrapper {
   display: flex;
@@ -271,7 +249,7 @@
 
 .card-industry {
   font-size: 16px;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 .card-details-container {
@@ -327,11 +305,6 @@
   padding-top: 15px;
 }
 
-
-/* =================================== */
-/*        РАСКРЫВАЮЩИЙСЯ БЛОК          */
-/* =================================== */
-
 .card-hidden-details {
   font-size: 16px;
   opacity: 0;
@@ -366,6 +339,7 @@
   opacity: 0;
   transform: translateY(-20px);
   pointer-events: none;
+  padding-bottom: 25px;
 }
 
 .result-card.expanded .card-hidden-details {
@@ -377,11 +351,6 @@
 .result-card.expanded .card-details-toggle::after {
   transform: rotate(180deg);
 }
-
-
-/* =================================== */
-/*        ГРАФИК НАВЫКОВ В КАРТОЧКЕ      */
-/* =================================== */
 
 .chart-container {
   width: 100%;
@@ -420,7 +389,7 @@
 
 .chart-bar-fill {
   height: 100%;
-  background-color: #f90;
+  background-color: #ffffff;
   border-radius: 6px;
   transition: width 0.5s ease-out;
 }
@@ -429,14 +398,9 @@
   display: block;
   text-align: center;
   margin-top: 20px;
-  color: #a1a1a1 !important;
+  color: #ffffff !important;
   text-decoration: underline;
 }
-
-
-/* =================================== */
-/*             АДАПТИВНОСТЬ            */
-/* =================================== */
 
 @media (max-width: 992px) {
   .explorer-grid {
@@ -466,11 +430,6 @@
     gap: 10px;
   }
 }
-
-
-/* =================================== */
-/*           ЗАГРУЗЧИК (СПИННЕР)        */
-/* =================================== */
 
 .loader-container {
   display: flex;
