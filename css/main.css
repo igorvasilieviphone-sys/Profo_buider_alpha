@@ -228,7 +228,7 @@
   padding: 30px;
   overflow: hidden;
   z-index: 2;
-  margin-top: 20px; /* <-- ДОБАВЛЕННАЯ СТРОКА */
+  margin-top: 35px; 
 }
 
 .result-card:active {
