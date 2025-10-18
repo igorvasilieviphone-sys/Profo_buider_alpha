@@ -4,9 +4,6 @@ function initSwipeableCards(containerSelector) {
     const container = document.querySelector(containerSelector);
     if (!container) return;
 
-    // --- НАЧАЛО ИЗМЕНЕНИЙ ---
-
-    // 1. Создаем и добавляем оверлеи для фона
     const leftOverlay = document.createElement('div');
     leftOverlay.className = 'swipe-overlay left';
     container.appendChild(leftOverlay);
@@ -14,14 +11,6 @@ function initSwipeableCards(containerSelector) {
     const rightOverlay = document.createElement('div');
     rightOverlay.className = 'swipe-overlay right';
     container.appendChild(rightOverlay);
-
-    // 2. Удаляем ненужные переменные и функции для цвета карточки
-    // const initialColor = '#e67d37'; - больше не нужно в JS
-    // const leftColor = '#ff4136'; - теперь в CSS
-    // const rightColor = '#2cc295'; - теперь в CSS
-    // function interpolateColor(...) - больше не нужна
-
-    // --- КОНЕЦ ИЗМЕНЕНИЙ ---
 
     const flyAwayDuration = 400;
     const returnDuration = 300;
@@ -37,9 +26,8 @@ function initSwipeableCards(containerSelector) {
 
     function updateCardStack() {
         cards.forEach((card, index) => {
-            const zIndex = cards.length - index + 1; // +1 чтобы быть выше оверлея
+            const zIndex = cards.length - index + 1;
             card.style.zIndex = zIndex;
-            // Убираем background-color из transition
             card.style.transition = `transform ${returnDuration}ms cubic-bezier(0.175, 0.885, 0.32, 1.275)`;
 
             if (index < 3) {
@@ -65,11 +53,8 @@ function initSwipeableCards(containerSelector) {
         activeCard.style.transition = 'none';
         activeCard.style.transform = `scale(${liftScale})`;
 
-        // --- НАЧАЛО ИЗМЕНЕНИЙ ---
-        // Сбрасываем transition у оверлеев на время перетаскивания
         leftOverlay.style.transition = 'none';
         rightOverlay.style.transition = 'none';
-        // --- КОНЕЦ ИЗМЕНЕНИЙ ---
 
         startX = e.pageX || e.touches[0].pageX;
         startY = e.pageY || e.touches[0].pageY;
@@ -88,17 +73,13 @@ function initSwipeableCards(containerSelector) {
         
         activeCard.style.transform = `translateX(${deltaX}px) translateY(${deltaY}px) scale(${liftScale}) rotate(${rotation}deg)`;
         
-        // --- НАЧАЛО ИЗМЕНЕНИЙ ---
-        // 3. Управляем прозрачностью оверлеев вместо цвета карточки
-        if (progress < 0) { // Движение влево
+        if (progress < 0) {
             rightOverlay.style.opacity = 0;
             leftOverlay.style.opacity = -progress;
-        } else { // Движение вправо
+        } else {
             leftOverlay.style.opacity = 0;
             rightOverlay.style.opacity = progress;
         }
-        // activeCard.style.backgroundColor = newColor; // СТРОКА УДАЛЕНА
-        // --- КОНЕЦ ИЗМЕНЕНИЙ ---
     }
 
     function onDragEnd(e) {
@@ -110,28 +91,18 @@ function initSwipeableCards(containerSelector) {
 
         const deltaX = (e.pageX || e.changedTouches[0].pageX) - startX;
 
-        // --- НАЧАЛО ИЗМЕНЕНИЙ ---
-        // Возвращаем transition оверлеям для плавного исчезновения
         leftOverlay.style.transition = `opacity ${returnDuration}ms ease`;
         rightOverlay.style.transition = `opacity ${returnDuration}ms ease`;
-        // --- КОНЕЦ ИЗМЕНЕНИЙ ---
-
 
         if (Math.abs(deltaX) > decisionThreshold) {
             const direction = deltaX > 0 ? 1 : -1;
             cardToAnimate.style.transition = `transform ${flyAwayDuration}ms ease-out`;
             cardToAnimate.style.transform = `translateX(${direction * window.innerWidth}px) rotate(${direction * 30}deg)`;
             
-            // --- НАЧАЛО ИЗМЕНЕНИЙ ---
-            // 4. Убираем изменение цвета улетающей карточки
-            // cardToAnimate.style.backgroundColor = direction === 1 ? rightColor : leftColor; // СТРОКА УДАЛЕНА
-
-            // Плавно скрываем оверлеи после улетания карточки
             setTimeout(() => {
                 leftOverlay.style.opacity = 0;
                 rightOverlay.style.opacity = 0;
             }, returnDuration);
-            // --- КОНЕЦ ИЗМЕНЕНИЙ ---
 
             cards.shift();
             updateCardStack();
@@ -140,7 +111,7 @@ function initSwipeableCards(containerSelector) {
                 if (container.contains(cardToAnimate)) {
                     container.removeChild(cardToAnimate);
                 }
-                if (cards.length === 0) {
+                if (cards.length === 0 && !container.querySelector('.description')) {
                     const message = document.createElement('p');
                     message.textContent = 'Вы просмотрели все рекомендации!';
                     message.className = 'description';
@@ -148,14 +119,10 @@ function initSwipeableCards(containerSelector) {
                 }
             }, flyAwayDuration);
         } else {
-            // --- НАЧАЛО ИЗМЕНЕНИЙ ---
-            // 5. Возвращаем карточку на место и скрываем оверлеи
             cardToAnimate.style.transition = `transform ${returnDuration}ms cubic-bezier(0.175, 0.885, 0.32, 1.275)`;
             cardToAnimate.style.transform = `translateX(0) translateY(0) rotate(0deg)`;
-            // cardToAnimate.style.backgroundColor = initialColor; // СТРОКА УДАЛЕНА
             leftOverlay.style.opacity = 0;
             rightOverlay.style.opacity = 0;
-            // --- КОНЕЦ ИЗМЕНЕНИЙ ---
         }
     }
 
