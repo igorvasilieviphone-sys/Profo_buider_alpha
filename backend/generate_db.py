@@ -260,7 +260,7 @@ CAREER_DATA: List[Dict[str, Any]] = [
     {
         "id": 43, "name": "Маркетолог-аналитик", "industry": "Маркетинг/Аналитика", "university": "НИУ ВШЭ (Маркетинг), СПбГЭУ",
         "description": "Исследует рынок, конкурентов и потребителей, чтобы строить эффективные маркетинговые стратегии. Работает на стыке креатива и данных.",
-        "link": "https://postupi.online/professiya/marketolog-analitik/", "junior_salary": 60000, "avg_salary": 110000, "growth_rate": "Высокие",
+        "link": "https://skillbox.ru/media/marketing/marketologanalitik-chem-on-zanimaetsya-i-kak-osvoit-etu-spetsializatsiyu/", "junior_salary": 60000, "avg_salary": 110000, "growth_rate": "Высокие",
         "score_vector": {'logic': 4, 'creativity': 4, 'social': 3, 'routine': 3, 'art': 2}
     },
     {
@@ -308,7 +308,7 @@ CAREER_DATA: List[Dict[str, Any]] = [
     {
         "id": 51, "name": "Инженер по машинному обучению (ML Engineer)", "industry": "ИТ/Искусственный интеллект", "university": "МФТИ (ФПМИ), НИУ ВШЭ (ФКН), ИТМО",
         "description": "Разрабатывает и внедряет алгоритмы искусственного интеллекта (например, нейросети) для решения задач бизнеса. Работает в Яндексе, Сбере и других техно-гигантах.",
-        "link": "https://postupi.online/professiya/specialist-po-mashinnomu-obucheniyu/", "junior_salary": 110000, "avg_salary": 220000, "growth_rate": "Очень высокие",
+        "link": "https://practicum.yandex.ru/blog/kto-takoy-ml-engineer/", "junior_salary": 110000, "avg_salary": 220000, "growth_rate": "Очень высокие",
         "score_vector": {'logic': 5, 'creativity': 4, 'social': 2, 'routine': 3, 'art': 1}
     },
     {
@@ -332,7 +332,7 @@ CAREER_DATA: List[Dict[str, Any]] = [
     {
         "id": 55, "name": "Геймдизайнер", "industry": "Геймдев/Креатив", "university": "НИУ ВШЭ (Геймдизайн), Scream School",
         "description": "Придумывает правила, механики и мир компьютерной игры. Отвечает за то, чтобы в игру было интересно играть. Работает в российских студиях разработки игр.",
-        "link": "https://postupi.online/professiya/gejmdizajner/", "junior_salary": 70000, "avg_salary": 130000, "growth_rate": "Высокие",
+        "link": "https://hi-tech.mail.ru/review/123791-gejmdizajne/", "junior_salary": 70000, "avg_salary": 130000, "growth_rate": "Высокие",
         "score_vector": {'logic': 4, 'creativity': 5, 'social': 4, 'routine': 2, 'art': 4}
     },
     {
@@ -350,7 +350,7 @@ CAREER_DATA: List[Dict[str, Any]] = [
     {
         "id": 58, "name": "Пилот гражданской авиации", "industry": "Транспорт/Авиация", "university": "УИ ГА (Ульяновск), СПбГУ ГА (Санкт-Петербург)",
         "description": "Управляет пассажирскими и грузовыми самолетами в российских авиакомпаниях. Престижная, ответственная и высокооплачиваемая профессия.",
-        "link": "https://postupi.online/professiya/pilot/", "junior_salary": 100000, "avg_salary": 350000, "growth_rate": "Средние",
+        "link": "https://www.s7.ru/ru/media/blog/kak-stat-pilotom-grazhdanskoj-aviacii/", "junior_salary": 100000, "avg_salary": 350000, "growth_rate": "Средние",
         "score_vector": {'logic': 5, 'creativity': 2, 'social': 3, 'routine': 5, 'art': 1}
     },
     {
@@ -374,7 +374,7 @@ CAREER_DATA: List[Dict[str, Any]] = [
     {
         "id": 62, "name": "Продуктовый менеджер (IT)", "industry": "ИТ/Менеджмент", "university": "НИУ ВШЭ, МФТИ",
         "description": "Отвечает за создание и развитие IT-продукта (сайта, приложения), определяет его стратегию, функционал и ценность для пользователя и бизнеса. Ключевая роль в продуктовых компаниях.",
-        "link": "https://postupi.online/professiya/produkt-menedzher-v-it/", "junior_salary": 90000, "avg_salary": 180000, "growth_rate": "Очень высокие",
+        "link": "https://practicum.yandex.ru/blog/kto-takoy-product-manager/", "junior_salary": 90000, "avg_salary": 180000, "growth_rate": "Очень высокие",
         "score_vector": {'logic': 4, 'creativity': 4, 'social': 5, 'routine': 2, 'art': 1}
     },
     {
@@ -398,7 +398,7 @@ CAREER_DATA: List[Dict[str, Any]] = [
     {
         "id": 66, "name": "Оператор БПЛА (Дронов)", "industry": "Технологии/Логистика/Агро", "university": "МАИ, Профильные центры подготовки",
         "description": "Управляет беспилотными летательными аппаратами для аэросъемки, доставки грузов, мониторинга объектов. Новая и быстрорастущая профессия в России.",
-        "link": "https://postupi.online/professiya/operator-bespilotnyh-letatelnyh-apparatov/", "junior_salary": 65000, "avg_salary": 100000, "growth_rate": "Очень высокие",
+        "link": "https://sky.pro/wiki/profession/professiya-operator-bespilotnykh-letatelnykh-apparatov-obyazannosti-navyki/", "junior_salary": 65000, "avg_salary": 100000, "growth_rate": "Очень высокие",
         "score_vector": {'logic': 4, 'creativity': 3, 'social': 1, 'routine': 4, 'art': 2}
     },
     {
@@ -410,7 +410,7 @@ CAREER_DATA: List[Dict[str, Any]] = [
     {
         "id": 68, "name": "Data Engineer", "industry": "ИТ/Big Data", "university": "МГУ (ВМК), СПбГУ (Матмех)",
         "description": "Строит и обслуживает 'трубопроводы' для больших данных: собирает, обрабатывает и хранит информацию, делая ее доступной для аналитиков и дата-сайентистов.",
-        "link": "https://postupi.online/professiya/data-inzhener/", "junior_salary": 100000, "avg_salary": 190000, "growth_rate": "Очень высокие",
+        "link": "https://skillbox.ru/media/code/data-engineer-kto-eto-takoy-chem-zanimaetsya-kak-im-stat/", "junior_salary": 100000, "avg_salary": 190000, "growth_rate": "Очень высокие",
         "score_vector": {'logic': 5, 'creativity': 2, 'social': 2, 'routine': 5, 'art': 1}
     },
     {
@@ -428,7 +428,7 @@ CAREER_DATA: List[Dict[str, Any]] = [
     {
         "id": 71, "name": "Мобильный разработчик (iOS/Android)", "industry": "ИТ", "university": "НИУ ВШЭ (ПМИ), МИРЭА",
         "description": "Создает приложения для смартфонов и планшетов. В России высокий спрос на разработчиков как под Android, так и под iOS со стороны банков, ритейла и IT-компаний.",
-        "link": "https://postupi.online/professiya/mobilnyj-razrabotchik/", "junior_salary": 85000, "avg_salary": 170000, "growth_rate": "Высокие",
+        "link": "https://skillbox.ru/media/code/kto_takoy_mobilnyy_razrabotchik_i_kak_im_stat/", "junior_salary": 85000, "avg_salary": 170000, "growth_rate": "Высокие",
         "score_vector": {'logic': 4, 'creativity': 4, 'social': 2, 'routine': 3, 'art': 3}
     },
     {
@@ -626,7 +626,7 @@ CAREER_DATA: List[Dict[str, Any]] = [
     {
         "id": 104, "name": "Fullstack-разработчик", "industry": "ИТ", "university": "МФТИ, ИТМО, онлайн-школы",
         "description": "Универсальный разработчик, который умеет создавать и фронтенд (пользовательский интерфейс), и бэкенд (серверную часть) веб-приложений. Очень ценится в стартапах.",
-        "link": "https://postupi.online/professiya/fullstack-razrabotchik/", "junior_salary": 90000, "avg_salary": 185000, "growth_rate": "Очень высокие",
+        "link": "https://msk.top-academy.ru/articles/fullstack-developer", "junior_salary": 90000, "avg_salary": 185000, "growth_rate": "Очень высокие",
         "score_vector": {'logic': 5, 'creativity': 4, 'social': 2, 'routine': 3, 'art': 2}
     },
     {
@@ -776,7 +776,7 @@ CAREER_DATA: List[Dict[str, Any]] = [
     {
         "id": 129, "name": "Разработчик игр (Game Developer)", "industry": "Геймдев/ИТ", "university": "НИУ ВШЭ (Программная инженерия), ИТМО",
         "description": "Пишет код для компьютерных и мобильных игр, реализуя игровую логику, графику и физику. Востребован в российской индустрии разработки игр.",
-        "link": "https://postupi.online/professiya/razrabotchik-igr/", "junior_salary": 80000, "avg_salary": 165000, "growth_rate": "Высокие",
+        "link": "https://edu.sravni.ru/kursy/info/razrabotchik-igr/", "junior_salary": 80000, "avg_salary": 165000, "growth_rate": "Высокие",
         "score_vector": {'logic': 5, 'creativity': 5, 'social': 2, 'routine': 3, 'art': 4}
     },
     {
@@ -854,7 +854,7 @@ CAREER_DATA: List[Dict[str, Any]] = [
     {
         "id": 142, "name": "Архитектор IT-решений (Solution Architect)", "industry": "ИТ/Консалтинг", "university": "МГТУ им. Баумана, МФТИ",
         "description": "Проектирует общую структуру сложных IT-систем, выбирая технологии и способы их взаимодействия для решения конкретных бизнес-задач. Высокоуровневая инженерная роль.",
-        "link": "https://postupi.online/professiya/it-arhitektor/", "junior_salary": 150000, "avg_salary": 300000, "growth_rate": "Очень высокие",
+        "link": "https://sky.pro/wiki/profession/solution-arhitektor-klyuchevye-kompetencii-i-zadachi-it-specialista/", "junior_salary": 150000, "avg_salary": 300000, "growth_rate": "Очень высокие",
         "score_vector": {'logic': 5, 'creativity': 4, 'social': 5, 'routine': 2, 'art': 1}
     },
     {
@@ -884,7 +884,7 @@ CAREER_DATA: List[Dict[str, Any]] = [
     {
         "id": 147, "name": "Python-разработчик", "industry": "ИТ/Data Science/Web", "university": "МФТИ, НИУ ВШЭ (ФКН), ИТМО",
         "description": "Программирует на языке Python, который используется в веб-разработке, анализе данных, машинном обучении и автоматизации. Одна из самых универсальных и востребованных IT-профессий.",
-        "link": "https://postupi.online/professiya/python-razrabotchik/", "junior_salary": 85000, "avg_salary": 175000, "growth_rate": "Очень высокие",
+        "link": "https://blog.skillbox.by/kod/professija-python-razrabotchika-chem-zanimajutsja-programmisty-chto-nuzhno-znat-i-umet-skillbox-media/", "junior_salary": 85000, "avg_salary": 175000, "growth_rate": "Очень высокие",
         "score_vector": {'logic': 5, 'creativity': 4, 'social': 2, 'routine': 4, 'art': 1}
     },
     {
@@ -908,7 +908,7 @@ CAREER_DATA: List[Dict[str, Any]] = [
     {
         "id": 151, "name": "UX-исследователь", "industry": "ИТ/Дизайн/Маркетинг", "university": "НИУ ВШЭ (Социология, Психология), МГУ",
         "description": "Изучает пользовательский опыт через интервью и тесты, чтобы сделать IT-продукты максимально удобными и понятными. Работает в крупных IT-компаниях и дизайн-студиях.",
-        "link": "https://postupi.online/professiya/ux-ui-issledovatel/", "junior_salary": 75000, "avg_salary": 140000, "growth_rate": "Очень высокие",
+        "link": "https://blog.skillbox.by/dizajn/advokat-polzovatelja-kto-takoj-ux-issledovatel-i-pochemu-on-delaet-mir-luchshe-skillbox-media/", "junior_salary": 75000, "avg_salary": 140000, "growth_rate": "Очень высокие",
         "score_vector": {'logic': 5, 'creativity': 4, 'social': 5, 'routine': 3, 'art': 2}
     },
     {
@@ -944,7 +944,7 @@ CAREER_DATA: List[Dict[str, Any]] = [
     {
         "id": 157, "name": "Специалист по информационной безопасности", "industry": "ИТ/Безопасность", "university": "МИФИ, МГТУ им. Баумана (ИУ-8), ИТМО",
         "description": "Защищает корпоративные сети, системы и данные от кибератак. 'Белый хакер' на страже интересов бизнеса. Критически важная профессия в цифровом мире.",
-        "link": "https://postupi.online/professiya/specialist-po-informacionnoj-bezopasnosti/", "junior_salary": 80000, "avg_salary": 150000, "growth_rate": "Очень высокие",
+        "link": "https://practicum.yandex.ru/blog/kto-takoy-specialist-po-informacionnoy-bezopasnosti/", "junior_salary": 80000, "avg_salary": 150000, "growth_rate": "Очень высокие",
         "score_vector": {'logic': 5, 'creativity': 3, 'social': 2, 'routine': 5, 'art': 1}
     },
     {
@@ -1070,7 +1070,7 @@ CAREER_DATA: List[Dict[str, Any]] = [
     {
         "id": 178, "name": "BIM-менеджер", "industry": "Строительство/Проектирование", "university": "МГСУ, СПбГАСУ",
         "description": "Руководит процессом информационного моделирования зданий (BIM), создавая цифровой двойник объекта. Ключевой специалист в современном цифровом строительстве.",
-        "link": "https://postupi.online/professiya/bim-menedzher/", "junior_salary": 80000, "avg_salary": 150000, "growth_rate": "Очень высокие",
+        "link": "https://vc.ru/edu/1637206-bim-menedzher-kto-eto-chem-zanimaetsya-i-kak-im-stat", "junior_salary": 80000, "avg_salary": 150000, "growth_rate": "Очень высокие",
         "score_vector": {'logic': 5, 'creativity': 4, 'social': 3, 'routine': 4, 'art': 2}
     },
     {
@@ -1088,7 +1088,7 @@ CAREER_DATA: List[Dict[str, Any]] = [
     {
         "id": 181, "name": "DevRel менеджер", "industry": "ИТ/Маркетинг/Коммуникации", "university": "Технические ВУЗы + опыт в IT-комьюнити",
         "description": "Выстраивает отношения IT-компании с сообществом разработчиков: выступает на конференциях, пишет статьи, организует митапы. 'Евангелист' технологий.",
-        "link": "https://postupi.online/professiya/developerevangelist/", "junior_salary": 100000, "avg_salary": 200000, "growth_rate": "Очень высокие",
+        "link": "https://habr.com/ru/articles/570594/", "junior_salary": 100000, "avg_salary": 200000, "growth_rate": "Очень высокие",
         "score_vector": {'logic': 4, 'creativity': 4, 'social': 5, 'routine': 2, 'art': 2}
     },
     {
@@ -1136,7 +1136,7 @@ CAREER_DATA: List[Dict[str, Any]] = [
     {
         "id": 189, "name": "Компьютерный лингвист", "industry": "ИТ/Наука", "university": "НИУ ВШЭ (ФКН), МГУ (Филологический/ВМК), СПбГУ",
         "description": "Обучает компьютеры понимать и обрабатывать человеческий язык. Работает над созданием голосовых помощников, чат-ботов и машинных переводчиков.",
-        "link": "https://postupi.online/professiya/kompyuternyj-lingvist/", "junior_salary": 90000, "avg_salary": 180000, "growth_rate": "Очень высокие",
+        "link": "https://blog.skillfactory.ru/kompyuternyi-lingvist-professiya/", "junior_salary": 90000, "avg_salary": 180000, "growth_rate": "Очень высокие",
         "score_vector": {'logic': 5, 'creativity': 4, 'social': 2, 'routine': 4, 'art': 2}
     },
     {
@@ -1184,7 +1184,7 @@ CAREER_DATA: List[Dict[str, Any]] = [
     {
         "id": 197, "name": "NLP-инженер", "industry": "ИТ/Искусственный интеллект", "university": "МФТИ, НИУ ВШЭ (ФКН), Сколтех",
         "description": "Специалист по обработке естественного языка (Natural Language Processing). Учит машины понимать текст и речь, создавая умных чат-ботов и голосовых ассистентов.",
-        "link": "https://postupi.online/professiya/nlp-razrabotchik/", "junior_salary": 115000, "avg_salary": 230000, "growth_rate": "Очень высокие",
+        "link": "https://netology.ru/blog/04-2022-nlp-engineer", "junior_salary": 115000, "avg_salary": 230000, "growth_rate": "Очень высокие",
         "score_vector": {'logic': 5, 'creativity': 4, 'social': 2, 'routine': 4, 'art': 1}
     },
     {
@@ -1208,7 +1208,7 @@ CAREER_DATA: List[Dict[str, Any]] = [
     {
         "id": 201, "name": "Продюсер онлайн-курсов", "industry": "EdTech/Образование", "university": "НИУ ВШЭ, Нетология, Skillbox",
         "description": "Создает и запускает образовательные онлайн-продукты. Отвечает за проект от идеи и поиска экспертов до маркетинга и продаж. Ключевая роль в российском EdTech.",
-        "link": "https://postupi.online/professiya/prodyuser-onlajn-kursov/", "junior_salary": 70000, "avg_salary": 130000, "growth_rate": "Очень высокие",
+        "link": "https://netology.ru/blog/10-2022-edmarket-who-is-producer-online-kursov", "junior_salary": 70000, "avg_salary": 130000, "growth_rate": "Очень высокие",
         "score_vector": {'logic': 4, 'creativity': 5, 'social': 5, 'routine': 2, 'art': 3}
     },
     {
@@ -1256,7 +1256,7 @@ CAREER_DATA: List[Dict[str, Any]] = [
     {
         "id": 209, "name": "VR/AR-разработчик", "industry": "ИТ/Геймдев/Инженерия", "university": "Университет Иннополис, ИТМО, ДВФУ",
         "description": "Создает приложения и симуляторы для виртуальной (VR) и дополненной (AR) реальности. Работает в геймдеве, промышленности (тренажеры) и маркетинге.",
-        "link": "https://postupi.online/professiya/razrabotchik-vr-ar/", "junior_salary": 100000, "avg_salary": 200000, "growth_rate": "Очень высокие",
+        "link": "https://edu.sravni.ru/kursy/info/vr-ar-razrabotchik/", "junior_salary": 100000, "avg_salary": 200000, "growth_rate": "Очень высокие",
         "score_vector": {'logic': 5, 'creativity': 5, 'social': 2, 'routine': 3, 'art': 4}
     },
     {
@@ -1304,7 +1304,7 @@ CAREER_DATA: List[Dict[str, Any]] = [
     {
         "id": 217, "name": "Разработчик голосовых интерфейсов", "industry": "ИТ/Искусственный интеллект", "university": "МФТИ, МИРЭА + курсы (Yandex)",
         "description": "Проектирует и создает навыки для голосовых ассистентов (Алиса) и другие системы, управляемые голосом. Перспективное направление в IT.",
-        "link": "https://postupi.online/professiya/razrabotchik-golosovyh-interfejsov/", "junior_salary": 80000, "avg_salary": 160000, "growth_rate": "Высокие",
+        "link": "https://www.ucheba.ru/prof/5368", "junior_salary": 80000, "avg_salary": 160000, "growth_rate": "Высокие",
         "score_vector": {'logic': 5, 'creativity': 4, 'social': 2, 'routine': 3, 'art': 2}
     },
     {
@@ -1316,7 +1316,7 @@ CAREER_DATA: List[Dict[str, Any]] = [
     {
         "id": 219, "name": "Специалист по большим данным в медицине", "industry": "Медицина/ИТ/Аналитика", "university": "Первый МГМУ им. Сеченова (Цифровая медицина), ИТМО",
         "description": "Анализирует большие массивы медицинских данных (истории болезней, снимки) для выявления закономерностей и помощи врачам в постановке диагнозов.",
-        "link": "https://postupi.online/professiya/specialist-po-bolshim-dannym-v-medicine/", "junior_salary": 95000, "avg_salary": 180000, "growth_rate": "Очень высокие",
+        "link": "https://habr.com/ru/companies/geekbrains/articles/555932/", "junior_salary": 95000, "avg_salary": 180000, "growth_rate": "Очень высокие",
         "score_vector": {'logic': 5, 'creativity': 3, 'social': 2, 'routine': 4, 'art': 1}
     },
     {
@@ -1328,13 +1328,13 @@ CAREER_DATA: List[Dict[str, Any]] = [
     {
         "id": 221, "name": "Молекулярный диетолог", "industry": "Медицина/Биотехнологии/Wellness", "university": "РНИМУ им. Пирогова, МГУ",
         "description": "Разрабатывает персональные планы питания на основе генетических тестов и анализов, учитывая индивидуальные особенности метаболизма.",
-        "link": "https://япроф.рф/professions/molekulyarnyy-dietolog", "junior_salary": 70000, "avg_salary": 140000, "growth_rate": "Высокие",
+        "link": "https://postupi.online/professiya/molekulyarnyj-dietolog/", "junior_salary": 70000, "avg_salary": 140000, "growth_rate": "Высокие",
         "score_vector": {'logic': 5, 'creativity': 3, 'social': 5, 'routine': 4, 'art': 1}
     },
     {
         "id": 222, "name": "Архитектор 'умных' городов", "industry": "Архитектура/ИТ/Госуправление", "university": "МАРХИ, НИУ ВШЭ (Высшая школа урбанистики), ИТМО",
         "description": "Проектирует городскую среду с использованием IT-технологий: умные светофоры, системы безопасности, онлайн-сервисы для горожан.",
-        "link": "https://postupi.online/professiya/arhitektor-umnyh-gorodov/", "junior_salary": 90000, "avg_salary": 180000, "growth_rate": "Высокие",
+        "link": "https://plan-your-time.com/profession/smart-city-architect/", "junior_salary": 90000, "avg_salary": 180000, "growth_rate": "Высокие",
         "score_vector": {'logic': 5, 'creativity': 5, 'social': 4, 'routine': 3, 'art': 3}
     },
     {
@@ -1406,7 +1406,7 @@ CAREER_DATA: List[Dict[str, Any]] = [
     {
         "id": 234, "name": "Киберследователь", "industry": "Безопасность/Госслужба/ИТ", "university": "МИФИ, МГТУ им. Баумана, ведомственные ВУЗы",
         "description": "Расследует киберпреступления: взломы, кражи данных, мошенничество в интернете. Работает в правоохранительных органах или в компаниях по кибербезопасности.",
-        "link": "https://postupi.online/professiya/kibersledovatel/", "junior_salary": 80000, "avg_salary": 160000, "growth_rate": "Очень высокие",
+        "link": "https://www.ucheba.ru/prof/5006", "junior_salary": 80000, "avg_salary": 160000, "growth_rate": "Очень высокие",
         "score_vector": {'logic': 5, 'creativity': 4, 'social': 3, 'routine': 5, 'art': 1}
     },
     {
@@ -2541,7 +2541,7 @@ CAREER_DATA: List[Dict[str, Any]] = [
     {
         "id": 423, "name": "Тестировщик игр (Game QA)", "industry": "Геймдев/ИТ", "university": "Профильные курсы (XYZ School, Narwhal)",
         "description": "Ищет ошибки (баги) в компьютерных и мобильных играх перед их выпуском. Отличная стартовая позиция для начала карьеры в российской игровой индустрии.",
-        "link": "https://postupi.online/professiya/testirovshchik-igr/", "junior_salary": 45000, "avg_salary": 80000, "growth_rate": "Высокие",
+        "link": "https://synergy.ru/akademiya/karera/testirovshhik_igr_chto_eto_za_professiya_i_kak_nachat_svoj_put", "junior_salary": 45000, "avg_salary": 80000, "growth_rate": "Высокие",
         "score_vector": {'logic': 4, 'creativity': 3, 'social': 2, 'routine': 5, 'art': 3}
     },
     {
@@ -2646,7 +2646,6 @@ CAREER_DATA: List[Dict[str, Any]] = [
         "link": "https://postupi.online/professiya/mediaplaner/", "junior_salary": 60000, "avg_salary": 110000, "growth_rate": "Средние",
         "score_vector": {'logic': 4, 'creativity': 4, 'social': 4, 'routine': 4, 'art': 1}
     },
-    # --- НАЧАЛО: НОВЫЕ 30 ПРОФЕССИЙ ДЛЯ КОПИРОВАНИЯ (441-470) ---
     {
         "id": 441, "name": "Разработчик 1С", "industry": "ИТ/Бизнес-автоматизация", "university": "Технические ВУЗы + сертификация 1С",
         "description": "Автоматизирует бухгалтерский, управленческий и торговый учет в российских компаниях на платформе '1С:Предприятие'. Самая массовая и востребованная профессия на стыке программирования и экономики в России.",
@@ -2662,13 +2661,13 @@ CAREER_DATA: List[Dict[str, Any]] = [
     {
         "id": 443, "name": "Инженер по автоматизации тестирования (QA Auto)", "industry": "ИТ", "university": "МГТУ им. Баумана, МИФИ, ИТМО",
         "description": "Пишет программы и скрипты, которые автоматически тестируют программное обеспечение, что ускоряет разработку и повышает качество. Продвинутая и высокооплачиваемая роль в QA.",
-        "link": "https://postupi.online/professiya/inzhener-po-avtomatizacii-testirovaniya/", "junior_salary": 90000, "avg_salary": 180000, "growth_rate": "Очень высокие",
+        "link": "https://education.yandex.ru/journal/chem-zanimaetsya-avtomatizator-testirovaniya-i-kak-im-stat", "junior_salary": 90000, "avg_salary": 180000, "growth_rate": "Очень высокие",
         "score_vector": {'logic': 5, 'creativity': 3, 'social': 2, 'routine': 4, 'art': 1}
     },
     {
         "id": 444, "name": "Менеджер по развитию бизнеса (Business Development Manager)", "industry": "Бизнес/Продажи/Менеджмент", "university": "НИУ ВШЭ, РАНХиГС",
         "description": "Ищет новые рынки, партнеров и возможности для роста компании. Работает на стыке продаж, маркетинга и стратегии, отвечая за долгосрочное развитие бизнеса.",
-        "link": "https://careerpath.pro/professions/menedzher-po-razvitiu-biznesa", "junior_salary": 80000, "avg_salary": 160000, "growth_rate": "Высокие",
+        "link": "https://postupi.online/professiya/menedzher-po-razvitiyu/", "junior_salary": 80000, "avg_salary": 160000, "growth_rate": "Высокие",
         "score_vector": {'logic': 4, 'creativity': 4, 'social': 5, 'routine': 2, 'art': 1}
     },
     {
@@ -2692,7 +2691,7 @@ CAREER_DATA: List[Dict[str, Any]] = [
     {
         "id": 448, "name": "Аналитик по противодействию мошенничеству (Anti-fraud)", "industry": "Финансы/Банки/ИТ", "university": "Финансовый университет, МИФИ",
         "description": "Разрабатывает и настраивает системы для выявления и предотвращения мошеннических операций (например, с банковскими картами). Работает в банках, финтехе и e-commerce.",
-        "link": "https://careerpath.pro/professions/spetsialist-po-finansovomu-monitoringu", "junior_salary": 85000, "avg_salary": 160000, "growth_rate": "Очень высокие",
+        "link": "https://finder.work/vacancies/3038954", "junior_salary": 85000, "avg_salary": 160000, "growth_rate": "Очень высокие",
         "score_vector": {'logic': 5, 'creativity': 4, 'social': 2, 'routine': 5, 'art': 1}
     },
     {
@@ -2710,7 +2709,7 @@ CAREER_DATA: List[Dict[str, Any]] = [
     {
         "id": 451, "name": "Игровой продюсер", "industry": "Геймдев/ИТ/Менеджмент", "university": "ВШБИ НИУ ВШЭ, Scream School",
         "description": "Руководит разработкой игры как бизнес-проекта. Отвечает за бюджет, сроки, команду и итоговый коммерческий успех. Связующее звено между разработчиками и издателем.",
-        "link": "https://postupi.online/professiya/igrovoj-prodyuser/", "junior_salary": 90000, "avg_salary": 190000, "growth_rate": "Высокие",
+        "link": "https://skillbox.ru/media/gamedev/kto-takoy-igrovoy-prodyuser/", "junior_salary": 90000, "avg_salary": 190000, "growth_rate": "Высокие",
         "score_vector": {'logic': 4, 'creativity': 4, 'social': 5, 'routine': 2, 'art': 3}
     },
     {
@@ -2879,7 +2878,7 @@ CAREER_DATA: List[Dict[str, Any]] = [
     {
         "id": 479, "name": "Инвестиционный банкир", "industry": "Финансы/Инвестиции", "university": "РЭШ, НИУ ВШЭ (МИЭФ), МГУ (Экономфак)",
         "description": "Организует для крупных компаний сделки по слиянию и поглощению (M&A), выпуску акций (IPO) и облигаций. Работа в инвестбанках ('ВТБ Капитал', 'Sber CIB'), требующая высочайшей квалификации.",
-        "link": "https://careerpath.pro/professions/investitsionnyi-bankir", "junior_salary": 150000, "avg_salary": 400000, "growth_rate": "Высокие",
+        "link": "https://blog.sf.education/career-kto-takoj-investiczionnyj-bankir-i-kak-im-stat/", "junior_salary": 150000, "avg_salary": 400000, "growth_rate": "Высокие",
         "score_vector": {'logic': 5, 'creativity': 4, 'social': 5, 'routine': 3, 'art': 1}
     },
     {
@@ -2909,7 +2908,7 @@ CAREER_DATA: List[Dict[str, Any]] = [
     {
         "id": 484, "name": "Event-декоратор", "industry": "Сервис/Дизайн", "university": "Школы дизайна и декора, курсы",
         "description": "Разрабатывает и реализует визуальное оформление мероприятий: свадеб, корпоративов, конференций. Работает с цветами, тканями, светом и мебелью, создавая атмосферу.",
-        "link": "https://careerpath.pro/professions/dekorator", "junior_salary": 50000, "avg_salary": 95000, "growth_rate": "Средние",
+        "link": "https://flatica.ru/statyi/novaya-professiya-ivent-dekorator-stsetivw-vs~158239061", "junior_salary": 50000, "avg_salary": 95000, "growth_rate": "Средние",
         "score_vector": {'logic': 3, 'creativity': 5, 'social': 5, 'routine': 2, 'art': 5}
     },
     {
@@ -2933,7 +2932,7 @@ CAREER_DATA: List[Dict[str, Any]] = [
     {
         "id": 488, "name": "Шеф-кондитер", "industry": "HoReCa/Общепит", "university": "Кулинарные академии (Novikov School), опыт работы",
         "description": "Руководит кондитерским цехом в ресторане или отеле, разрабатывает десертное меню. Высшая ступень в карьере кондитера, требующая управленческих и творческих навыков.",
-        "link": "https://careerpath.pro/professions/shef-konditer", "junior_salary": 90000, "avg_salary": 160000, "growth_rate": "Средние",
+        "link": "https://ncpo.ru/blog/kak-stat-shef-konditerom/", "junior_salary": 90000, "avg_salary": 160000, "growth_rate": "Средние",
         "score_vector": {'logic': 3, 'creativity': 5, 'social': 4, 'routine': 3, 'art': 5}
     },
     {
@@ -2957,7 +2956,7 @@ CAREER_DATA: List[Dict[str, Any]] = [
     {
         "id": 492, "name": "Специалист по франчайзингу", "industry": "Бизнес/Продажи/Ритейл", "university": "Экономические и управленческие ВУЗы",
         "description": "Помогает компании упаковать свой бизнес во франшизу и продавать ее партнерам. Разрабатывает пакет документов, занимается поиском и обучением франчайзи.",
-        "link": "https://careerpath.pro/professions/menedzher-po-franchaizingu", "junior_salary": 70000, "avg_salary": 140000, "growth_rate": "Высокие",
+        "link": "https://www.rosbo.ru/blog/kak-stat-franchayzerom-s-nulya-chto-nuzhno-znat", "junior_salary": 70000, "avg_salary": 140000, "growth_rate": "Высокие",
         "score_vector": {'logic': 4, 'creativity': 4, 'social': 5, 'routine': 3, 'art': 1}
     },
     {
@@ -2987,13 +2986,13 @@ CAREER_DATA: List[Dict[str, Any]] = [
     {
         "id": 497, "name": "Мастер по ремонту стиральных машин", "industry": "Сервис/Рабочие", "university": "Технические колледжи, учебные центры",
         "description": "Диагностирует и устраняет неисправности в стиральных и посудомоечных машинах. Может работать в сервисном центре или как частный мастер, спрос на услуги стабильно высокий.",
-        "link": "https://careerpath.pro/professions/master-po-remontu-stiralnykh-mashin", "junior_salary": 60000, "avg_salary": 110000, "growth_rate": "Средние",
+        "link": "https://www.profguide.io/professions/master-po-remontu-stiralnyh-mashyn.html", "junior_salary": 60000, "avg_salary": 110000, "growth_rate": "Средние",
         "score_vector": {'logic': 4, 'creativity': 2, 'social': 4, 'routine': 5, 'art': 1}
     },
     {
         "id": 498, "name": "Копирайтер UX-текстов (UX Writer)", "industry": "ИТ/Дизайн/Маркетинг", "university": "ВУЗы (филология, журналистика) + курсы",
         "description": "Пишет тексты для интерфейсов сайтов и приложений: названия кнопок, подсказки, сообщения об ошибках. Делает продукт понятным и дружелюбным для пользователя.",
-        "link": "https://postupi.online/professiya/ux-pisatel/", "junior_salary": 70000, "avg_salary": 130000, "growth_rate": "Очень высокие",
+        "link": "https://sdelaem.agency/blog/chto-takoe-ux-kopirajting-i-kak-nachat-rabotat-s-mikrotekstami/", "junior_salary": 70000, "avg_salary": 130000, "growth_rate": "Очень высокие",
         "score_vector": {'logic': 4, 'creativity': 5, 'social': 3, 'routine': 4, 'art': 3}
     },
     {
@@ -3005,14 +3004,13 @@ CAREER_DATA: List[Dict[str, Any]] = [
     {
         "id": 500, "name": "Закупщик рекламы (Media Buyer)", "industry": "Маркетинг/Реклама/ИТ", "university": "Онлайн-курсы, ВУЗы (маркетинг, реклама)",
         "description": "Специалист, который покупает рекламные показы в различных системах (VK Реклама, Telegram Ads) с целью привлечения трафика и лидов. Часто работает с большими бюджетами в арбитраже трафика.",
-        "link": "https://careerpath.pro/professions/media-baier", "junior_salary": 70000, "avg_salary": 150000, "growth_rate": "Высокие",
+        "link": "https://sky.pro/wiki/marketing/zakupshchik-reklamy-v-telegram-professiya-navyki-perspektivy/", "junior_salary": 70000, "avg_salary": 150000, "growth_rate": "Высокие",
         "score_vector": {'logic': 5, 'creativity': 4, 'social': 3, 'routine': 4, 'art': 1}
     },
-    # --- НАЧАло: НОВЫЕ 30 ПРОФЕССИЙ ДЛЯ КОПИРОВАНИЯ (501-530) ---
     {
         "id": 501, "name": "Go-разработчик (Golang)", "industry": "ИТ", "university": "МФТИ, МГУ (ВМК), ИТМО",
         "description": "Программист, который пишет высокопроизводительные и надежные серверные приложения на языке Go от Google. В России этот язык активно используется в Ozon, Avito и других высоконагруженных проектах.",
-        "link": "https://postupi.online/professiya/go-razrabotchik/", "junior_salary": 100000, "avg_salary": 210000, "growth_rate": "Очень высокие",
+        "link": "https://habr.com/ru/articles/937760/", "junior_salary": 100000, "avg_salary": 210000, "growth_rate": "Очень высокие",
         "score_vector": {'logic': 5, 'creativity': 3, 'social': 1, 'routine': 4, 'art': 1}
     },
     {
@@ -3132,7 +3130,7 @@ CAREER_DATA: List[Dict[str, Any]] = [
     {
         "id": 521, "name": "Специалист по взысканию задолженности", "industry": "Финансы/Банки/Юриспруденция", "university": "Юридические и экономические колледжи, курсы",
         "description": "Ведет переговоры с должниками с целью возврата просроченной задолженности. Работает в банках, микрофинансовых организациях или коллекторских агентствах.",
-        "link": "https://careerpath.pro/professions/spetsialist-po-vzyskaniu-zadolzhennosti", "junior_salary": 50000, "avg_salary": 100000, "growth_rate": "Средние",
+        "link": "https://edwica.ru/professions/specialist-po-vzyskaniyu-4541", "junior_salary": 50000, "avg_salary": 100000, "growth_rate": "Средние",
         "score_vector": {'logic': 4, 'creativity': 2, 'social': 5, 'routine': 5, 'art': 1}
     },
     {
@@ -3174,7 +3172,7 @@ CAREER_DATA: List[Dict[str, Any]] = [
     {
         "id": 528, "name": "Специалист по этикету", "industry": "Консалтинг/Образование/Сервис", "university": "ВУЗы (международные отношения, лингвистика) + спец. школы",
         "description": "Консультирует по вопросам делового, светского и протокольного этикета. Обучает правилам поведения на официальных приемах, в бизнесе и обществе. Нишевая, но востребованная услуга.",
-        "link": "https://careerpath.pro/professions/spetsialist-po-etiketu", "junior_salary": 55000, "avg_salary": 100000, "growth_rate": "Средние",
+        "link": "https://arsvi.ru/news/how-to-become-a-trainer-27-09-2022.html", "junior_salary": 55000, "avg_salary": 100000, "growth_rate": "Средние",
         "score_vector": {'logic': 3, 'creativity': 4, 'social': 5, 'routine': 4, 'art': 3}
     },
     {
@@ -3188,6 +3186,2034 @@ CAREER_DATA: List[Dict[str, Any]] = [
         "description": "Проводит испытания новой техники — от автомобилей и самолетов до ракетных двигателей — чтобы проверить ее надежность, безопасность и соответствие характеристикам. Работа в КБ и на полигонах.",
         "link": "https://postupi.online/professiya/inzhener-ispytatel/", "junior_salary": 80000, "avg_salary": 150000, "growth_rate": "Средние",
         "score_vector": {'logic': 5, 'creativity': 4, 'social': 2, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 531,
+        "name": "Дата-журналист",
+        "industry": "Медиа/ИТ/Аналитика",
+        "university": "НИУ ВШЭ (Факультет коммуникаций, медиа и дизайна), МГУ (Журфак)",
+        "description": "Специалист, который ищет истории в больших данных, анализирует их и представляет в виде понятных и увлекательных материалов: инфографики, интерактивных карт, расследований. Работает на стыке журналистики, программирования и дизайна в ведущих российских онлайн-СМИ.",
+        "link": "https://postupi.online/professiya/data-zhurnalist/",
+        "junior_salary": 75000,
+        "avg_salary": 140000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 5, 'social': 3, 'routine': 3, 'art': 4}
+    },
+    {
+        "id": 532,
+        "name": "Агроинформатик (Агрокибернетик)",
+        "industry": "Сельское хозяйство/ИТ",
+        "university": "РГАУ-МСХА им. Тимирязева, КубГАУ, Ставропольский ГАУ",
+        "description": "Внедряет IT-решения в сельское хозяйство: разрабатывает ПО для управления агропредприятием, настраивает системы мониторинга полей с помощью датчиков и дронов, анализирует данные для повышения урожайности. Ключевой специалист по цифровизации АПК.",
+        "link": "https://postupi.online/professiya/agroinformatik/",
+        "junior_salary": 70000,
+        "avg_salary": 130000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 2, 'routine': 3, 'art': 1}
+    },
+    {
+        "id": 533,
+        "name": "Специалист по городской мобильности",
+        "industry": "Транспорт/Госуправление/Консалтинг",
+        "university": "МАДИ, НИУ ВШЭ (Высшая школа урбанистики)",
+        "description": "Планирует и проектирует транспортные системы городов, делая их удобными, безопасными и экологичными. Анализирует пассажиропотоки, развивает общественный транспорт, велосипедную и пешеходную инфраструктуру.",
+        "link": "https://sky.pro/wiki/profession/kakie-eshe-est-professii-polnyj-obzor-aktualnyh-specialnostej/",
+        "junior_salary": 75000,
+        "avg_salary": 140000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 4, 'routine': 3, 'art': 2}
+    },
+    {
+        "id": 534,
+        "name": "Инженер по солнечной энергетике",
+        "industry": "Энергетика/Экология/Строительство",
+        "university": "МЭИ, Сколтех, СПбПУ",
+        "description": "Проектирует, устанавливает и обслуживает солнечные электростанции для промышленных предприятий и частных домов. Перспективная 'зеленая' профессия на фоне роста интереса к возобновляемой энергии в России.",
+        "link": "https://postupi.online/professiya/specialist-po-vozobnovlyaemoj-energetike/",
+        "junior_salary": 80000,
+        "avg_salary": 150000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 3, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 535,
+        "name": "Специалист по переработке вторсырья",
+        "industry": "Экология/Промышленность",
+        "university": "РХТУ им. Менделеева, РУДН (Экологический факультет)",
+        "description": "Разрабатывает и контролирует технологические процессы по переработке отходов (пластика, стекла, бумаги) во вторичное сырье. Работает на мусоросортировочных комплексах и перерабатывающих заводах.",
+        "link": "https://postupi.online/professiya/recikling-tehnolog/",
+        "junior_salary": 60000,
+        "avg_salary": 100000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 3, 'social': 2, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 536,
+        "name": "Аналитик цепей поставок",
+        "industry": "Логистика/Ритейл/Аналитика",
+        "university": "НИУ ВШЭ (Логистика и управление цепями поставок), Финансовый университет",
+        "description": "Анализирует данные о движении товаров, чтобы оптимизировать логистические процессы, сократить издержки и ускорить доставку. Работает в крупных торговых и производственных компаниях.",
+        "link": "https://postupi.online/professiya/menedzher-po-cepyam-postavok/",
+        "junior_salary": 85000,
+        "avg_salary": 160000,
+        "growth_rate": "Очень высокие",
+        "score_vector": {'logic': 5, 'creativity': 3, 'social': 3, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 537,
+        "name": "Юрист по цифровому праву",
+        "industry": "Юриспруденция/ИТ",
+        "university": "НИУ ВШЭ (Факультет права), МГЮА, Сколково",
+        "description": "Специализируется на правовом регулировании интернета, персональных данных, электронной коммерции, криптовалют и искусственного интеллекта. Сопровождает деятельность IT-компаний и стартапов.",
+        "link": "https://postupi.online/professiya/cifrovoj-yurist/",
+        "junior_salary": 80000,
+        "avg_salary": 170000,
+        "growth_rate": "Очень высокие",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 4, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 538,
+        "name": "IT-рекрутер",
+        "industry": "HR/ИТ",
+        "university": "Онлайн-школы (Otus, Hedu), опыт в HR или IT",
+        "description": "Специализируется на поиске и подборе IT-специалистов: от разработчиков до ML-инженеров. Глубоко понимает технологии, чтобы говорить с кандидатами на одном языке. Одна из самых востребованных и высокооплачиваемых ролей в HR.",
+        "link": "https://postupi.online/professiya/it-rekruter/",
+        "junior_salary": 75000,
+        "avg_salary": 150000,
+        "growth_rate": "Очень высокие",
+        "score_vector": {'logic': 4, 'creativity': 3, 'social': 5, 'routine': 3, 'art': 1}
+    },
+    {
+        "id": 539,
+        "name": "Нейропсихолог",
+        "industry": "Психология/Медицина/Образование",
+        "university": "МГУ (Психфак), НИУ ВШЭ",
+        "description": "Диагностирует и корректирует нарушения высших психических функций (память, внимание, мышление) у детей и взрослых, связанные с работой мозга. Работает в медицинских и развивающих центрах.",
+        "link": "https://postupi.online/professiya/nejropsiholog/",
+        "junior_salary": 60000,
+        "avg_salary": 110000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 5, 'routine': 4, 'art': 2}
+    },
+    {
+        "id": 540,
+        "name": "Специалист по мультимодальным перевозкам",
+        "industry": "Транспорт/Логистика",
+        "university": "МАДИ, РУТ (МИИТ)",
+        "description": "Организует перевозку грузов с использованием нескольких видов транспорта (например, море + ж/д + авто). Разрабатывает оптимальные маршруты и координирует всех участников процесса. ",
+        "link": "https://glonass-std.ru/stati/kak-stat-logistom-multimodalnyh-perevozok-s-nulya/",
+        "junior_salary": 70000,
+        "avg_salary": 130000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 3, 'social': 5, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 541,
+        "name": "Менеджер по адаптации персонала (Onboarding Manager)",
+        "industry": "HR/Управление персоналом",
+        "university": "НИУ ВШЭ (Управление человеческими ресурсами), РГГУ",
+        "description": "Разрабатывает и проводит программы для новых сотрудников, чтобы помочь им быстрее влиться в коллектив, понять свои задачи и начать эффективно работать. Снижает текучесть кадров на испытательном сроке.",
+        "link": "https://www.rabota.ru/articles/career/onbording-spetsialist-chem-zanimaetsya-i-kak-im-stat-10499/",
+        "junior_salary": 65000,
+        "avg_salary": 110000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 4, 'creativity': 4, 'social': 5, 'routine': 3, 'art': 2}
+    },
+    {
+        "id": 542,
+        "name": "Аналитик углеродного рынка",
+        "industry": "Экология/Финансы/Консалтинг",
+        "university": "МГУ (Экономфак), НИУ ВШЭ, РЭУ им. Плеханова",
+        "description": "Анализирует рынок углеродных единиц, помогает компаниям реализовывать климатические проекты и управлять своим углеродным следом в рамках российского и международного регулирования.",
+        "link": "https://edwica.ru/professions/specialist-po-uglerodnomu-rynku-17044",
+        "junior_salary": 80000,
+        "avg_salary": 160000,
+        "growth_rate": "Очень высокие",
+        "score_vector": {'logic': 5, 'creativity': 3, 'social': 4, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 543,
+        "name": "Специалист по работе с отзывами (ORM-менеджер)",
+        "industry": "Маркетинг/PR",
+        "university": "НИУ ВШЭ (Реклама и связи с общественностью), онлайн-курсы",
+        "description": "Управляет репутацией бренда в интернете (Online Reputation Management). Отслеживает упоминания компании на сайтах-отзовиках, в соцсетях и на форумах, отвечает на негатив и стимулирует позитивные отзывы.",
+        "link": "https://postupi.online/professiya/orm-menedzher/",
+        "junior_salary": 55000,
+        "avg_salary": 95000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 4, 'creativity': 4, 'social': 5, 'routine': 4, 'art': 2}
+    },
+    {
+        "id": 544,
+        "name": "Вертикальный фермер",
+        "industry": "Сельское хозяйство/Технологии",
+        "university": "РГАУ-МСХА им. Тимирязева, онлайн-платформы",
+        "description": "Выращивает зелень, овощи и ягоды в закрытых помещениях на многоярусных установках (сити-фермах) с использованием гидропоники и искусственного освещения. Новое направление в городском сельском хозяйстве.",
+        "link": "https://postupi.online/professiya/siti-fermer/",
+        "junior_salary": 60000,
+        "avg_salary": 100000,
+        "growth_rate": "Очень высокие",
+        "score_vector": {'logic': 4, 'creativity': 4, 'social': 2, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 545,
+        "name": "3D-биопринтинг инженер",
+        "industry": "Медицина/Биотехнологии/Наука",
+        "university": "Первый МГМУ им. Сеченова, Сколтех, МИСиС",
+        "description": "Специалист, который 'печатает' живые ткани и органы на 3D-биопринтере, используя клетки пациента. Футуристическая профессия на передовой регенеративной медицины в России.",
+        "link": "https://postupi.online/professiya/inzhener-tkanevoj-inzhenerii/",
+        "junior_salary": 100000,
+        "avg_salary": 200000,
+        "growth_rate": "Очень высокие",
+        "score_vector": {'logic': 5, 'creativity': 5, 'social': 2, 'routine': 4, 'art': 2}
+    },
+    {
+        "id": 546,
+        "name": "Менеджер по маркетплейс-маркетингу",
+        "industry": "Маркетинг/E-commerce",
+        "university": "НИУ ВШЭ (Маркетинг), профильные курсы (Marketplace Guru)",
+        "description": "Специализируется на продвижении товаров внутри маркетплейсов (Ozon, Wildberries). Настраивает внутреннюю рекламу, работает с отзывами и вопросами, анализирует продажи для вывода карточек в ТОП.",
+        "link": "https://practicum.yandex.ru/blog/professiya-menedzher-marketpleysov/",
+        "junior_salary": 70000,
+        "avg_salary": 130000,
+        "growth_rate": "Очень высокие",
+        "score_vector": {'logic': 4, 'creativity': 5, 'social': 3, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 547,
+        "name": "Цифровой следователь (форензик-специалист)",
+        "industry": "ИТ/Безопасность/Юриспруденция",
+        "university": "МИФИ, МГТУ им. Баумана, Университеты МВД РФ",
+        "description": "Специалист по компьютерной криминалистике. Расследует киберинциденты, восстанавливает удаленные данные с цифровых носителей и собирает доказательства для суда. Работает в правоохранительных органах и консалтинге.",
+        "link": "https://postupi.online/professiya/kibersledovatel/",
+        "junior_salary": 90000,
+        "avg_salary": 180000,
+        "growth_rate": "Очень высокие",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 3, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 548,
+        "name": "Финтех-аналитик",
+        "industry": "Финансы/ИТ/Аналитика",
+        "university": "НИУ ВШЭ (МИЭФ), МФТИ, Финансовый университет",
+        "description": "Анализирует и проектирует финансовые технологии и продукты на стыке банковского дела и IT. Работает в банках (Сбер, Тинькофф) и финтех-стартапах над созданием новых цифровых сервисов.",
+        "link": "https://postupi.online/professiya/finansovyj-inzhener/",
+        "junior_salary": 100000,
+        "avg_salary": 190000,
+        "growth_rate": "Очень высокие",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 4, 'routine': 3, 'art': 1}
+    },
+    {
+        "id": 549,
+        "name": "Специалист по работе с нейросетями",
+        "industry": "ИТ/Дизайн/Медиа",
+        "university": "Онлайн-курсы, технические ВУЗы",
+        "description": "Профессионально использует генеративные нейросети (YandexGPT, Kandinsky, Midjourney) для создания текстов, изображений и другого контента. Объединяет творческие задачи с техническими навыками промпт-инжиниринга.",
+        "link": "https://ru.wikipedia.org/wiki/Инженерия_подсказок",
+        "junior_salary": 70000,
+        "avg_salary": 130000,
+        "growth_rate": "Очень высокие",
+        "score_vector": {'logic': 4, 'creativity': 5, 'social': 2, 'routine': 3, 'art': 5}
+    },
+    {
+        "id": 550,
+        "name": "Облачный инженер (Cloud Engineer)",
+        "industry": "ИТ",
+        "university": "Технические ВУЗы + сертификации Yandex.Cloud",
+        "description": "Администрирует и развивает IT-инфраструктуру компании в облачных сервисах. Настраивает виртуальные серверы, базы данных и сети, обеспечивая их надежность и масштабируемость. Одна из самых востребованных ролей в современном IT.",
+        "link": "https://postupi.online/professiya/cloud-inzhener/",
+        "junior_salary": 120000,
+        "avg_salary": 230000,
+        "growth_rate": "Очень высокие",
+        "score_vector": {'logic': 5, 'creativity': 3, 'social': 2, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 551,
+        "name": "Инженер по альтернативной энергетике",
+        "industry": "Энергетика/Экология",
+        "university": "МЭИ, Сколтех, СПбПУ",
+        "description": "Разрабатывает и внедряет решения в области возобновляемых источников энергии, включая ветровую, геотермальную и водородную энергетику. Работает в научно-исследовательских институтах и инновационных компаниях.",
+        "link": "https://postupi.online/professiya/inzhener-po-alternativnoj-energetike/",
+        "junior_salary": 85000,
+        "avg_salary": 160000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 3, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 552,
+        "name": "Клинический биоинформатик",
+        "industry": "Медицина/Наука/ИТ",
+        "university": "МГУ (Факультет биоинженерии и биоинформатики), РНИМУ им. Пирогова",
+        "description": "Анализирует генетические данные пациентов для диагностики наследственных заболеваний, подбора персональной терапии и оценки рисков. Работает в медико-генетических центрах и лабораториях.",
+        "link": "https://postupi.online/professiya/bioinformatik/",
+        "junior_salary": 90000,
+        "avg_salary": 170000,
+        "growth_rate": "Очень высокие",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 3, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 553,
+        "name": "Дизайнер образовательного опыта (LX Designer)",
+        "industry": "Образование/EdTech/Дизайн",
+        "university": "НИУ ВШЭ (Институт образования), онлайн-курсы",
+        "description": "Проектирует образовательный процесс так, чтобы он был максимально увлекательным, понятным и эффективным для студента. Применяет принципы UX-дизайна к созданию онлайн-курсов и учебных программ.",
+        "link": "https://postupi.online/professiya/pedagogicheskij-dizajner/",
+        "junior_salary": 70000,
+        "avg_salary": 130000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 4, 'creativity': 5, 'social': 4, 'routine': 3, 'art': 3}
+    },
+    {
+        "id": 554,
+        "name": "Специалист по исламскому банкингу",
+        "industry": "Финансы/Банки",
+        "university": "МГИМО, СПбГУ (Восточный факультет), Финансовый университет",
+        "description": "Консультирует и сопровождает финансовые операции в соответствии с нормами шариата (без ссудного процента, запрет на спекуляции). Востребован в банках, развивающих партнерский банкинг в России.",
+        "link": "https://ru.wikipedia.org/wiki/Исламский_банкинг",
+        "junior_salary": 80000,
+        "avg_salary": 160000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 2, 'social': 4, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 555,
+        "name": "Менеджер по устойчивому развитию (ESG-менеджер)",
+        "industry": "Консалтинг/Менеджмент/Экология",
+        "university": "МГИМО, РАНХиГС, НИУ ВШЭ",
+        "description": "Разрабатывает и внедряет в компании стратегию устойчивого развития (Environmental, Social, Governance). Отвечает за снижение экологического следа, социальные проекты и прозрачность управления. Работает в крупных российских корпорациях.",
+        "link": "https://postupi.online/professiya/specialist-po-ustojchivomu-razvitiyu/",
+        "junior_salary": 90000,
+        "avg_salary": 180000,
+        "growth_rate": "Очень высокие",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 5, 'routine': 3, 'art': 1}
+    },
+    {
+        "id": 556,
+        "name": "Биофармаколог",
+        "industry": "Наука/Фармацевтика/Биотехнологии",
+        "university": "МГУ (Биофак), РХТУ им. Менделеева",
+        "description": "Разрабатывает лекарственные препараты нового поколения на основе биологических молекул (антитела, белки, генные конструкции). Работает в R&D-центрах ведущих фармацевтических компаний.",
+        "link": "https://postupi.online/professiya/farmakolog/",
+        "junior_salary": 85000,
+        "avg_salary": 170000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 2, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 557,
+        "name": "Цифровой антрополог",
+        "industry": "Наука/Маркетинг/ИТ",
+        "university": "НИУ ВШЭ (Социология), МГУ (Исторический факультет)",
+        "description": "Изучает поведение людей в цифровой среде: как формируются онлайн-сообщества, как технологии меняют культуру и общение. Работает в исследовательских агентствах и IT-компаниях для лучшего понимания пользователей.",
+        "link": "https://postupi.online/professiya/cifrovoj-antropolog/",
+        "junior_salary": 65000,
+        "avg_salary": 120000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 4, 'routine': 4, 'art': 2}
+    },
+    {
+        "id": 558,
+        "name": "Инженер по композитным материалам",
+        "industry": "Промышленность/Авиакосмос/Инженерия",
+        "university": "МГТУ им. Баумана, МАИ, МИСиС",
+        "description": "Разрабатывает и применяет композитные материалы (например, углепластик) для создания легких и прочных конструкций в авиастроении, автоспорте и других высокотехнологичных отраслях.",
+        "link": "https://postupi.online/professiya/inzhener-po-kompozitnym-materialam/",
+        "junior_salary": 80000,
+        "avg_salary": 160000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 2, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 559,
+        "name": "Тренд-вотчер",
+        "industry": "Маркетинг/Консалтинг/Дизайн",
+        "university": "НИУ ВШЭ, Британская высшая школа дизайна",
+        "description": "Профессиональный 'охотник за трендами'. Отслеживает и анализирует новые тенденции в обществе, технологиях и культуре, чтобы помочь компаниям создавать востребованные продукты и услуги. Работает в брендинговых и консалтинговых агентствах.",
+        "link": "https://proforientator.ru/publications/articles/professiya-trendvotcher.html",
+        "junior_salary": 70000,
+        "avg_salary": 140000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 4, 'creativity': 5, 'social': 4, 'routine': 3, 'art': 4}
+    },
+    {
+        "id": 560,
+        "name": "Архитектор медицинского оборудования",
+        "industry": "Медицина/Инженерия/ИТ",
+        "university": "МГТУ им. Баумана (Биомедицинская техника), МИФИ",
+        "description": "Проектирует и разрабатывает сложное медицинское оборудование: от томографов и аппаратов УЗИ до роботизированных хирургических комплексов. Работает в R&D-центрах производителей медтехники.",
+        "link": "https://postupi.online/professiya/inzhener-medtehniki/",
+        "junior_salary": 95000,
+        "avg_salary": 190000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 5, 'social': 3, 'routine': 3, 'art': 2}
+    },
+    {
+        "id": 561,
+        "name": "Специалист по Legal Tech",
+        "industry": "Юриспруденция/ИТ",
+        "university": "НИУ ВШЭ, МГЮА, Сколково",
+        "description": "Внедряет IT-решения (конструкторы документов, системы анализа судебной практики) в работу юристов для автоматизации рутинных задач и повышения эффективности. Работает в юридических фирмах и LegalTech-стартапах.",
+        "link": "https://ru.wikipedia.org/wiki/LegalTech",
+        "junior_salary": 80000,
+        "avg_salary": 150000,
+        "growth_rate": "Очень высокие",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 4, 'routine': 3, 'art': 1}
+    },
+    {
+        "id": 562,
+        "name": "Партизанский маркетолог",
+        "industry": "Маркетинг/Реклама",
+        "university": "Онлайн-школы, ВУЗы (маркетинг)",
+        "description": "Придумывает и реализует малобюджетные, но креативные и запоминающиеся рекламные акции, которые часто становятся вирусными. Специалист по нестандартному продвижению для стартапов и малого бизнеса.",
+        "link": "https://ru.wikipedia.org/wiki/Партизанский_маркетинг",
+        "junior_salary": 60000,
+        "avg_salary": 110000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 3, 'creativity': 5, 'social': 5, 'routine': 2, 'art': 4}
+    },
+    {
+        "id": 563,
+        "name": "Проектировщик промышленных роботов",
+        "industry": "Инженерия/Промышленность/ИТ",
+        "university": "Университет Иннополис, ИТМО, МГТУ СТАНКИН",
+        "description": "Разрабатывает роботизированные ячейки и линии для автоматизации производственных процессов на заводах. Подбирает роботов, проектирует оснастку и пишет управляющие программы.",
+        "link": "https://postupi.online/professiya/robototehnik/",
+        "junior_salary": 90000,
+        "avg_salary": 170000,
+        "growth_rate": "Очень высокие",
+        "score_vector": {'logic': 5, 'creativity': 5, 'social': 3, 'routine': 3, 'art': 2}
+    },
+    {
+        "id": 564,
+        "name": "Специалист по адаптивному спорту",
+        "industry": "Спорт/Медицина/Образование",
+        "university": "РГУФКСМиТ, НГУ им. Лесгафта",
+        "description": "Тренер или инструктор, который проводит занятия по физической культуре и спорту для людей с ограниченными возможностями здоровья, помогая им в реабилитации и социализации. Работает в реабилитационных центрах и спортивных школах.",
+        "link": "https://postupi.online/professiya/trener-po-adaptivnoj-fizkulture/",
+        "junior_salary": 45000,
+        "avg_salary": 80000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 4, 'creativity': 4, 'social': 5, 'routine': 4, 'art': 2}
+    },
+    {
+        "id": 565,
+        "name": "Chief of Staff (Руководитель аппарата)",
+        "industry": "Менеджмент/Бизнес",
+        "university": "Ведущие ВУЗы (ВШЭ, МГУ, МГИМО) + опыт в консалтинге или управлении",
+        "description": "'Правая рука' и стратегический партнер CEO в крупной компании. Помогает в принятии решений, управляет ключевыми проектами и оптимизирует работу топ-менеджмента. Редкая и влиятельная позиция.",
+        "link": "https://ru.wikipedia.org/wiki/Руководитель_аппарата",
+        "junior_salary": 200000,
+        "avg_salary": 400000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 5, 'routine': 2, 'art': 1}
+    },
+    {
+        "id": 566,
+        "name": "Инженер-атомщик (проектировщик АЭС)",
+        "industry": "Энергетика/Промышленность/Инженерия",
+        "university": "НИЯУ МИФИ, СПбПУ Петра Великого",
+        "description": "Разрабатывает и проектирует ядерные реакторы и другое оборудование для атомных электростанций. Критически важный специалист для госкорпорации 'Росатом', работающий над проектами в России и за рубежом.",
+        "link": "https://postupi.online/professiya/inzhener-atomshchik/",
+        "junior_salary": 100000,
+        "avg_salary": 200000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 2, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 567,
+        "name": "Управляющий коммерческой недвижимостью",
+        "industry": "Недвижимость/Менеджмент",
+        "university": "ГУУ, РАНХиГС",
+        "description": "Отвечает за эксплуатацию и получение прибыли от торговых центров, офисных зданий или складов. Ищет арендаторов, управляет техническими службами и бюджетом объекта.",
+        "link": "https://postupi.online/professiya/menedzher-po-kommercheskoj-nedvizhimosti/",
+        "junior_salary": 80000,
+        "avg_salary": 160000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 4, 'creativity': 3, 'social': 5, 'routine': 3, 'art': 1}
+    },
+    {
+        "id": 568,
+        "name": "Спортивный аналитик (Data Scientist in sport)",
+        "industry": "Спорт/Аналитика/ИТ",
+        "university": "НИУ ВШЭ, МФТИ + спортивные ВУЗы",
+        "description": "Анализирует большие данные (статистику матчей, данные с датчиков) для улучшения результатов спортсменов и команд. Работает в профессиональных клубах (футбол, хоккей) и букмекерских компаниях.",
+        "link": "https://postupi.online/professiya/sportivnyj-analitik/",
+        "junior_salary": 90000,
+        "avg_salary": 180000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 3, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 569,
+        "name": "Технолог по переработке сельхозпродукции",
+        "industry": "Сельское хозяйство/Промышленность",
+        "university": "МГУПП, КубГТУ",
+        "description": "Разрабатывает и контролирует технологии переработки зерна, молока, мяса и овощей в готовые продукты питания. Ключевой специалист на пищевых комбинатах и агрохолдингах.",
+        "link": "https://postupi.online/professiya/tehnolog-po-pererabotke-selhozprodukcii/",
+        "junior_salary": 60000,
+        "avg_salary": 100000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 4, 'creativity': 3, 'social': 2, 'routine': 5, 'art': 2}
+    },
+    {
+        "id": 570,
+        "name": "Инженер по обогащению полезных ископаемых",
+        "industry": "Добыча/Промышленность",
+        "university": "НИТУ 'МИСиС', Санкт-Петербургский горный университет",
+        "description": "Разрабатывает и управляет процессами отделения ценных минералов от пустой породы на обогатительных фабриках. Важнейший специалист в металлургии и горнодобывающей отрасли.",
+        "link": "https://postupi.online/professiya/obogatitel-poleznyh-iskopaemyh/",
+        "junior_salary": 85000,
+        "avg_salary": 160000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 5, 'creativity': 3, 'social': 2, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 571,
+        "name": "Специалист по антикризисным коммуникациям",
+        "industry": "Коммуникации/PR/Менеджмент",
+        "university": "МГИМО, НИУ ВШЭ",
+        "description": "Разрабатывает и реализует коммуникационную стратегию компании в период кризиса (аварии, скандалы, санкции). Готовит заявления для СМИ и управляет репутационными рисками.",
+        "link": "https://ru.wikipedia.org/wiki/Антикризисное_управление",
+        "junior_salary": 90000,
+        "avg_salary": 190000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 4, 'creativity': 5, 'social': 5, 'routine': 2, 'art': 2}
+    },
+    {
+        "id": 572,
+        "name": "Банкетный менеджер",
+        "industry": "HoReCa/Сервис",
+        "university": "РГУТиС, ВУЗы гостиничного дела",
+        "description": "Организует 'под ключ' банкеты, свадьбы, фуршеты и конференции в отелях и ресторанах. Отвечает за продажи, координацию всех служб и удовлетворенность клиента.",
+        "link": "https://postupi.online/professiya/banketnyj-menedzher/",
+        "junior_salary": 65000,
+        "avg_salary": 120000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 3, 'creativity': 4, 'social': 5, 'routine': 3, 'art': 3}
+    },
+    {
+        "id": 573,
+        "name": "Художник по свету (светодизайнер)",
+        "industry": "Искусство/Театр/Дизайн",
+        "university": "Школа-студия МХАТ, СПбГАТИ, школы дизайна",
+        "description": "Создает световую партитуру для спектаклей, концертов, архитектурных объектов и выставок. С помощью света управляет вниманием зрителя и создает нужную атмосферу.",
+        "link": "https://postupi.online/professiya/hudozhnik-po-svetu/",
+        "junior_salary": 60000,
+        "avg_salary": 110000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 4, 'creativity': 5, 'social': 3, 'routine': 3, 'art': 5}
+    },
+    {
+        "id": 574,
+        "name": "Инженер по промышленной безопасности",
+        "industry": "Промышленность/Безопасность",
+        "university": "РГУ нефти и газа им. Губкина, технические ВУЗы",
+        "description": "Отвечает за предотвращение аварий на опасных производственных объектах (заводы, нефтепроводы). Контролирует соблюдение норм и проходит проверки Ростехнадзора. Обязательная должность на любом крупном производстве.",
+        "link": "https://postupi.online/professiya/inzhener-po-promyshlennoj-bezopasnosti/",
+        "junior_salary": 70000,
+        "avg_salary": 130000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 5, 'creativity': 2, 'social': 4, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 575,
+        "name": "Спортивный юрист",
+        "industry": "Юриспруденция/Спорт",
+        "university": "МГЮА, НИУ ВШЭ (совместно с ФИФА)",
+        "description": "Сопровождает трансферы спортсменов, разрешает допинговые и контрактные споры, представляет интересы клубов и федераций в спортивных арбитражных судах. Элитная и узкая юридическая специализация.",
+        "link": "https://postupi.online/professiya/sportivnyj-yurist/",
+        "junior_salary": 90000,
+        "avg_salary": 180000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 3, 'social': 5, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 576,
+        "name": "Эко-аудитор",
+        "industry": "Экология/Консалтинг",
+        "university": "РУДН (Экологический факультет), МГУ",
+        "description": "Проводит независимую проверку деятельности компании на предмет ее соответствия экологическому законодательству и стандартам. Помогает бизнесу снижать негативное воздействие на природу и избегать штрафов.",
+        "link": "https://vuzopedia.ru/professii/2005",
+        "junior_salary": 70000,
+        "avg_salary": 130000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 2, 'social': 4, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 577,
+        "name": "Категорийный менеджер",
+        "industry": "Ритейл/Продажи/Маркетинг",
+        "university": "РЭУ им. Плеханова, НИУ ВШЭ",
+        "description": "Управляет определенной категорией товаров в торговой сети (например, 'молочные продукты' или 'бытовая химия'). Отвечает за ассортимент, ценообразование, закупки и прибыльность своей категории.",
+        "link": "https://postupi.online/professiya/kategorijnyj-menedzher/",
+        "junior_salary": 80000,
+        "avg_salary": 150000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 4, 'routine': 3, 'art': 1}
+    },
+    {
+        "id": 578,
+        "name": "Популяризатор науки (Science Communicator)",
+        "industry": "Наука/Медиа/Образование",
+        "university": "Университет ИТМО (Научная коммуникация), МГУ",
+        "description": "Рассказывает о сложных научных открытиях простым и увлекательным языком. Ведет блоги, пишет книги, выступает с лекциями, работает в научных музеях и СМИ, делая науку доступной для всех.",
+        "link": "https://postupi.online/professiya/nauchnyj-kommunikator/",
+        "junior_salary": 60000,
+        "avg_salary": 110000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 4, 'creativity': 5, 'social': 5, 'routine': 3, 'art': 3}
+    },
+    {
+        "id": 579,
+        "name": "Телохранитель (Личный охранник)",
+        "industry": "Безопасность",
+        "university": "Школы телохранителей, опыт службы в спецподразделениях",
+        "description": "Обеспечивает физическую безопасность клиента (бизнесмена, политика, звезды). Профессия, требующая отличной физической подготовки, навыков владения оружием и аналитического склада ума.",
+        "link": "https://postupi.online/professiya/telohranitel/",
+        "junior_salary": 90000,
+        "avg_salary": 200000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 4, 'creativity': 2, 'social': 4, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 580,
+        "name": "Дизайнер навигации (Wayfinding Designer)",
+        "industry": "Дизайн/Архитектура",
+        "university": "НИУ ВШЭ (Дизайн), МГХПА им. Строганова",
+        "description": "Разрабатывает системы указателей и знаков для сложных пространств: аэропортов, вокзалов, торговых центров, парков. Помогает людям легко ориентироваться и находить путь.",
+        "link": "https://ru.wikipedia.org/wiki/Навигационный_дизайн",
+        "junior_salary": 65000,
+        "avg_salary": 120000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 5, 'creativity': 5, 'social': 3, 'routine': 3, 'art': 4}
+    },
+    {
+        "id": 581,
+        "name": "Операционный директор (COO)",
+        "industry": "Менеджмент/Бизнес",
+        "university": "Ведущие ВУЗы + MBA (Сколково, ВШБ НИУ ВШЭ)",
+        "description": "Второй человек в компании после генерального директора (CEO), который отвечает за всю операционную деятельность: производство, логистику, персонал. Налаживает и контролирует все внутренние бизнес-процессы.",
+        "link": "https://ru.wikipedia.org/wiki/Операционный_директор",
+        "junior_salary": 200000,
+        "avg_salary": 500000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 5, 'creativity': 3, 'social': 5, 'routine': 3, 'art': 1}
+    },
+    {
+        "id": 582,
+        "name": "Специалист по аквакультуре (Рыбовод)",
+        "industry": "Сельское хозяйство/Промышленность",
+        "university": "Астраханский ГТУ, Калининградский ГТУ",
+        "description": "Занимается искусственным разведением рыбы (осетра, форели, лосося) и других водных организмов на специализированных фермах. Перспективное направление на фоне импортозамещения.",
+        "link": "https://postupi.online/professiya/rybovod/",
+        "junior_salary": 60000,
+        "avg_salary": 110000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 4, 'creativity': 3, 'social': 2, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 583,
+        "name": "Музейный педагог",
+        "industry": "Образование/Культура/Искусство",
+        "university": "РГГУ, МПГУ, институты культуры",
+        "description": "Разрабатывает и проводит интерактивные занятия, квесты и мастер-классы для детей и взрослых в музеях, делая посещение выставки увлекательным образовательным опытом.",
+        "link": "https://postupi.online/professiya/muzejnyj-pedagog/",
+        "junior_salary": 40000,
+        "avg_salary": 65000,
+        "growth_rate": "Низкие",
+        "score_vector": {'logic': 3, 'creativity': 5, 'social': 5, 'routine': 3, 'art': 4}
+    },
+    {
+        "id": 584,
+        "name": "Геофизик",
+        "industry": "Добыча/Наука/Геология",
+        "university": "МГУ (Геологический), РГУ нефти и газа им. Губкина",
+        "description": "Изучает строение Земли с помощью физических методов (сейсморазведка, гравиразведка) для поиска месторождений нефти, газа и других полезных ископаемых. Работает в 'поле' и в аналитических центрах.",
+        "link": "https://postupi.online/professiya/geofizik/",
+        "junior_salary": 90000,
+        "avg_salary": 180000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 5, 'creativity': 3, 'social': 2, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 585,
+        "name": "Инженер технического надзора (стройконтроль)",
+        "industry": "Строительство",
+        "university": "МГСУ, СПбГАСУ",
+        "description": "Представляет интересы заказчика на стройке, контролируя качество работ, материалов и соблюдение проектных решений со стороны подрядчика. Обеспечивает, чтобы объект был построен без брака.",
+        "link": "https://postupi.online/professiya/inzhener-tehnicheskogo-nadzora/",
+        "junior_salary": 90000,
+        "avg_salary": 160000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 2, 'social': 5, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 586,
+        "name": "Семейный психолог",
+        "industry": "Психология/Консалтинг/Сервис",
+        "university": "МГУ (Психфак), НИУ ВШЭ (Психология)",
+        "description": "Помогает парам и семьям разрешать конфликты, преодолевать кризисы в отношениях и выстраивать гармоничную коммуникацию. Ведет частную практику или работает в психологических центрах.",
+        "link": "https://postupi.online/professiya/semejnyj-psiholog/",
+        "junior_salary": 50000,
+        "avg_salary": 100000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 4, 'creativity': 4, 'social': 5, 'routine': 3, 'art': 2}
+    },
+    {
+        "id": 587,
+        "name": "F&B-менеджер (Food and Beverage Manager)",
+        "industry": "HoReCa/Менеджмент",
+        "university": "Российский международный олимпийский университет, бизнес-школы",
+        "description": "Руководитель службы питания в крупном отеле или ресторанной сети. Отвечает за работу всех ресторанов, баров и рум-сервиса, контролирует закупки, бюджет и качество.",
+        "link": "https://ru.wikipedia.org/wiki/F&B-менеджер",
+        "junior_salary": 85000,
+        "avg_salary": 170000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 4, 'creativity': 4, 'social': 5, 'routine': 3, 'art': 2}
+    },
+    {
+        "id": 588,
+        "name": "Медиа-аналитик",
+        "industry": "Коммуникации/PR/Маркетинг",
+        "university": "НИУ ВШЭ (Социология), МГУ (Журфак)",
+        "description": "Анализирует информационное поле вокруг бренда, персоны или события. Оценивает тональность публикаций в СМИ и соцсетях, эффективность PR-кампаний и составляет аналитические отчеты. Работает в PR-агентствах и крупных компаниях.",
+        "link": "https://postupi.online/professiya/media-analitik/",
+        "junior_salary": 65000,
+        "avg_salary": 120000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 3, 'social': 3, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 589,
+        "name": "Аудитор энергоэффективности (Энергоаудитор)",
+        "industry": "Энергетика/Экология/Консалтинг",
+        "university": "МЭИ, технические ВУЗы",
+        "description": "Проводит обследование зданий и промышленных предприятий, чтобы найти источники потерь энергии и разработать план по их сокращению. Помогает компаниям экономить на коммунальных платежах и снижать вред для экологии.",
+        "link": "https://postupi.online/professiya/energoauditor/",
+        "junior_salary": 75000,
+        "avg_salary": 140000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 3, 'social': 4, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 590,
+        "name": "Менеджер девелоперских проектов",
+        "industry": "Недвижимость/Строительство/Менеджмент",
+        "university": "МГСУ, НИУ ВШЭ (Управление недвижимостью)",
+        "description": "Управляет всем циклом создания объекта недвижимости: от покупки земельного участка и разработки концепции до строительства и продажи. Координирует архитекторов, строителей и маркетологов. ",
+        "link": "https://postupi.online/professiya/menedzher-developerskih-proektov/",
+        "junior_salary": 120000,
+        "avg_salary": 250000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 5, 'routine': 3, 'art': 2}
+    },
+    {
+        "id": 591,
+        "name": "Спортивный агент",
+        "industry": "Спорт/Менеджмент/Юриспруденция",
+        "university": "РГУФКСМиТ, юридические и экономические ВУЗы",
+        "description": "Представляет интересы профессионального спортсмена. Ведет переговоры о контрактах с клубами и спонсорами, решает юридические и финансовые вопросы, строит карьеру своего клиента.",
+        "link": "https://postupi.online/professiya/sportivnyj-agent/",
+        "junior_salary": 70000,
+        "avg_salary": 180000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 4, 'creativity': 3, 'social': 5, 'routine': 3, 'art': 1}
+    },
+    {
+        "id": 592,
+        "name": "Леттерер-дизайнер",
+        "industry": "Дизайн/Креатив/Искусство",
+        "university": "Британская высшая школа дизайна, онлайн-школы",
+        "description": "Художник, который рисует уникальные буквы и надписи. Создает логотипы, оформляет упаковку, постеры и обложки, делая текст главным элементом дизайна. Нишевое, но востребованное направление в брендинге.",
+        "link": "https://ru.wikipedia.org/wiki/Леттеринг",
+        "junior_salary": 50000,
+        "avg_salary": 95000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 3, 'creativity': 5, 'social': 3, 'routine': 4, 'art': 5}
+    },
+    {
+        "id": 593,
+        "name": "Игровой аналитик (Game Analyst)",
+        "industry": "Геймдев/Аналитика/ИТ",
+        "university": "НИУ ВШЭ, МФТИ",
+        "description": "Анализирует поведение игроков внутри игры: какие уровни они проходят, где испытывают сложности, на что тратят деньги. Помогает геймдизайнерам улучшать баланс и монетизацию игры.",
+        "link": "https://postupi.online/professiya/igrovoj-analitik/",
+        "junior_salary": 80000,
+        "avg_salary": 160000,
+        "growth_rate": "Очень высокие",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 2, 'routine': 4, 'art': 2}
+    },
+    {
+        "id": 594,
+        "name": "Специалист по транспортной безопасности",
+        "industry": "Безопасность/Транспорт/Госслужба",
+        "university": "РУТ (МИИТ), СПбГУ ГА",
+        "description": "Обеспечивает защиту объектов транспортной инфраструктуры (аэропортов, вокзалов, мостов) от актов незаконного вмешательства. Работает в соответствии с федеральным законом №16-ФЗ.",
+        "link": "https://postupi.online/professiya/specialist-po-transportnoj-bezopasnosti/",
+        "junior_salary": 65000,
+        "avg_salary": 110000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 5, 'creativity': 2, 'social': 4, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 595,
+        "name": "Методист образовательных программ",
+        "industry": "Образование/EdTech",
+        "university": "МПГУ, НИУ ВШЭ (Институт образования)",
+        "description": "Проектирует содержание и структуру образовательных программ, от школьных уроков до онлайн-курсов. Определяет цели обучения, подбирает форматы и оценивает результаты. Ключевой специалист по качеству образования.",
+        "link": "https://postupi.online/professiya/metodist/",
+        "junior_salary": 55000,
+        "avg_salary": 95000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 4, 'routine': 4, 'art': 2}
+    },
+    {
+        "id": 596,
+        "name": "Специалист по финансовому моделированию",
+        "industry": "Финансы/Аналитика/Консалтинг",
+        "university": "Финансовый университет, РЭШ, НИУ ВШЭ",
+        "description": "Строит в Excel или специализированном ПО математические модели бизнеса для оценки инвестиционных проектов, планирования бюджета или прогнозирования финансовых показателей. Работает в инвестбанках, фондах и крупных корпорациях.",
+        "link": "https://postupi.online/professiya/finansovyj-modelist/",
+        "junior_salary": 95000,
+        "avg_salary": 180000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 3, 'social': 3, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 597,
+        "name": "Инженер-технолог (машиностроение)",
+        "industry": "Промышленность/Инженерия",
+        "university": "МГТУ им. Баумана, МГТУ 'СТАНКИН'",
+        "description": "Разрабатывает технологический процесс изготовления деталей и сборки узлов на машиностроительном заводе. Определяет последовательность операций, подбирает оборудование и инструменты. Ключевой инженер на любом производстве.",
+        "link": "https://postupi.online/professiya/inzhener-tehnolog/",
+        "junior_salary": 70000,
+        "avg_salary": 125000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 5, 'creativity': 3, 'social': 2, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 598,
+        "name": "Промышленный клинер",
+        "industry": "Сервис/Промышленность",
+        "university": "Профильные учебные центры",
+        "description": "Выполняет сложную уборку на промышленных объектах: чистку оборудования, удаление технических загрязнений, обеспыливание цехов. Работа, требующая специальных знаний и оборудования.",
+        "link": "https://ru.wikipedia.org/wiki/Клининговая_компания",
+        "junior_salary": 55000,
+        "avg_salary": 90000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 3, 'creativity': 2, 'social': 2, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 599,
+        "name": "Политический консультант",
+        "industry": "Консалтинг/Политика",
+        "university": "МГУ (Политология), НИУ ВШЭ, МГИМО",
+        "description": "Консультирует политиков и государственные органы по широкому кругу вопросов: от разработки стратегии до анализа общественного мнения. В отличие от политтехнолога, больше сфокусирован на аналитике и консалтинге, а не на ведении кампаний.",
+        "link": "https://postupi.online/professiya/politicheskij-konsultant/",
+        "junior_salary": 80000,
+        "avg_salary": 170000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 5, 'routine': 3, 'art': 2}
+    },
+    {
+        "id": 600,
+        "name": "Технический дизайнер одежды",
+        "industry": "Дизайн/Промышленность/Мода",
+        "university": "РГУ им. Косыгина, профильные колледжи",
+        "description": "Превращает эскизы дизайнера одежды в техническую документацию для фабрики. Разрабатывает лекала, подбирает материалы и контролирует пошив образцов. Связующее звено между творчеством и производством.",
+        "link": "https://postupi.online/professiya/tehnicheskij-dizajner-odezhdy/",
+        "junior_salary": 65000,
+        "avg_salary": 115000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 5, 'creativity': 3, 'social': 3, 'routine': 5, 'art': 4}
+    },
+    {
+        "id": 601,
+        "name": "Инженер по ветроэнергетике",
+        "industry": "Энергетика/Экология/Инженерия",
+        "university": "МЭИ, СПбПУ Петра Великого",
+        "description": "Проектирует, строит и обслуживает ветроэнергетические установки (ВЭУ) и ветропарки. Рассчитывает эффективность, подбирает оборудование и контролирует работу станций. Востребованная 'зеленая' профессия в растущем секторе российской энергетики.",
+        "link": "https://postupi.online/professiya/inzhener-vetroenergetiki/",
+        "junior_salary": 85000,
+        "avg_salary": 160000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 3, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 602,
+        "name": "Логист в e-commerce",
+        "industry": "Логистика/Ритейл/Торговля",
+        "university": "НИУ ВШЭ (Логистика), МАДИ",
+        "description": "Организует всю цепочку движения товаров для интернет-магазинов и маркетплейсов: от управления складом (фулфилмент) до организации 'последней мили' — доставки курьером до клиента. Ключевой специалист в бурно растущем секторе онлайн-торговли.",
+        "link": "https://postupi.online/professiya/logist-v-sfere-e-commerce/",
+        "junior_salary": 70000,
+        "avg_salary": 130000,
+        "growth_rate": "Очень высокие",
+        "score_vector": {'logic': 5, 'creativity': 3, 'social': 4, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 603,
+        "name": "Литературный агент",
+        "industry": "Медиа/Искусство/Консалтинг",
+        "university": "Литературный институт им. Горького, НИУ ВШЭ (Медиакоммуникации)",
+        "description": "Представляет интересы писателя: ищет издательство для рукописи, ведет переговоры о контракте, помогает с продвижением книги, занимается продажей прав на экранизацию. Профессия-мост между автором и книжным бизнесом.",
+        "link": "https://ru.wikipedia.org/wiki/Литературный_агент",
+        "junior_salary": 55000,
+        "avg_salary": 120000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 4, 'creativity': 5, 'social': 5, 'routine': 2, 'art': 3}
+    },
+    {
+        "id": 604,
+        "name": "Реставратор антикварной мебели",
+        "industry": "Искусство/Ремесло/Сервис",
+        "university": "МГХПА им. Строганова, колледжи ДПИ",
+        "description": "Восстанавливает старинную мебель, сохраняя ее историческую ценность и внешний вид. Работает с деревом, лаками, тканями. Редкая и кропотливая работа для частных коллекционеров, музеев и антикварных салонов.",
+        "link": "https://postupi.online/professiya/restavrator-mebeli/",
+        "junior_salary": 60000,
+        "avg_salary": 110000,
+        "growth_rate": "Низкие",
+        "score_vector": {'logic': 4, 'creativity': 5, 'social': 3, 'routine': 5, 'art': 5}
+    },
+    {
+        "id": 605,
+        "name": "Спортивный скаут",
+        "industry": "Спорт/Менеджмент",
+        "university": "РГУФКСМиТ, онлайн-курсы",
+        "description": "Занимается поиском талантливых молодых спортсменов для профессиональных клубов. Посещает матчи, анализирует статистику и потенциал игроков. 'Охотник за талантами' в мире большого спорта.",
+        "link": "https://postupi.online/professiya/skaut/",
+        "junior_salary": 65000,
+        "avg_salary": 140000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 4, 'creativity': 4, 'social': 5, 'routine': 3, 'art': 1}
+    },
+    {
+        "id": 606,
+        "name": "Менеджер по внутреннему аудиту",
+        "industry": "Финансы/Менеджмент",
+        "university": "Финансовый университет, НИУ ВШЭ",
+        "description": "Проверяет бизнес-процессы внутри компании на эффективность, соответствие законодательству и внутренним регламентам. Помогает руководству находить 'узкие места' и минимизировать риски. Работает в крупных корпорациях.",
+        "link": "https://postupi.online/professiya/vnutrennij-auditor/",
+        "junior_salary": 90000,
+        "avg_salary": 180000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 3, 'social': 4, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 607,
+        "name": "Инженер-гидротехник",
+        "industry": "Строительство/Энергетика/Инженерия",
+        "university": "МГСУ, СПбГПУ Петра Великого",
+        "description": "Проектирует, строит и эксплуатирует гидротехнические сооружения: плотины ГЭС, порты, каналы, системы мелиорации. Масштабная и ответственная инженерная профессия.",
+        "link": "https://postupi.online/professiya/inzhener-gidrotehnik/",
+        "junior_salary": 85000,
+        "avg_salary": 150000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 2, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 608,
+        "name": "Организационный психолог",
+        "industry": "Психология/HR/Консалтинг",
+        "university": "МГУ (Психфак), НИУ ВШЭ (Психология)",
+        "description": "Изучает и улучшает психологический климат в компании. Помогает решать конфликты, повышать мотивацию сотрудников, проводить оценку персонала и адаптировать новичков. Работает в HR-отделах крупных компаний.",
+        "link": "https://postupi.online/professiya/organizacionnyj-psiholog/",
+        "junior_salary": 70000,
+        "avg_salary": 140000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 5, 'routine': 3, 'art': 1}
+    },
+    {
+        "id": 609,
+        "name": "Специалист по беспилотной авиации",
+        "industry": "Транспорт/Технологии/Сельское хозяйство",
+        "university": "МАИ, Университет Иннополис",
+        "description": "Проектирует, обслуживает и управляет беспилотными авиационными системами (БАС). Применяет дроны для аэрофотосъемки, мониторинга ЛЭП, доставки грузов и обработки полей.",
+        "link": "https://postupi.online/professiya/inzhener-po-bespilotnym-aviacionnym-sistemam/",
+        "junior_salary": 80000,
+        "avg_salary": 150000,
+        "growth_rate": "Очень высокие",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 2, 'routine': 4, 'art': 2}
+    },
+    {
+        "id": 610,
+        "name": "Гример",
+        "industry": "Искусство/Кино/Театр/Сервис",
+        "university": "Театральные колледжи, школы визажа",
+        "description": "Создает образ персонажа с помощью грима, париков и спецэффектов. Работает в кино, театре, на телевидении. Может создавать как простой макияж, так и сложный пластический грим.",
+        "link": "https://postupi.online/professiya/grimer-pastizher/",
+        "junior_salary": 50000,
+        "avg_salary": 95000,
+        "growth_rate": "Низкие",
+        "score_vector": {'logic': 3, 'creativity': 5, 'social': 4, 'routine': 4, 'art': 5}
+    },
+    {
+        "id": 611,
+        "name": "Инженер железнодорожного транспорта",
+        "industry": "Транспорт/Инженерия",
+        "university": "РУТ (МИИТ), ПГУПС",
+        "description": "Проектирует, строит и обслуживает объекты железнодорожной инфраструктуры: пути, мосты, станции, системы сигнализации и связи. Ключевой специалист для РЖД.",
+        "link": "https://postupi.online/professiya/inzhener-putej-soobshcheniya/",
+        "junior_salary": 75000,
+        "avg_salary": 140000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 5, 'creativity': 3, 'social': 2, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 612,
+        "name": "Специалист по тендерному сопровождению",
+        "industry": "Продажи/Юриспруденция/Консалтинг",
+        "university": "Профильные курсы (Академия Госзакупок)",
+        "description": "Оказывает услуги компаниям по участию в государственных и коммерческих закупках (тендерах) 'под ключ': от поиска торгов и подготовки документации до участия в аукционе.",
+        "link": "https://postupi.online/professiya/specialist-po-tenderam/",
+        "junior_salary": 60000,
+        "avg_salary": 110000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 2, 'social': 4, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 613,
+        "name": "Ландшафтный архитектор",
+        "industry": "Архитектура/Дизайн/Экология",
+        "university": "МАРХИ, РУДН, РГАУ-МСХА им. Тимирязева",
+        "description": "Проектирует крупные общественные пространства: парки, набережные, городские площади. В отличие от ландшафтного дизайнера, работает с большими территориями и решает комплексные градостроительные задачи.",
+        "link": "https://postupi.online/professiya/landshaftnyj-arhitektor/",
+        "junior_salary": 70000,
+        "avg_salary": 130000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 4, 'creativity': 5, 'social': 4, 'routine': 3, 'art': 5}
+    },
+    {
+        "id": 614,
+        "name": "Спортивный менеджер",
+        "industry": "Спорт/Менеджмент",
+        "university": "РГУФКСМиТ, НИУ ВШЭ, МГУ (Высшая школа культурной политики и управления)",
+        "description": "Управляет спортивным клубом, федерацией или спорткомплексом. Отвечает за финансы, маркетинг, организацию соревнований и развитие организации.",
+        "link": "https://postupi.online/professiya/sportivnyj-menedzher/",
+        "junior_salary": 75000,
+        "avg_salary": 160000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 4, 'creativity': 4, 'social': 5, 'routine': 3, 'art': 1}
+    },
+    {
+        "id": 615,
+        "name": "Эколог-проектировщик",
+        "industry": "Экология/Строительство/Промышленность",
+        "university": "РУДН (Экологический факультет), МГСУ",
+        "description": "Разрабатывает природоохранную документацию для строящихся и действующих предприятий (проекты ПДВ, НДС, СЗЗ). Оценивает воздействие на окружающую среду и проходит государственную экспертизу.",
+        "link": "https://postupi.online/professiya/ekolog-proektirovshchik/",
+        "junior_salary": 65000,
+        "avg_salary": 115000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 3, 'social': 3, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 616,
+        "name": "Менеджер по компенсациям и льготам (C&B Manager)",
+        "industry": "HR/Менеджмент",
+        "university": "НИУ ВШЭ, Финансовый университет",
+        "description": "Разрабатывает и управляет системой оплаты труда, премирования и льгот в компании. Анализирует рынок зарплат, формирует грейды, отвечает за ДМС и другие бенефиты для сотрудников.",
+        "link": "https://postupi.online/professiya/menedzher-po-kompensaciyam-i-lgotam/",
+        "junior_salary": 90000,
+        "avg_salary": 180000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 4, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 617,
+        "name": "Технолог общественного питания",
+        "industry": "HoReCa/Промышленность/Ритейл",
+        "university": "МГУПП, РЭУ им. Плеханова",
+        "description": "Разрабатывает рецептуры и технологические карты для блюд в ресторанах, столовых и на пищевых производствах. Контролирует качество сырья и соблюдение санитарных норм (ХАССП).",
+        "link": "https://postupi.online/professiya/tehnolog-obshchestvennogo-pitaniya/",
+        "junior_salary": 55000,
+        "avg_salary": 90000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 4, 'creativity': 4, 'social': 3, 'routine': 5, 'art': 3}
+    },
+    {
+        "id": 618,
+        "name": "Оператор товарный (нефтепродукты)",
+        "industry": "Энергетика/Транспорт/Промышленность",
+        "university": "Профильные колледжи (нефтегазовые, транспортные)",
+        "description": "Осуществляет прием, хранение и отгрузку нефти и нефтепродуктов на нефтебазах, терминалах и НПЗ. Ответственная рабочая профессия в нефтегазовом секторе.",
+        "link": "https://postupi.online/professiya/operator-tovarnyj/",
+        "junior_salary": 70000,
+        "avg_salary": 110000,
+        "growth_rate": "Низкие",
+        "score_vector": {'logic': 4, 'creativity': 1, 'social': 2, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 619,
+        "name": "Специалист по экономической безопасности",
+        "industry": "Безопасность/Финансы/Юриспруденция",
+        "university": "Экономические ВУЗы (специальность 'Экономическая безопасность'), Университеты МВД",
+        "description": "Предотвращает и расследует экономические угрозы для компании: мошенничество, хищения, коммерческий шпионаж, проверяет контрагентов. Работает в службе безопасности крупных компаний.",
+        "link": "https://postupi.online/professiya/specialist-po-ekonomicheskoj-bezopasnosti/",
+        "junior_salary": 80000,
+        "avg_salary": 150000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 4, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 620,
+        "name": "Проектировщик автомобильных дорог",
+        "industry": "Строительство/Транспорт/Инженерия",
+        "university": "МАДИ, СибАДИ",
+        "description": "Разрабатывает проекты строительства и реконструкции автомобильных дорог, развязок и мостов. Выполняет расчеты, чертежи и готовит документацию для прохождения экспертизы.",
+        "link": "https://postupi.online/professiya/inzhener-proektirovshchik-avtomobilnyh-dorog/",
+        "junior_salary": 75000,
+        "avg_salary": 140000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 5, 'creativity': 3, 'social': 2, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 621,
+        "name": "Драматург",
+        "industry": "Искусство/Театр/Кино",
+        "university": "Литературный институт им. Горького, ВГИК, РГИСИ",
+        "description": "Пишет пьесы для театра, а также может работать над сценариями для кино и сериалов. Литературная профессия, требующая таланта создавать живые диалоги и захватывающие сюжеты.",
+        "link": "https://postupi.online/professiya/dramaturg/",
+        "junior_salary": 50000,
+        "avg_salary": 100000,
+        "growth_rate": "Низкие",
+        "score_vector": {'logic': 3, 'creativity': 5, 'social': 3, 'routine': 2, 'art': 5}
+    },
+    {
+        "id": 622,
+        "name": "Инженер по лесному хозяйству (Лесопатолог)",
+        "industry": "Сельское хозяйство/Экология",
+        "university": "МГТУ им. Баумана (Мытищинский филиал), СПбГЛТУ",
+        "description": "Занимается защитой лесов от вредителей и болезней. Обследует лесные массивы, назначает санитарные рубки и разрабатывает меры по сохранению здоровья леса.",
+        "link": "https://postupi.online/professiya/inzhener-lesopatolog/",
+        "junior_salary": 55000,
+        "avg_salary": 90000,
+        "growth_rate": "Низкие",
+        "score_vector": {'logic': 5, 'creativity': 2, 'social': 2, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 623,
+        "name": "Менеджер по работе с партнерами (Partner Manager)",
+        "industry": "Продажи/Бизнес/ИТ",
+        "university": "Экономические и управленческие ВУЗы",
+        "description": "Развивает партнерскую сеть компании. Ищет новых партнеров (дилеров, агентов, интеграторов), обучает их и помогает им продавать продукты компании, достигая общих бизнес-целей.",
+        "link": "https://postupi.online/professiya/menedzher-po-rabote-s-partnerami/",
+        "junior_salary": 75000,
+        "avg_salary": 150000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 4, 'creativity': 4, 'social': 5, 'routine': 3, 'art': 1}
+    },
+    {
+        "id": 624,
+        "name": "Тренер-аналитик (в спорте)",
+        "industry": "Спорт/Аналитика",
+        "university": "РГУФКСМиТ, технические ВУЗы",
+        "description": "Член тренерского штаба, который занимается тактическим анализом своей команды и соперников. 'Разбирает' матчи, готовит видео-нарезки и статистические отчеты для главного тренера и игроков.",
+        "link": "https://postupi.online/professiya/trener-analitik/",
+        "junior_salary": 70000,
+        "avg_salary": 130000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 4, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 625,
+        "name": "Инженер по водоснабжению и водоотведению",
+        "industry": "Строительство/ЖКХ/Инженерия",
+        "university": "МГСУ, НИУ 'МЭИ'",
+        "description": "Проектирует и обслуживает системы подачи воды и канализации для зданий и целых городов. Ключевой специалист в структурах 'Водоканала' и в строительных компаниях.",
+        "link": "https://postupi.online/professiya/inzhener-po-vodosnabzheniyu-i-vodootvedeniyu/",
+        "junior_salary": 70000,
+        "avg_salary": 120000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 5, 'creativity': 2, 'social': 3, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 626,
+        "name": "Геммолог",
+        "industry": "Ритейл/Наука/Искусство",
+        "university": "МГУ (Геологический), РГГРУ, Геммологический центр МГУ",
+        "description": "Эксперт по драгоценным камням. Определяет подлинность, качество и происхождение камней. Работает в ювелирных компаниях, ломбардах и экспертных лабораториях.",
+        "link": "https://postupi.online/professiya/gemmolog/",
+        "junior_salary": 70000,
+        "avg_salary": 140000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 5, 'creativity': 3, 'social': 4, 'routine': 5, 'art': 4}
+    },
+    {
+        "id": 627,
+        "name": "Специалист по управлению автопарком",
+        "industry": "Транспорт/Логистика",
+        "university": "МАДИ, транспортные колледжи",
+        "description": "Отвечает за эффективную эксплуатацию корпоративного автопарка. Организует техобслуживание и ремонт, контролирует расход топлива, управляет водителями. Работает в логистических и таксомоторных компаниях.",
+        "link": "https://postupi.online/professiya/specialist-po-upravleniyu-avtoparkom/",
+        "junior_salary": 65000,
+        "avg_salary": 110000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 5, 'creativity': 2, 'social': 4, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 628,
+        "name": "PR-менеджер в IT",
+        "industry": "Коммуникации/PR/ИТ",
+        "university": "НИУ ВШЭ, МГИМО, технические ВУЗы",
+        "description": "Продвигает IT-компании и их продукты в СМИ и профессиональном сообществе. Пишет статьи на Хабр, организует участие в конференциях, работает с IT-журналистами и блогерами.",
+        "link": "https://postupi.online/professiya/pr-menedzher-v-it/",
+        "junior_salary": 80000,
+        "avg_salary": 160000,
+        "growth_rate": "Очень высокие",
+        "score_vector": {'logic': 4, 'creativity': 5, 'social': 5, 'routine': 2, 'art': 2}
+    },
+    {
+        "id": 629,
+        "name": "Инженер по охране окружающей среды (Эколог на предприятии)",
+        "industry": "Экология/Промышленность",
+        "university": "РХТУ им. Менделеева, РУДН",
+        "description": "Отвечает за соблюдение природоохранного законодательства на заводе. Контролирует выбросы, сбросы и отходы, готовит отчетность для надзорных органов. Обязательная должность на любом промышленном предприятии.",
+        "link": "https://postupi.online/professiya/inzhener-po-ohrane-okruzhayushchej-sredy/",
+        "junior_salary": 60000,
+        "avg_salary": 105000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 2, 'social': 4, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 630,
+        "name": "Концепт-художник",
+        "industry": "Геймдев/Кино/Анимация",
+        "university": "Британская высшая школа дизайна, Scream School",
+        "description": "Создает визуальные образы персонажей, локаций и предметов на начальном этапе разработки игры или фильма. Задает стилистику и атмосферу будущего проекта. Ключевая роль в визуальном дизайне.",
+        "link": "https://postupi.online/professiya/koncept-hudozhnik/",
+        "junior_salary": 70000,
+        "avg_salary": 140000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 3, 'creativity': 5, 'social': 2, 'routine': 2, 'art': 5}
+    },
+    {
+        "id": 631,
+        "name": "Специалист по ипотечному кредитованию",
+        "industry": "Финансы/Банки/Недвижимость",
+        "university": "Финансовые ВУЗы и колледжи",
+        "description": "Консультирует клиентов по ипотечным программам, помогает собрать документы и сопровождает сделку по покупке недвижимости с помощью кредита. Работает в банках и агентствах недвижимости.",
+        "link": "https://postupi.online/professiya/specialist-po-ipotechnomu-kreditovaniyu/",
+        "junior_salary": 60000,
+        "avg_salary": 120000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 5, 'creativity': 2, 'social': 5, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 632,
+        "name": "Директор по закупкам (Chief Procurement Officer)",
+        "industry": "Менеджмент/Логистика/Ритейл",
+        "university": "НИУ ВШЭ, экономические ВУЗы + MBA",
+        "description": "Топ-менеджер, отвечающий за всю закупочную деятельность в крупной компании. Разрабатывает стратегию, управляет бюджетом и командой закупщиков, оптимизирует расходы.",
+        "link": "https://ru.wikipedia.org/wiki/Директор_по_закупкам",
+        "junior_salary": 180000,
+        "avg_salary": 400000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 5, 'creativity': 3, 'social': 5, 'routine': 3, 'art': 1}
+    },
+    {
+        "id": 633,
+        "name": "Конфликтолог-медиатор",
+        "industry": "Психология/Юриспруденция/Консалтинг",
+        "university": "СПбГУ (Факультет социологии), РГСУ, центры медиации",
+        "description": "Нейтральный посредник, который помогает сторонам конфликта (в семье, бизнесе, организации) провести переговоры и найти взаимовыгодное решение без обращения в суд. Растущее направление в России.",
+        "link": "https://postupi.online/professiya/mediator/",
+        "junior_salary": 60000,
+        "avg_salary": 110000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 4, 'creativity': 4, 'social': 5, 'routine': 3, 'art': 1}
+    },
+    {
+        "id": 634,
+        "name": "Инженер-механик (сельскохозяйственная техника)",
+        "industry": "Сельское хозяйство/Инженерия",
+        "university": "РГАУ-МСХА им. Тимирязева, КубГАУ",
+        "description": "Организует эксплуатацию, техническое обслуживание и ремонт тракторов, комбайнов и другой сельхозтехники. Ключевой технический специалист в любом агрохозяйстве.",
+        "link": "https://postupi.online/professiya/agroinzhener/",
+        "junior_salary": 65000,
+        "avg_salary": 110000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 5, 'creativity': 3, 'social': 3, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 635,
+        "name": "Специалист по промышленному туризму",
+        "industry": "Туризм/Промышленность/PR",
+        "university": "РГУТиС, УрФУ",
+        "description": "Разрабатывает и проводит экскурсии на действующие заводы и фабрики. Помогает предприятиям повышать свою открытость и привлекать новые кадры, а туристам — увидеть производственные процессы изнутри.",
+        "link": "https://postupi.online/professiya/specialist-po-promyshlennomu-turizmu/",
+        "junior_salary": 55000,
+        "avg_salary": 95000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 3, 'creativity': 5, 'social': 5, 'routine': 3, 'art': 2}
+    },
+    {
+        "id": 636,
+        "name": "Инженер-релейщик (специалист РЗиА)",
+        "industry": "Энергетика/Промышленность",
+        "university": "НИУ 'МЭИ', Новосибирский ГТУ, Ивановский ГЭУ",
+        "description": "Инженер, отвечающий за релейную защиту и автоматику (РЗиА) на электростанциях и подстанциях. Настраивает 'мозг' энергосистемы, который отключает поврежденные участки и предотвращает крупные аварии. Элитная и крайне ответственная профессия в электроэнергетике.",
+        "link": "https://postupi.online/professiya/inzhener-relejnoj-zashchity-i-avtomatiki/",
+        "junior_salary": 90000,
+        "avg_salary": 170000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 2, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 637,
+        "name": "Технолог сварочного производства",
+        "industry": "Промышленность/Строительство/Инженерия",
+        "university": "МГТУ им. Баумана, СПбПУ Петра Великого",
+        "description": "Разрабатывает и контролирует технологию сварки на производстве. Выбирает оборудование, материалы и режимы сварки, аттестует сварщиков. От его работы зависит прочность и надежность ответственных конструкций — от мостов до трубопроводов.",
+        "link": "https://postupi.online/professiya/tehnolog-svarochnogo-proizvodstva/",
+        "junior_salary": 80000,
+        "avg_salary": 140000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 5, 'creativity': 3, 'social': 3, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 638,
+        "name": "Специалист по неразрушающему контролю (Дефектоскопист)",
+        "industry": "Промышленность/Энергетика/Транспорт",
+        "university": "НИТУ 'МИСиС', Томский политехнический университет, учебные центры",
+        "description": "Проверяет качество сварных швов, деталей и конструкций, не разрушая их (с помощью ультразвука, рентгена и др.). 'Врач' для металла, который находит скрытые дефекты в самолетах, трубах и реакторах, обеспечивая их безопасность.",
+        "link": "https://postupi.online/professiya/defektoskopist/",
+        "junior_salary": 85000,
+        "avg_salary": 150000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 2, 'social': 2, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 639,
+        "name": "Инженер-кораблестроитель",
+        "industry": "Промышленность/Инженерия/Транспорт",
+        "university": "СПбГМТУ, Дальневосточный федеральный университет",
+        "description": "Проектирует и строит корабли и суда — от гражданских танкеров до военных кораблей и подводных лодок. Работает в конструкторских бюро и на судостроительных верфях.",
+        "link": "https://postupi.online/professiya/inzhener-korablestroitel/",
+        "junior_salary": 90000,
+        "avg_salary": 170000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 2, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 640,
+        "name": "Диспетчер энергосистемы",
+        "industry": "Энергетика",
+        "university": "НИУ 'МЭИ', профильные технические ВУЗы",
+        "description": "Управляет потоками электроэнергии в режиме реального времени в масштабах региона или всей страны. Обеспечивает баланс между производством и потреблением, предотвращая блэкауты. Работа в 'Системном операторе Единой энергетической системы'.",
+        "link": "https://postupi.online/professiya/dispetcher-energosistemy/",
+        "junior_salary": 100000,
+        "avg_salary": 200000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 5, 'creativity': 2, 'social': 3, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 641,
+        "name": "Инженер-организатор дорожного движения",
+        "industry": "Транспорт/Строительство/Госуправление",
+        "university": "МАДИ, СПбГАСУ",
+        "description": "Проектирует схемы движения транспорта в городах: настраивает светофоры, рисует разметку, устанавливает знаки, чтобы увеличить пропускную способность улиц и уменьшить пробки.",
+        "link": "https://postupi.online/professiya/inzhener-po-organizacii-dorozhnogo-dvizheniya/",
+        "junior_salary": 75000,
+        "avg_salary": 140000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 4, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 642,
+        "name": "Специалист по органическому земледелию",
+        "industry": "Сельское хозяйство/Экология",
+        "university": "РГАУ-МСХА им. Тимирязева, аграрные ВУЗы",
+        "description": "Внедряет и сертифицирует технологии ведения сельского хозяйства без использования синтетических пестицидов и удобрений. Помогает фермерам производить 'органические' продукты.",
+        "link": "https://ru.wikipedia.org/wiki/Органическое_сельское_хозяйство",
+        "junior_salary": 65000,
+        "avg_salary": 110000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 4, 'creativity': 4, 'social': 3, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 643,
+        "name": "Ихтиолог",
+        "industry": "Наука/Экология/Сельское хозяйство",
+        "university": "МГУ (Биофак), Астраханский ГТУ, Дальрыбвтуз",
+        "description": "Ученый, изучающий рыб. Оценивает запасы промысловых рыб в морях и реках, работает в НИИ рыбного хозяйства, а также может заниматься болезнями рыб в аквакультуре.",
+        "link": "https://postupi.online/professiya/ihtiolog/",
+        "junior_salary": 55000,
+        "avg_salary": 95000,
+        "growth_rate": "Низкие",
+        "score_vector": {'logic': 5, 'creativity': 2, 'social': 2, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 644,
+        "name": "Арборист (специалист по уходу за деревьями)",
+        "industry": "Экология/Сервис/ЖКХ",
+        "university": "Учебные центры, РГАУ-МСХА",
+        "description": "'Хирург' для деревьев. Занимается лечением, обрезкой и удалением деревьев, в том числе в труднодоступных местах с использованием альпинистского снаряжения. Востребован в городском озеленении и частном секторе.",
+        "link": "https://postupi.online/professiya/arborist/",
+        "junior_salary": 60000,
+        "avg_salary": 120000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 4, 'creativity': 3, 'social': 3, 'routine': 4, 'art': 2}
+    },
+    {
+        "id": 645,
+        "name": "Колорист (кино и ТВ)",
+        "industry": "Креатив/Кино/Медиа",
+        "university": "Школы кино и телевидения, онлайн-курсы",
+        "description": "Специалист по цветокоррекции видео. 'Раскрашивает' фильм или ролик на финальном этапе постпродакшна, создавая нужное настроение и добиваясь единого визуального стиля.",
+        "link": "https://postupi.online/professiya/kolorist/",
+        "junior_salary": 70000,
+        "avg_salary": 130000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 4, 'creativity': 5, 'social': 2, 'routine': 4, 'art': 5}
+    },
+    {
+        "id": 646,
+        "name": "Дизайнер выставочных стендов",
+        "industry": "Дизайн/Маркетинг",
+        "university": "МГХПА им. Строганова, Британская высшая школа дизайна",
+        "description": "Проектирует и оформляет выставочные стенды для компаний, участвующих в отраслевых выставках. Создает креативные и функциональные пространства для привлечения клиентов.",
+        "link": "https://postupi.online/professiya/dizajner-vystavochnyh-stendov/",
+        "junior_salary": 65000,
+        "avg_salary": 120000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 4, 'creativity': 5, 'social': 4, 'routine': 3, 'art': 5}
+    },
+    {
+        "id": 647,
+        "name": "Спортивный диетолог",
+        "industry": "Спорт/Медицина/Wellness",
+        "university": "РГУФКСМиТ, мед. ВУЗы + курсы",
+        "description": "Разрабатывает персональные планы питания для профессиональных спортсменов и любителей для достижения конкретных целей: набора мышечной массы, повышения выносливости, снижения веса.",
+        "link": "https://postupi.online/professiya/sportivnyj-dietolog/",
+        "junior_salary": 70000,
+        "avg_salary": 140000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 5, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 648,
+        "name": "Зоопсихолог",
+        "industry": "Психология/Сервис",
+        "university": "МГУ (Психфак), аграрные ВУЗы (зоотехния) + курсы",
+        "description": "Специалист по поведению животных. Помогает владельцам кошек и собак скорректировать нежелательное поведение питомцев (агрессия, страхи, нечистоплотность), находя его причины.",
+        "link": "https://postupi.online/professiya/zoopsiholog/",
+        "junior_salary": 50000,
+        "avg_salary": 95000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 4, 'creativity': 4, 'social': 5, 'routine': 3, 'art': 2}
+    },
+    {
+        "id": 649,
+        "name": "Иппотерапевт",
+        "industry": "Медицина/Социальная сфера/Спорт",
+        "university": "РГУФКСМиТ, мед. и пед. ВУЗы + курсы",
+        "description": "Специалист по лечебной верховой езде. Проводит реабилитационные занятия с помощью лошадей для людей с нарушениями опорно-двигательного аппарата и особенностями ментального развития.",
+        "link": "https://postupi.online/professiya/ippoterapevt/",
+        "junior_salary": 45000,
+        "avg_salary": 80000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 4, 'creativity': 4, 'social': 5, 'routine': 4, 'art': 2}
+    },
+    {
+        "id": 650,
+        "name": "Отельер",
+        "industry": "HoReCa/Менеджмент",
+        "university": "Российский международный олимпийский университет, РЭУ им. Плеханова",
+        "description": "Управляющий или владелец отеля. Отвечает за стратегию развития, финансовые результаты, качество сервиса и репутацию гостиницы. Вершина карьеры в гостиничном бизнесе.",
+        "link": "https://postupi.online/professiya/oteler/",
+        "junior_salary": 100000,
+        "avg_salary": 250000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 5, 'routine': 2, 'art': 2}
+    },
+    {
+        "id": 651,
+        "name": "Менеджер по управлению изменениями (Change Manager)",
+        "industry": "Менеджмент/Консалтинг/HR",
+        "university": "НИУ ВШЭ, РАНХиГС, бизнес-школы",
+        "description": "Помогает компании успешно проводить крупные внутренние трансформации (внедрение нового ПО, слияние, реорганизация). Работает с сопротивлением сотрудников и выстраивает коммуникации.",
+        "link": "https://ru.wikipedia.org/wiki/Управление_изменениями",
+        "junior_salary": 120000,
+        "avg_salary": 230000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 5, 'routine': 3, 'art': 1}
+    },
+    {
+        "id": 652,
+        "name": "Антимонопольный юрист",
+        "industry": "Юриспруденция/Консалтинг/Госслужба",
+        "university": "МГЮА, МГУ (Юрфак), НИУ ВШЭ",
+        "description": "Специализируется на законодательстве о защите конкуренции. Сопровождает сделки слияния и поглощения, представляет интересы компаний в Федеральной антимонопольной службе (ФАС).",
+        "link": "https://postupi.online/professiya/antimonopolnyj-yurist/",
+        "junior_salary": 90000,
+        "avg_salary": 190000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 3, 'social': 5, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 653,
+        "name": "Краснодеревщик",
+        "industry": "Ремесло/Производство/Дизайн",
+        "university": "Колледжи ДПИ, художественно-промышленные академии",
+        "description": "Мастер по изготовлению эксклюзивной мебели и предметов интерьера из ценных пород дерева. Сочетает навыки столяра, реставратора и художника. Редкая и престижная ремесленная профессия.",
+        "link": "https://postupi.online/professiya/krasnoderevshchik/",
+        "junior_salary": 70000,
+        "avg_salary": 140000,
+        "growth_rate": "Низкие",
+        "score_vector": {'logic': 4, 'creativity': 5, 'social': 3, 'routine': 5, 'art': 5}
+    },
+    {
+        "id": 654,
+        "name": "Наладчик промышленного оборудования",
+        "industry": "Промышленность/Рабочие",
+        "university": "Технические и политехнические колледжи",
+        "description": "Настраивает, запускает и регулирует автоматические линии и станки на производстве. Высококвалифицированный рабочий, от которого зависит бесперебойная работа всего завода.",
+        "link": "https://postupi.online/professiya/naladchik-promyshlennogo-oborudovaniya/",
+        "junior_salary": 75000,
+        "avg_salary": 130000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 3, 'social': 2, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 655,
+        "name": "Специалист по водородной энергетике",
+        "industry": "Энергетика/Наука/Инженерия",
+        "university": "МЭИ, РХТУ им. Менделеева, Сколтех",
+        "description": "Разрабатывает и внедряет технологии производства, хранения и использования водорода в качестве экологически чистого топлива. Профессия будущего, работа на переднем крае науки и энергетики.",
+        "link": "https://postupi.online/professiya/specialist-po-vodorodnoj-energetike/",
+        "junior_salary": 95000,
+        "avg_salary": 190000,
+        "growth_rate": "Очень высокие",
+        "score_vector": {'logic': 5, 'creativity': 5, 'social': 2, 'routine': 3, 'art': 1}
+    },
+    {
+        "id": 656,
+        "name": "Сценограф",
+        "industry": "Искусство/Театр/Дизайн",
+        "university": "Школа-студия МХАТ, РГИСИ, ГИТИС",
+        "description": "Художник, который создает визуальное пространство спектакля: декорации, костюмы, свет. Главный соавтор режиссера, отвечающий за материальный мир на сцене.",
+        "link": "https://postupi.online/professiya/scenograf/",
+        "junior_salary": 60000,
+        "avg_salary": 120000,
+        "growth_rate": "Низкие",
+        "score_vector": {'logic': 4, 'creativity': 5, 'social': 4, 'routine': 3, 'art': 5}
+    },
+    {
+        "id": 657,
+        "name": "Персональный шоппер",
+        "industry": "Сервис/Мода/Ритейл",
+        "university": "Профильные школы стиля и имиджа",
+        "description": "Помогает клиентам формировать гардероб: разбирает существующую одежду, сопровождает на шоппинге, подбирает образы в соответствии со стилем жизни и бюджетом клиента.",
+        "link": "https://postupi.online/professiya/personalnyj-shopper/",
+        "junior_salary": 50000,
+        "avg_salary": 110000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 3, 'creativity': 5, 'social': 5, 'routine': 2, 'art': 5}
+    },
+    {
+        "id": 658,
+        "name": "Инженер-металлург",
+        "industry": "Промышленность",
+        "university": "НИТУ 'МИСиС', УрФУ, СПбПУ Петра Великого",
+        "description": "Управляет процессами получения металлов из руды и создания сплавов с заданными свойствами. Фундаментальная профессия для черной и цветной металлургии.",
+        "link": "https://postupi.online/professiya/metallurg/",
+        "junior_salary": 80000,
+        "avg_salary": 150000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 5, 'creativity': 3, 'social': 2, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 659,
+        "name": "Продуктовый дизайнер (физические продукты)",
+        "industry": "Дизайн/Промышленность",
+        "university": "МГХПА им. Строганова, Британская высшая школа дизайна",
+        "description": "Проектирует потребительские товары: от гаджетов и бытовой техники до мебели и посуды. Отвечает не только за внешний вид, но и за эргономику, функциональность и технологичность продукта.",
+        "link": "https://postupi.online/professiya/promyshlennyj-dizajner/",
+        "junior_salary": 75000,
+        "avg_salary": 140000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 4, 'creativity': 5, 'social': 3, 'routine': 3, 'art': 5}
+    },
+    {
+        "id": 660,
+        "name": "Инженер-конструктор (авиастроение)",
+        "industry": "Промышленность/Авиакосмос/Инженерия",
+        "university": "МАИ, Казанский национальный исследовательский технический университет (КАИ)",
+        "description": "Проектирует самолеты, вертолеты и их отдельные узлы (фюзеляж, крыло, шасси). Работает в конструкторских бюро, таких как 'Сухой' или 'Иркут'.",
+        "link": "https://postupi.online/professiya/aviacionnyj-inzhener/",
+        "junior_salary": 95000,
+        "avg_salary": 190000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 5, 'creativity': 5, 'social': 2, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 661,
+        "name": "Директор по логистике (Chief Logistics Officer)",
+        "industry": "Менеджмент/Логистика/Транспорт",
+        "university": "НИУ ВШЭ, МАДИ + MBA",
+        "description": "Топ-менеджер, отвечающий за всю логистику и управление цепями поставок в компании. Разрабатывает стратегию, управляет бюджетом, складами и транспортными потоками.",
+        "link": "https://postupi.online/professiya/direktor-po-logistike/",
+        "junior_salary": 200000,
+        "avg_salary": 450000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 5, 'routine': 2, 'art': 1}
+    },
+    {
+        "id": 662,
+        "name": "Инженер по утилизации отходов",
+        "industry": "Экология/Промышленность/ЖКХ",
+        "university": "РХТУ им. Менделеева, МГСУ",
+        "description": "Проектирует и эксплуатирует объекты по переработке и утилизации промышленных и бытовых отходов: полигоны, мусоросжигательные заводы, сортировочные комплексы.",
+        "link": "https://postupi.online/professiya/ekolog-utilizator/",
+        "junior_salary": 70000,
+        "avg_salary": 125000,
+        "growth_rate": "Очень высокие",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 2, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 663,
+        "name": "Бутафор",
+        "industry": "Искусство/Театр/Кино",
+        "university": "Театральные художественно-технические колледжи",
+        "description": "Мастер, который изготавливает реквизит для спектаклей и фильмов: от 'драгоценностей' и оружия до еды и элементов декораций. Редкая и креативная профессия в закулисье.",
+        "link": "https://postupi.online/professiya/butafor/",
+        "junior_salary": 45000,
+        "avg_salary": 75000,
+        "growth_rate": "Низкие",
+        "score_vector": {'logic': 3, 'creativity': 5, 'social': 2, 'routine': 4, 'art': 5}
+    },
+    {
+        "id": 664,
+        "name": "Специалист по личной безопасности",
+        "industry": "Безопасность/Консалтинг",
+        "university": "Опыт в силовых структурах, профильные курсы",
+        "description": "Анализирует угрозы и разрабатывает комплекс мер по защите жизни, здоровья и частной жизни клиента. В отличие от телохранителя, больше работает с информацией, планированием и превентивными мерами.",
+        "link": "https://ru.wikipedia.org/wiki/Телохранитель",
+        "junior_salary": 100000,
+        "avg_salary": 220000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 4, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 665,
+        "name": "Профайлер-верификатор",
+        "industry": "Психология/Безопасность/HR",
+        "university": "МГУ (Психфак), школы профайлинга",
+        "description": "Специалист по 'чтению' людей. Анализирует невербальное поведение человека (мимику, жесты, речь) для выявления лжи, оценки его намерений и составления психологического портрета. Востребован в службах безопасности, HR и на переговорах.",
+        "link": "https://postupi.online/professiya/profajler/",
+        "junior_salary": 80000,
+        "avg_salary": 160000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 5, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 666,
+        "name": "Спортивный директор",
+        "industry": "Спорт/Менеджмент",
+        "university": "РГУФКСМиТ, бизнес-школы (RMA)",
+        "description": "Топ-менеджер в профессиональном спортивном клубе, отвечающий за всю спортивную составляющую: формирование команды, трансферную политику, назначение главного тренера и развитие академии.",
+        "link": "https://postupi.online/professiya/sportivnyj-direktor/",
+        "junior_salary": 150000,
+        "avg_salary": 350000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 5, 'routine': 2, 'art': 1}
+    },
+    {
+        "id": 667,
+        "name": "Инженер-геотехник",
+        "industry": "Строительство/Инженерия",
+        "university": "МГСУ, СПбГАСУ",
+        "description": "Специалист по фундаментам и основаниям зданий. Изучает свойства грунтов и проектирует фундаменты, подпорные стенки и подземные сооружения, обеспечивая их надежность и устойчивость.",
+        "link": "https://postupi.online/professiya/inzhener-geotehnik/",
+        "junior_salary": 85000,
+        "avg_salary": 160000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 3, 'social': 2, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 668,
+        "name": "Специалист по сертификации пищевой продукции",
+        "industry": "Промышленность/Ритейл/Консалтинг",
+        "university": "МГУПП, РГАУ-МСХА",
+        "description": "Помогает производителям и импортерам продуктов питания получать необходимые декларации, сертификаты и проходить проверки на соответствие техническим регламентам (ТР ТС) и стандартам (ХАССП).",
+        "link": "https://postupi.online/professiya/specialist-po-sertifikacii/",
+        "junior_salary": 70000,
+        "avg_salary": 120000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 1, 'social': 4, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 669,
+        "name": "Инженер БТИ (Кадастровый инженер)",
+        "industry": "Недвижимость/Строительство/Госслужба",
+        "university": "МИИГАиК, Государственный университет по землеустройству",
+        "description": "Проводит техническую инвентаризацию объектов недвижимости: обмеряет квартиры и здания, составляет технические планы для постановки на кадастровый учет в Росреестре. ",
+        "link": "https://postupi.online/professiya/kadastrovyj-inzhener/",
+        "junior_salary": 60000,
+        "avg_salary": 110000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 5, 'creativity': 1, 'social': 4, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 670,
+        "name": "Байер (закупщик сырья и материалов)",
+        "industry": "Промышленность/Производство/Логистика",
+        "university": "Экономические и технические ВУЗы",
+        "description": "Специалист отдела снабжения на производственном предприятии, который закупает сырье, комплектующие и оборудование. Ищет поставщиков, проводит переговоры и обеспечивает бесперебойность поставок.",
+        "link": "https://postupi.online/professiya/menedzher-po-zakupkam/",
+        "junior_salary": 70000,
+        "avg_salary": 130000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 5, 'creativity': 2, 'social': 5, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 671,
+        "name": "Инженер по надежности оборудования (Reliability Engineer)",
+        "industry": "Промышленность/Энергетика/Инженерия",
+        "university": "МГТУ им. Баумана, РГУ нефти и газа им. Губкина, технические ВУЗы",
+        "description": "Анализирует причины отказов оборудования на производстве и разрабатывает программы по повышению его надежности и снижению простоев. Критически важный специалист для непрерывных производств, таких как НПЗ, металлургические и химические заводы.",
+        "link": "https://postupi.online/professiya/inzhener-po-nadezhnosti/",
+        "junior_salary": 95000,
+        "avg_salary": 180000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 3, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 672,
+        "name": "Инженер-гидролог",
+        "industry": "Экология/Строительство/Наука",
+        "university": "МГУ (Географический), РГГМУ",
+        "description": "Изучает водные объекты (реки, озера) и водный режим территорий. Проводит расчеты для проектирования мостов, плотин и защиты от наводнений. Работает в проектных институтах и структурах Росгидромета.",
+        "link": "https://postupi.online/professiya/gidrolog/",
+        "junior_salary": 70000,
+        "avg_salary": 130000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 5, 'creativity': 3, 'social': 2, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 673,
+        "name": "Планировщик маршрутной сети общественного транспорта",
+        "industry": "Транспорт/Госуправление/Консалтинг",
+        "university": "МАДИ, НИУ ВШЭ (Высшая школа урбанистики)",
+        "description": "Анализирует пассажиропотоки и разрабатывает оптимальные маршруты и расписания для автобусов, трамваев и метро. Работает в городских департаментах транспорта и консалтинговых компаниях, чтобы сделать общественный транспорт быстрее и удобнее.",
+        "link": "https://postupi.online/professiya/planirovshchik-marshrutnoj-seti-obshchestvennogo-transporta/",
+        "junior_salary": 80000,
+        "avg_salary": 150000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 4, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 674,
+        "name": "Специалист по лесовосстановлению",
+        "industry": "Экология/Сельское хозяйство",
+        "university": "МГТУ им. Баумана (Мытищинский филиал), СПбГЛТУ",
+        "description": "Разрабатывает и реализует проекты по восстановлению лесов после рубок, пожаров и болезней. Подбирает породы деревьев, организует посадку и уход за молодым лесом. Работает в лесничествах и лесопромышленных компаниях.",
+        "link": "https://postupi.online/professiya/specialist-po-lesovosstanovleniyu/",
+        "junior_salary": 60000,
+        "avg_salary": 100000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 4, 'creativity': 3, 'social': 3, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 675,
+        "name": "Технолог молочного производства",
+        "industry": "Промышленность/Сельское хозяйство",
+        "university": "МГУПП, Вологодская ГМХА",
+        "description": "Отвечает за технологию производства молока, сыра, йогурта, творога и других молочных продуктов. Контролирует качество сырья, соблюдение рецептур и работу оборудования на молокозаводах.",
+        "link": "https://postupi.online/professiya/tehnolog-molochnogo-proizvodstva/",
+        "junior_salary": 65000,
+        "avg_salary": 110000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 4, 'creativity': 4, 'social': 2, 'routine': 5, 'art': 2}
+    },
+    {
+        "id": 676,
+        "name": "Инженер-материаловед",
+        "industry": "Промышленность/Наука/Инженерия",
+        "university": "НИТУ 'МИСиС', МГТУ им. Баумана",
+        "description": "Изучает строение и свойства материалов (металлов, керамики, полимеров) и создает новые материалы с заданными характеристиками. Работает в R&D-центрах авиационных, оборонных и металлургических компаний.",
+        "link": "https://postupi.online/professiya/materialoved/",
+        "junior_salary": 85000,
+        "avg_salary": 160000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 2, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 677,
+        "name": "Креативный продюсер",
+        "industry": "Креатив/Медиа/Реклама",
+        "university": "НИУ ВШЭ (Медиакоммуникации), MADS, IKRA",
+        "description": "Отвечает за творческую составляющую проекта (рекламного ролика, телешоу, YouTube-канала). Разрабатывает идею, подбирает команду (режиссера, сценариста) и контролирует, чтобы итоговый продукт соответствовал креативной концепции.",
+        "link": "https://postupi.online/professiya/kreativnyj-prodyuser/",
+        "junior_salary": 90000,
+        "avg_salary": 180000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 4, 'creativity': 5, 'social': 5, 'routine': 2, 'art': 4}
+    },
+    {
+        "id": 678,
+        "name": "Ветеринарно-санитарный врач",
+        "industry": "Сельское хозяйство/Госслужба/Безопасность",
+        "university": "МГАВМиБ им. Скрябина, СПбГУВМ",
+        "description": "Контролирует качество и безопасность продуктов животного происхождения (мясо, молоко, яйца) на рынках, фермах и перерабатывающих предприятиях. Защищает людей от болезней, общих для человека и животных. Работает в структурах Россельхознадзора.",
+        "link": "https://postupi.online/professiya/veterinarno-sanitarnyj-vrach/",
+        "junior_salary": 60000,
+        "avg_salary": 100000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 5, 'creativity': 2, 'social': 4, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 679,
+        "name": "Музыкальный супервайзер",
+        "industry": "Кино/Креатив/Медиа",
+        "university": "Бизнес-школы (RMA), опыт в музыкальной индустрии",
+        "description": "Подбирает и лицензирует музыку для фильмов, сериалов, рекламы и видеоигр. Ведет переговоры с правообладателями, формирует саундтрек и отвечает за музыкальный бюджет проекта.",
+        "link": "https://ru.wikipedia.org/wiki/Музыкальный_супервайзер",
+        "junior_salary": 70000,
+        "avg_salary": 140000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 4, 'creativity': 5, 'social': 5, 'routine': 3, 'art': 5}
+    },
+    {
+        "id": 680,
+        "name": "Специалист по системам менеджмента качества (ISO)",
+        "industry": "Менеджмент/Промышленность/Консалтинг",
+        "university": "Технические ВУЗы (специальность 'Управление качеством')",
+        "description": "Внедряет и поддерживает на предприятии системы управления качеством в соответствии с международными стандартами (например, ISO 9001). Оптимизирует бизнес-процессы и готовит компанию к сертификационному аудиту.",
+        "link": "https://postupi.online/professiya/menedzher-po-kachestvu/",
+        "junior_salary": 75000,
+        "avg_salary": 130000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 3, 'social': 4, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 681,
+        "name": "Управляющий логистическим терминалом",
+        "industry": "Логистика/Транспорт/Менеджмент",
+        "university": "МАДИ, НИУ ВШЭ (Логистика)",
+        "description": "Руководит работой крупного складского или транспортного комплекса. Отвечает за операционную эффективность, бюджет, безопасность и управление персоналом терминала.",
+        "link": "https://postupi.online/professiya/zaveduyushchij-skladom/",
+        "junior_salary": 100000,
+        "avg_salary": 200000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 5, 'creativity': 2, 'social': 5, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 682,
+        "name": "Fashion-аналитик",
+        "industry": "Мода/Ритейл/Аналитика",
+        "university": "НИУ ВШЭ (Школа дизайна), Британская высшая школа дизайна",
+        "description": "Анализирует продажи, рыночные тенденции и поведение потребителей в индустрии моды. Помогает брендам и ритейлерам прогнозировать спрос, формировать ассортимент и определять ценовую политику.",
+        "link": "https://postupi.online/professiya/fashion-analitik/",
+        "junior_salary": 80000,
+        "avg_salary": 150000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 5, 'social': 3, 'routine': 4, 'art': 4}
+    },
+    {
+        "id": 683,
+        "name": "Административный директор (Head of Admin)",
+        "industry": "Менеджмент/Административная работа",
+        "university": "Управленческие и экономические ВУЗы",
+        "description": "Топ-менеджер, отвечающий за всю административно-хозяйственную деятельность крупной компании: от управления офисом и автопарком до организации мероприятий и командировок. Обеспечивает комфортную и эффективную рабочую среду.",
+        "link": "https://ru.wikipedia.org/wiki/Административный_директор",
+        "junior_salary": 130000,
+        "avg_salary": 250000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 5, 'creativity': 3, 'social': 5, 'routine': 3, 'art': 1}
+    },
+    {
+        "id": 684,
+        "name": "Специалист по организации авиационных перевозок",
+        "industry": "Транспорт/Логистика",
+        "university": "МГТУ ГА, СПбГУ ГА",
+        "description": "Организует грузовые и пассажирские авиаперевозки. Взаимодействует с авиакомпаниями, аэропортами, таможней, фрахтует рейсы и оформляет сопроводительную документацию.",
+        "link": "https://postupi.online/professiya/specialist-po-organizacii-aviaperevozok/",
+        "junior_salary": 75000,
+        "avg_salary": 140000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 5, 'creativity': 2, 'social': 5, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 685,
+        "name": "Спортивный физиолог",
+        "industry": "Спорт/Наука/Медицина",
+        "university": "МГУ (Биофак), РГУФКСМиТ",
+        "description": "Изучает, как физические нагрузки влияют на организм спортсмена. Разрабатывает программы тренировок и восстановления на основе данных о работе сердечно-сосудистой, дыхательной и мышечной систем. Работает в центрах спортивной медицины и профессиональных командах.",
+        "link": "https://postupi.online/professiya/sportivnyj-fiziolog/",
+        "junior_salary": 80000,
+        "avg_salary": 150000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 4, 'routine': 4, 'art': 1}
+    },
+    {
+        "id": 686,
+        "name": "Ихтиопатолог",
+        "industry": "Сельское хозяйство/Наука",
+        "university": "МГАВМиБ им. Скрябина, Астраханский ГТУ",
+        "description": "'Рыбий доктор'. Специалист по диагностике, лечению и профилактике болезней рыб, в первую очередь в аквакультуре (на рыбоводных хозяйствах). Обеспечивает здоровье и сохранность поголовья.",
+        "link": "https://postupi.online/professiya/ihtiopatolog/",
+        "junior_salary": 65000,
+        "avg_salary": 110000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 5, 'creativity': 3, 'social': 3, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 687,
+        "name": "Яхтенный брокер",
+        "industry": "Продажи/Транспорт/Сервис",
+        "university": "ВУЗы (менеджмент, международные отношения) + сертификация",
+        "description": "Посредник при покупке, продаже и аренде дорогих яхт. Консультирует клиентов, подбирает суда, сопровождает сделки. Элитный сегмент продаж для состоятельных клиентов.",
+        "link": "https://ru.wikipedia.org/wiki/Яхтенный_брокер",
+        "junior_salary": 100000,
+        "avg_salary": 300000,
+        "growth_rate": "Низкие",
+        "score_vector": {'logic': 4, 'creativity': 3, 'social': 5, 'routine': 3, 'art': 2}
+    },
+    {
+        "id": 688,
+        "name": "Горный инженер",
+        "industry": "Добыча/Промышленность/Инженерия",
+        "university": "НИТУ 'МИСиС', Санкт-Петербургский горный университет",
+        "description": "Организует и контролирует процессы добычи полезных ископаемых открытым (карьеры) или подземным (шахты) способом. Отвечает за технологию, безопасность и эффективность горных работ.",
+        "link": "https://postupi.online/professiya/gornyj-inzhener/",
+        "junior_salary": 120000,
+        "avg_salary": 250000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 5, 'creativity': 2, 'social': 4, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 689,
+        "name": "Книжный дизайнер (верстальщик)",
+        "industry": "Дизайн/Медиа/Креатив",
+        "university": "Высшая школа печати и медиаиндустрии (Политех), НИУ ВШЭ (Дизайн)",
+        "description": "Разрабатывает дизайн и верстает макет книг, журналов и другой печатной продукции. Отвечает за внешний вид обложки, типографику, расположение текста и иллюстраций. ",
+        "link": "https://postupi.online/professiya/dizajner-verstalshchik/",
+        "junior_salary": 60000,
+        "avg_salary": 110000,
+        "growth_rate": "Низкие",
+        "score_vector": {'logic': 4, 'creativity': 5, 'social': 3, 'routine': 4, 'art': 5}
+    },
+    {
+        "id": 690,
+        "name": "Инженер по стандартизации",
+        "industry": "Промышленность/Менеджмент",
+        "university": "Технические ВУЗы (специальность 'Стандартизация и метрология')",
+        "description": "Разрабатывает и внедряет стандарты (ГОСТы, ТУ, стандарты организации) на предприятии. Контролирует, чтобы продукция и процессы соответствовали установленным требованиям.",
+        "link": "https://postupi.online/professiya/inzhener-po-standartizacii-i-sertifikacii/",
+        "junior_salary": 65000,
+        "avg_salary": 115000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 5, 'creativity': 2, 'social': 3, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 691,
+        "name": "Консультант по выходу на международные рынки",
+        "industry": "Консалтинг/Бизнес/Продажи",
+        "university": "МГИМО, РАНХиГС (ВШКУ), НИУ ВШЭ (МЭиМП)",
+        "description": "Помогает российским компаниям начать экспорт своей продукции. Анализирует зарубежные рынки, разрабатывает стратегию, помогает с сертификацией, логистикой и поиском партнеров.",
+        "link": "https://ru.wikipedia.org/wiki/Экспорт",
+        "junior_salary": 100000,
+        "avg_salary": 220000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 4, 'social': 5, 'routine': 3, 'art': 1}
+    },
+    {
+        "id": 692,
+        "name": "Арт-оценщик",
+        "industry": "Искусство/Финансы/Консалтинг",
+        "university": "МГУ (Истфак, отделение истории искусства), РГГУ",
+        "description": "Эксперт, определяющий подлинность и рыночную стоимость произведений искусства. Работает в аукционных домах, галереях, страховых компаниях и банках (арт-банкинг).",
+        "link": "https://postupi.online/professiya/art-ocenshchik/",
+        "junior_salary": 80000,
+        "avg_salary": 170000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 5, 'creativity': 5, 'social': 4, 'routine': 4, 'art': 5}
+    },
+    {
+        "id": 693,
+        "name": "Управляющий фитнес-клубом",
+        "industry": "Менеджмент/Спорт/Сервис",
+        "university": "РГУФКСМиТ, бизнес-школы",
+        "description": "Руководит работой фитнес-клуба. Отвечает за финансовые показатели, продажи клубных карт, маркетинг, подбор персонала (тренеров, администраторов) и качество услуг.",
+        "link": "https://postupi.online/professiya/upravlyayushchij-fitnes-klubom/",
+        "junior_salary": 80000,
+        "avg_salary": 160000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 4, 'creativity': 4, 'social': 5, 'routine': 3, 'art': 1}
+    },
+    {
+        "id": 694,
+        "name": "Главный редактор",
+        "industry": "Медиа/Креатив/Менеджмент",
+        "university": "МГУ (Журфак), НИУ ВШЭ (Медиакоммуникации)",
+        "description": "Руководит редакцией СМИ (журнала, сайта, телеканала). Определяет редакционную политику, отвечает за контент, управляет командой журналистов и редакторов. Ключевая фигура в медиабизнесе.",
+        "link": "https://postupi.online/professiya/glavnyj-redaktor/",
+        "junior_salary": 120000,
+        "avg_salary": 250000,
+        "growth_rate": "Средние",
+        "score_vector": {'logic': 4, 'creativity': 5, 'social': 5, 'routine': 2, 'art': 4}
+    },
+    {
+        "id": 695,
+        "name": "Специалист по спортивным покрытиям (граундсмен)",
+        "industry": "Спорт/Сервис/Агрономия",
+        "university": "РГАУ-МСХА им. Тимирязева, профильные курсы",
+        "description": "Отвечает за подготовку и уход за спортивными газонами на футбольных полях и полях для гольфа. Профессия на стыке агрономии и инженерии, от которой зависит качество игры.",
+        "link": "https://ru.wikipedia.org/wiki/Граундсмен",
+        "junior_salary": 70000,
+        "avg_salary": 130000,
+        "growth_rate": "Низкие",
+        "score_vector": {'logic': 4, 'creativity': 3, 'social': 2, 'routine': 5, 'art': 2}
+    },
+    {
+        "id": 696,
+        "name": "Дворецкий (Батлер)",
+        "industry": "Сервис/HoReCa",
+        "university": "Международные школы батлеров, опыт в отелях класса люкс",
+        "description": "Управляющий домашним хозяйством в богатом доме или персональный ассистент для VIP-гостей в отелях класса люкс. Организует быт, управляет персоналом, исполняет поручения. Элитная сервисная профессия.",
+        "link": "https://ru.wikipedia.org/wiki/Дворецкий",
+        "junior_salary": 150000,
+        "avg_salary": 350000,
+        "growth_rate": "Низкие",
+        "score_vector": {'logic': 4, 'creativity': 3, 'social': 5, 'routine': 4, 'art': 2}
+    },
+    {
+        "id": 697,
+        "name": "Инженер-электрик (проектировщик)",
+        "industry": "Строительство/Энергетика/Инженерия",
+        "university": "НИУ 'МЭИ', СПбПУ Петра Великого",
+        "description": "Проектирует системы электроснабжения и освещения для зданий и промышленных объектов. Выполняет расчеты нагрузок, подбирает оборудование и чертит схемы в AutoCAD или Revit.",
+        "link": "https://postupi.online/professiya/inzhener-elektrik/",
+        "junior_salary": 80000,
+        "avg_salary": 150000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 5, 'creativity': 3, 'social': 3, 'routine': 5, 'art': 1}
+    },
+    {
+        "id": 698,
+        "name": "Исторический костюмер",
+        "industry": "Искусство/Кино/Театр",
+        "university": "Школа-студия МХАТ, РГИСИ",
+        "description": "Специалист по созданию исторических костюмов для кино и театра. Изучает крой, материалы и технологии пошива определенной эпохи, чтобы добиться максимальной достоверности.",
+        "link": "https://postupi.online/professiya/hudozhnik-po-kostyumu/",
+        "junior_salary": 60000,
+        "avg_salary": 110000,
+        "growth_rate": "Низкие",
+        "score_vector": {'logic': 4, 'creativity': 5, 'social': 3, 'routine': 5, 'art': 5}
+    },
+    {
+        "id": 699,
+        "name": "Переводчик-локализатор (игры, ПО)",
+        "industry": "Креатив/ИТ/Медиа",
+        "university": "МГЛУ, переводческие факультеты ВУЗов",
+        "description": "Не просто переводит, а адаптирует текст и культурные реалии компьютерной игры или программы для российского рынка. Работает с юмором, идиомами и игровым сленгом.",
+        "link": "https://dtf.ru/gamedev/2042179-kak-stat-perevodchikom-igr-instrukciya-dlya-novichkov",
+        "junior_salary": 65000,
+        "avg_salary": 120000,
+        "growth_rate": "Высокие",
+        "score_vector": {'logic': 4, 'creativity': 5, 'social': 2, 'routine': 4, 'art': 4}
     }
 ]
 
