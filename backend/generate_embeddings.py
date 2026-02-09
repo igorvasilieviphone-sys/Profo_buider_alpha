@@ -1,13 +1,11 @@
-# backend/generate_embeddings.py
-
 import sqlite3
-import google.generativeai as genai
+from google import genai
 import os
 import json
 import logging
+import time
 from dotenv import load_dotenv
-os.environ['HTTP_PROXY'] = 'http://127.0.0.1:10809'
-os.environ['HTTPS_PROXY'] = 'http://127.0.0.1:10809'
+
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -19,18 +17,17 @@ if os.path.exists(DOTENV_PATH):
     load_dotenv(dotenv_path=DOTENV_PATH)
     logging.info(f"Loading environment variables from: {DOTENV_PATH}")
 else:
-    logging.warning(f".env file not found at {DOTENV_PATH}. Make sure it exists in the project root.")
     load_dotenv()
 
 try:
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
-        raise ValueError("GEMINI_API_KEY not found. Check your .env file.")
-    genai.configure(api_key=api_key)
+        raise ValueError("GEMINI_API_KEY not found.")
+    client = genai.Client(api_key=api_key)
     logging.info("Gemini configured successfully.")
 except Exception as e:
     logging.error(f"Failed to configure Gemini: {e}")
-    genai = None
+    client = None
 
 def get_db_connection():
     try:
@@ -45,17 +42,13 @@ def add_embedding_column(conn):
     try:
         conn.execute('ALTER TABLE careers ADD COLUMN embedding BLOB')
         conn.commit()
-        logging.info("Column 'embedding' added to 'careers' table.")
     except sqlite3.OperationalError as e:
-        if "duplicate column name" in str(e):
-            logging.info("Column 'embedding' already exists. No changes made to the table structure.")
-        else:
+        if "duplicate column name" not in str(e):
             logging.error(f"Failed to alter table: {e}")
             raise
 
 def generate_embeddings():
-    if not genai:
-        logging.error("Gemini AI is not configured. Cannot generate embeddings.")
+    if not client:
         return
 
     conn = get_db_connection()
@@ -67,35 +60,39 @@ def generate_embeddings():
     careers_to_process = conn.execute('SELECT id, name, industry FROM careers WHERE embedding IS NULL').fetchall()
     
     if not careers_to_process:
-        logging.info("No new careers to process. All embeddings seem to be up to date.")
         conn.close()
         return
 
-    logging.info(f"Found {len(careers_to_process)} careers to process.")
-
-    model = 'models/text-embedding-004'
+    model_id = 'gemini-embedding-001'
 
     for career in careers_to_process:
         try:
             text_to_embed = f"Профессия: {career['name']}. Отрасль: {career['industry']}"
-            
             logging.info(f"Generating embedding for: '{career['name']}'...")
-            result = genai.embed_content(
-                model=model,
-                content=text_to_embed,
-                task_type="RETRIEVAL_DOCUMENT"
+            
+            result = client.models.embed_content(
+                model=model_id,
+                contents=text_to_embed,
+                config={'task_type': 'RETRIEVAL_DOCUMENT'}
             )
             
-            embedding_json = json.dumps(result['embedding'])
+            embedding_values = result.embeddings[0].values
+            embedding_json = json.dumps(embedding_values)
+            
             conn.execute('UPDATE careers SET embedding = ? WHERE id = ?', (embedding_json.encode('utf-8'), career['id']))
             conn.commit()
             logging.info(f"Successfully saved embedding for: {career['name']}")
+            
+            time.sleep(0.7)
 
         except Exception as e:
-            logging.error(f"Failed to process career ID {career['id']} ('{career['name']}'): {e}")
+            if "429" in str(e):
+                logging.warning("Rate limit reached. Sleeping for 20 seconds...")
+                time.sleep(20)
+            else:
+                logging.error(f"Failed to process career ID {career['id']} ('{career['name']}'): {e}")
 
     conn.close()
-    logging.info("Embedding generation process finished.")
 
 if __name__ == '__main__':
     generate_embeddings()

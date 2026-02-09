@@ -1,16 +1,11 @@
-# backend/chat.py
 import os
 import google.generativeai as genai
 import logging
 from dotenv import load_dotenv
+for key in ['HTTP_PROXY', 'HTTPS_PROXY', 'ALL_PROXY', 'http_proxy', 'https_proxy', 'all_proxy']:
+    os.environ.pop(key, None)
 
 load_dotenv()
-
-# Настройка прокси для Psiphon
-PSIPHON_PORT = "10809"
-os.environ['HTTP_PROXY'] = f'http://127.0.0.1:{PSIPHON_PORT}'
-os.environ['HTTPS_PROXY'] = f'http://127.0.0.1:{PSIPHON_PORT}'
-
 API_KEY = os.getenv('GEMINI_API_KEY')
 
 system_instruction = (
@@ -29,11 +24,12 @@ system_instruction = (
 )
 
 chat_model = None
+
 if API_KEY:
     try:
         genai.configure(api_key=API_KEY, transport='rest')
         chat_model = genai.GenerativeModel(
-            model_name='gemini-2.5-flash',
+            model_name='gemini-2.5-flash', 
             system_instruction=system_instruction
         )
     except Exception as e:
@@ -41,11 +37,11 @@ if API_KEY:
 
 def get_gemini_response(user_message: str) -> str:
     if not chat_model:
-        return "Извините, мой сервис чата сейчас недоступен. 🔧"
+        return "Сервис недоступен. Проверьте API ключ."
     try:
         print(f"Запрос в Gemini: {user_message}")
         response = chat_model.generate_content(user_message)
         return response.text
     except Exception as e:
         logging.error(f"Gemini error: {e}")
-        return "Ой, что-то пошло не так при обращении к AI. Попробуйте еще раз! 🤔"
+        return "Ошибка соединения с AI."

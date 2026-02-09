@@ -1,11 +1,8 @@
-# backend/main.py
 import os
 import sys
 
-# Настройка прокси для Psiphon (обязательно в самом верху)
-PSIPHON_PORT = "10809" 
-os.environ['HTTP_PROXY'] = f'http://127.0.0.1:{PSIPHON_PORT}'
-os.environ['HTTPS_PROXY'] = f'http://127.0.0.1:{PSIPHON_PORT}'
+for key in ['HTTP_PROXY', 'HTTPS_PROXY', 'ALL_PROXY', 'http_proxy', 'https_proxy', 'all_proxy']:
+    os.environ.pop(key, None)
 
 from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
@@ -34,18 +31,15 @@ else:
 try:
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
-        raise ValueError("GEMINI_API_KEY not found in environment variables.")
-    
-    # Конфигурация: transport='rest' критически важен для работы через Psiphon
+        raise ValueError("GEMINI_API_KEY missing")
     genai.configure(api_key=api_key, transport='rest')
-    
-    EMBEDDING_MODEL = 'text-embedding-004'
-    # Используем полное имя модели
+    EMBEDDING_MODEL = 'gemini-embedding-001'
     ANALYSIS_MODEL = genai.GenerativeModel('gemini-2.5-flash')
-    logging.info("Gemini AI services configured successfully (REST mode).")
 except Exception as e:
-    logging.error(f"Failed to configure Gemini AI: {e}")
-    genai = ANALYSIS_MODEL = None
+    logging.error(f"Setup error: {e}")
+    genai = None
+    ANALYSIS_MODEL = None
+    EMBEDDING_MODEL = None
 
 app = Flask(__name__)
 CORS(app)
@@ -55,14 +49,14 @@ def get_db_connection():
         conn = sqlite3.connect(DB_PATH)
         conn.row_factory = sqlite3.Row
         return conn
-    except sqlite3.Error as e:
+    except sqlite3.Error:
         return None
 
 def cosine_similarity(v1, v2):
     return np.dot(v1, v2) / (np.linalg.norm(v1) * np.linalg.norm(v2))
 
 def get_query_embedding(text):
-    if not genai: return None
+    if not genai or not EMBEDDING_MODEL: return None
     try:
         result = genai.embed_content(model=EMBEDDING_MODEL, content=text, task_type="RETRIEVAL_QUERY")
         return np.array(result['embedding'])
@@ -86,36 +80,87 @@ def analyze_user_text_for_rules(text: str) -> dict:
         return {"positive_summary": text, "exclusion_keywords": []}
 
 @app.route('/')
-def index(): return send_from_directory(PROJECT_ROOT, 'index.html')
+def index():
+    return send_from_directory(PROJECT_ROOT, 'index.html')
 
 @app.route('/<path:filename>')
-def serve_static(filename): return send_from_directory(PROJECT_ROOT, filename)
+def serve_static(filename):
+    return send_from_directory(PROJECT_ROOT, filename)
 
 @app.route('/api/chat', methods=['POST'])
 def handle_chat_message():
-    data = request.get_json()
-    user_message = data.get('message')
-    if not user_message: return jsonify({'error': 'No message'}), 400
-    ai_response_text = get_gemini_response(user_message)
-    return jsonify({'response': ai_response_text})
+    try:
+        data = request.get_json()
+        user_message = data.get('message')
+        if not user_message:
+            return jsonify({'error': 'No message'}), 400
+        ai_response_text = get_gemini_response(user_message)
+        return jsonify({'response': ai_response_text})
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
 
 @app.route('/api/generate_cards', methods=['POST'])
 def generate_cards():
-    if not ANALYSIS_MODEL: return jsonify({"error": "AI service is unavailable."}), 503
+    if not genai:
+        return jsonify({"error": "AI unavailable"}), 503
     try:
         data = request.get_json()
         selected_topics = [topic.get('label', '') for topic in data.get('selected_topics', [])]
         additional_info = data.get('additional_info', '').strip()
 
+        if not selected_topics and not additional_info:
+            return jsonify({'error': 'No input'}), 400
+
         analysis = analyze_user_text_for_rules(additional_info) if additional_info else {"positive_summary": "", "exclusion_keywords": []}
-        
+        positive_summary = analysis.get("positive_summary", "").strip()
+        exclusion_keywords = analysis.get("exclusion_keywords", [])
+
         conn = get_db_connection()
-        # ... (здесь остается твоя логика поиска по базе careers.db, она верная)
-        # Для краткости я не дублирую блок SQL, оставь его как был в твоем коде
+        if not conn: return jsonify({'error': 'DB error'}), 500
+
+        selected_topics_text = ", ".join(selected_topics)
+        user_query = f"Интересы: {selected_topics_text}. Пожелания: {positive_summary}"
+        query_embedding = get_query_embedding(user_query)
+        
+        if query_embedding is None:
+            conn.close()
+            return jsonify({"error": "AI query error"}), 500
+
+        rows = conn.execute('SELECT * FROM careers WHERE embedding IS NOT NULL').fetchall()
+        scored_careers = []
+        for row in rows:
+            career_data = dict(row)
+            try:
+                career_embedding = np.array(json.loads(career_data['embedding']))
+                similarity = cosine_similarity(query_embedding, career_embedding)
+                scored_careers.append((similarity, career_data))
+            except:
+                continue
+
+        scored_careers.sort(key=lambda x: x[0], reverse=True)
+        all_careers_raw = [c[1] for c in scored_careers]
         conn.close()
-        return jsonify([]) # Замени на возврат списка final_careers
+
+        final_careers = []
+        for career in all_careers_raw:
+            if len(final_careers) >= 50: break
+            is_excluded = False
+            career_text = (career['name'] + " " + career['industry']).lower()
+            for kw in exclusion_keywords:
+                if kw.lower() in career_text:
+                    is_excluded = True
+                    break
+            if not is_excluded:
+                if 'embedding' in career: del career['embedding']
+                if 'score_vector' in career and isinstance(career['score_vector'], str):
+                    try: career['score_vector'] = json.loads(career['score_vector'])
+                    except: career['score_vector'] = None
+                final_careers.append(career)
+
+        return jsonify(final_careers)
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(debug=True, host='0.0.0.0', port=port)
