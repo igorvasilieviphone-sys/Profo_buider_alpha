@@ -1,11 +1,15 @@
 # backend/chat.py
-
 import os
 import google.generativeai as genai
 import logging
 from dotenv import load_dotenv
 
 load_dotenv()
+
+# Настройка прокси для Psiphon
+PSIPHON_PORT = "10809"
+os.environ['HTTP_PROXY'] = f'http://127.0.0.1:{PSIPHON_PORT}'
+os.environ['HTTPS_PROXY'] = f'http://127.0.0.1:{PSIPHON_PORT}'
 
 API_KEY = os.getenv('GEMINI_API_KEY')
 
@@ -25,27 +29,23 @@ system_instruction = (
 )
 
 chat_model = None
-if not API_KEY:
-    logging.error("In chat.py: GEMINI_API_KEY is missing. Chat functionality will be disabled.")
-else:
+if API_KEY:
     try:
-        genai.configure(api_key=API_KEY)
+        genai.configure(api_key=API_KEY, transport='rest')
         chat_model = genai.GenerativeModel(
-            'gemini-1.5-flash',
+            model_name='gemini-2.5-flash',
             system_instruction=system_instruction
         )
-        logging.info("Chat model ('Профик') configured successfully in chat.py.")
     except Exception as e:
-        logging.error(f"Failed to configure Gemini client in chat.py: {e}")
+        logging.error(f"Chat config error: {e}")
 
 def get_gemini_response(user_message: str) -> str:
     if not chat_model:
-        return "Извините, мой сервис чата сейчас недоступен из-за ошибки конфигурации. 🔧"
-
+        return "Извините, мой сервис чата сейчас недоступен. 🔧"
     try:
+        print(f"Запрос в Gemini: {user_message}")
         response = chat_model.generate_content(user_message)
         return response.text
-        
     except Exception as e:
-        logging.error(f"Unexpected error in get_gemini_response: {e}")
-        return "Ой, что-то пошло не так при обращении к моему AI. Попробуйте еще раз! 🤔"
+        logging.error(f"Gemini error: {e}")
+        return "Ой, что-то пошло не так при обращении к AI. Попробуйте еще раз! 🤔"

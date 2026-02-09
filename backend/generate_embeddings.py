@@ -6,7 +6,8 @@ import os
 import json
 import logging
 from dotenv import load_dotenv
-
+os.environ['HTTP_PROXY'] = 'http://127.0.0.1:10809'
+os.environ['HTTPS_PROXY'] = 'http://127.0.0.1:10809'
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
