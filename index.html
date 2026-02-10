@@ -15,7 +15,6 @@
   <div class="page-wrapper">
     
     <div id="homepage" class="page active">
-      
       <header class="main-header">
         <nav class="container nav-homepage">
           <a href="/" class="logo-accent"><img src="img/pb_logo1.png" alt="ПрофоБилдер Логотип" class="logo-image"></a>
@@ -28,24 +27,20 @@
       </header>
       
       <main class="hero-new-style"> 
-        
         <div class="container hero-inner-wrap"> 
           <div class="hero-content">
             <p class="hero-subtitle">НАЧНИ СВОЙ ПУТЬ СЕГОДНЯ</p>
             <h1 class="hero-title">ПрофоБилдер</h1>
             <p class="hero-description">Открой свой "настоящий потенциал" и выбери профессию мечты. Наш интерактивный тест поможет найти сферу, которая подходит именно тебе.</p>
-            
             <div class="hero-actions">
               <a href="#" class="btn primary-accent-new" id="start-assessment-btn-homepage">Начать Тест</a>
               <a href="about.html" class="btn secondary-outline-new">Подробнее</a>
             </div>
           </div>
         </div>
-
         <div class="hero-visual">
           <img src="/img/main_pic22.png" alt="Профориентация и карьерный рост" class="hero-image">
         </div>
-
         <div class="decorative-text-corner">
           <p>Профориентация, созданная для будущего.</p>
         </div>
@@ -53,42 +48,37 @@
     </div>
 
     <div id="explorer" class="page hidden">
-      
       <header class="main-header">
         <nav class="container nav-homepage">
           <a href="/" class="logo-accent"><img src="img/pb_logo1.png" alt="ПрофоБилдер Логотип" class="logo-image"></a> 
           <ul class="nav-links">
+            <li><a href="#" class="nav-item" onclick="showSavedCards(); return false;">Мои карточки</a></li>
             <li><a href="/about.html" class="nav-item">О нас </a></li>
             <li><a href="/about.html#contact" class="nav-item">Контакты</a></li>
           </ul>
         </nav>
       </header>
-      
       <div class="progress-bar-container">
         <div id="progress-bar-fill" class="progress-fill" style="width: 0%;"></div>
       </div>
-      
       <div class="container assessment-container">
         <h2 class="page-title">выбери всё, чем бы тебе хотелось заниматься</h2>
         <p class="description">минимум 3 карточки</p>
-        <div id="explorer-container" class="explorer-grid">
-        </div>
-
+        <div id="explorer-container" class="explorer-grid"></div>
         <div class="explorer-footer">
           <button id="explorer-finish-btn" class="btn primary-accent-new" disabled>Продолжить к тесту (0)</button>
           <button id="explorer-reset-btn" class="btn secondary-outline-new">Сбросить выбор</button>
         </div>
       </div>
-      <!-- КОД ЧАТА БЫЛ УДАЛЕН ОТСЮДА -->
     </div>
     
-    <!-- НОВАЯ СТРАНИЦА РЕЗУЛЬТАТОВ -->
     <div id="results" class="page hidden">
       <header class="main-header">
         <nav class="container nav-homepage">
           <a href="/" class="logo-accent"><img src="img/pb_logo1.png" alt="ПрофоБилдер Логотип" class="logo-image"></a> 
           <ul class="nav-links">
             <li><a href="#" class="nav-item" onclick="showPage('explorer'); return false;">Начать заново</a></li>
+            <li><a href="#" class="nav-item" onclick="showSavedCards(); return false;">Мои карточки</a></li>
             <li><a href="/about.html" class="nav-item">О нас</a></li>
           </ul>
         </nav>
@@ -96,15 +86,26 @@
       <div class="container assessment-container">
         <h2 class="page-title">Ваши персональные рекомендации</h2>
         <p class="description">Смахните карточку влево или вправо, чтобы увидеть следующую.</p>
-        <!-- Новый контейнер для стека карточек -->
-        <div id="results-stack-container">
-          <!-- Карточки результатов будут добавлены сюда с помощью JS -->
-        </div>
+        <div id="results-stack-container"></div>
       </div>
     </div>
 
-    <!-- === НАЧАЛО ИЗМЕНЕНИЙ === -->
-    <!-- ВИДЖЕТ ЧАТА ПЕРЕМЕЩЕН СЮДА, ЧТОБЫ БЫТЬ ВИДИМЫМ НА ВСЕХ СТРАНИЦАХ -->
+    <div id="saved-cards" class="page hidden">
+      <header class="main-header">
+        <nav class="container nav-homepage">
+          <a href="/" class="logo-accent"><img src="img/pb_logo1.png" alt="ПрофоБилдер Логотип" class="logo-image"></a> 
+          <ul class="nav-links">
+            <li><a href="#" class="nav-item" onclick="showPage('explorer'); return false;">Начать заново</a></li>
+            <li><a href="#" class="nav-item" onclick="handleResultsNav(); return false;">К результатам теста</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="container assessment-container">
+        <h2 class="page-title">Мои карточки</h2>
+        <div id="saved-cards-grid" class="saved-cards-container"></div>
+      </div>
+    </div>
+
     <div class="chat-widget" id="chatWidget">
       <button class="chat-toggle" id="chatToggle">
         <img src="img/chat_gpt_logo.png" alt="ИИ">
@@ -116,8 +117,7 @@
             <h2>Ассистент ИИ</h2>
             <span class="close" id="closeChat">&times;</span>
           </div>
-          <div class="chat-messages" id="chatMessages">
-          </div>
+          <div class="chat-messages" id="chatMessages"></div>
           <div class="chat-input">
             <div class="chat-input-wrapper">
               <input type="text" id="chatInput" placeholder="Введите ваше сообщение...">
@@ -129,11 +129,9 @@
         </div>
       </div>
     </div>
-    <!-- === КОНЕЦ ИЗМЕНЕНИЙ === -->
 
   </div>
 
-  <!-- НОВОЕ МОДАЛЬНОЕ ОКНО -->
   <div id="userInfoModal" class="modal-overlay hidden">
     <div class="modal-content">
       <button id="closeModalBtn" class="modal-close-btn">&times;</button>
@@ -144,7 +142,39 @@
     </div>
   </div>
 
-  <script src="/js/block.js"></script> <!-- Подключаем новый скрипт ПЕРЕД main.js -->
+  <div id="cardModal" class="modal-overlay hidden">
+    <div class="modal-card-view">
+      <button id="closeCardModalBtn" class="modal-close-btn" style="color: white; top: 20px; right: 20px;">&times;</button>
+      <div id="modal-card-container"></div>
+    </div>
+  </div>
+
+  <div id="deleteConfirmModal" class="modal-overlay hidden">
+    <div class="modal-content confirm-modal">
+      <button id="closeDeleteModalCrossBtn" class="modal-close-btn">&times;</button>
+      <div class="confirm-icon">!</div>
+      <h2>Удалить из сохраненных?</h2>
+      <p>Эта профессия больше не будет отображаться в вашем списке "Мои карточки".</p>
+      <div class="confirm-actions">
+        <button id="cancelDeleteBtn" class="btn secondary-outline-new">Отмена</button>
+        <button id="confirmDeleteBtn" class="btn delete-accent">Удалить</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="noticeModal" class="modal-overlay hidden">
+    <div class="modal-content notice-modal">
+      <button id="closeNoticeCrossBtn" class="modal-close-btn">&times;</button>
+      <div class="notice-icon">i</div>
+      <h2>Рекомендации не найдены</h2>
+      <p>Сначала необходимо пройти тест, чтобы система могла сгенерировать для вас персональные рекомендации.</p>
+      <div class="confirm-actions">
+        <button id="closeNoticeBtn" class="btn primary-accent-new">Начать тестирование</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/block.js"></script>
   <script src="/js/main.js"></script>
   <script src="/js/app.js"></script>
 </body>

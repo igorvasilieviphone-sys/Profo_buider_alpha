@@ -1,5 +1,3 @@
-// js/block.js
-
 function initSwipeableCards(containerSelector) {
     const container = document.querySelector(containerSelector);
     if (!container) return;
@@ -96,6 +94,11 @@ function initSwipeableCards(containerSelector) {
 
         if (Math.abs(deltaX) > decisionThreshold) {
             const direction = deltaX > 0 ? 1 : -1;
+
+            if (direction === 1 && cardToAnimate.dataset.careerData) {
+                saveCareerToLocal(JSON.parse(cardToAnimate.dataset.careerData));
+            }
+
             cardToAnimate.style.transition = `transform ${flyAwayDuration}ms ease-out`;
             cardToAnimate.style.transform = `translateX(${direction * window.innerWidth}px) rotate(${direction * 30}deg)`;
             

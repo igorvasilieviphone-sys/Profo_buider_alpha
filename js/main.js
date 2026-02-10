@@ -1,25 +1,22 @@
-// js/main.js
-
 const pages = document.querySelectorAll('.page');
 let explorerContainer, explorerFinishBtn, explorerResetBtn, progressBarFill, startAssessmentBtnHomepage;
 let userInfoModal, closeModalBtn, showResultsBtn, userInfoInput;
+let cardModal, closeCardModalBtn, modalCardContainer;
+let deleteConfirmModal, cancelDeleteBtn, confirmDeleteBtn, closeDeleteModalCrossBtn;
+let noticeModal, closeNoticeBtn, closeNoticeCrossBtn;
+let careerNameToDelete = null;
+
+let testCompleted = false;
 
 function showPage(pageId) {
-    // === НАЧАЛО ИЗМЕНЕНИЙ ===
-    // Получаем доступ к виджету чата
     const chatWidget = document.getElementById('chatWidget');
-
-    // Проверяем, существует ли виджет на странице
     if (chatWidget) {
-        // Если мы переключаемся на главную страницу, скрываем чат
         if (pageId === 'homepage') {
             chatWidget.classList.add('hidden');
         } else {
-            // На всех остальных страницах (тест, результаты) показываем чат
             chatWidget.classList.remove('hidden');
         }
     }
-    // === КОНЕЦ ИЗМЕНЕНИЙ ===
 
     document.querySelectorAll('.page').forEach(page => {
         if (page.id === pageId) {
@@ -32,6 +29,14 @@ function showPage(pageId) {
     });
     if (pageId === 'explorer') {
         initExplorerPage();
+    }
+}
+
+function handleResultsNav() {
+    if (testCompleted) {
+        showPage('results');
+    } else {
+        noticeModal.classList.remove('hidden');
     }
 }
 
@@ -75,6 +80,125 @@ const ADJACENT_PARENTS = {
     'l2_1': 'l2_2', 'l2_2': 'l2_3', 'l2_3': 'l2_1',
     'l2_4': 'l2_5', 'l2_5': 'l2_6', 'l2_6': 'l2_4',
     'l2_7': 'l2_8', 'l2_8': 'l2_9', 'l2_9': 'l2_7',
+};
+
+function saveCareerToLocal(careerData) {
+    let saved = JSON.parse(localStorage.getItem('savedCareers')) || [];
+    const exists = saved.some(item => item.name === careerData.name);
+    if (!exists) {
+        saved.push(careerData);
+        localStorage.setItem('savedCareers', JSON.stringify(saved));
+    }
+}
+
+function generateCardHTML(rec) {
+    const scoreVectorLabels = {
+        logic: 'Логика',
+        creativity: 'Креативность',
+        social: 'Общение',
+        routine: 'Рутина',
+        art: 'Искусство'
+    };
+
+    let chartHtml = '<div class="chart-container"><h4>Требуемые навыки</h4>';
+    if (rec.score_vector && Object.keys(rec.score_vector).length > 0) {
+        for (const [key, value] of Object.entries(rec.score_vector)) {
+            const label = scoreVectorLabels[key] || key;
+            const barWidth = (value / 5) * 100;
+            chartHtml += `
+                <div class="chart-bar-row">
+                    <span class="chart-label">${label}</span>
+                    <div class="chart-bar-bg">
+                        <div class="chart-bar-fill" style="width: ${barWidth}%;"></div>
+                    </div>
+                </div>`;
+        }
+    } else {
+        chartHtml += '<p>Данные о навыках отсутствуют.</p>';
+    }
+    chartHtml += '</div>';
+
+    return `
+        <div class="card-content-wrapper">
+            <div class="card-main-info">
+                <h3>${rec.name}</h3>
+                <p class="card-industry"><b>Отрасль:</b> ${rec.industry}</p>
+            </div>
+            
+            <div class="card-details-container">
+                <div class="card-description-wrapper">
+                    <p class="card-ai-description"><b>Описание:</b> ${rec.description || 'Узнайте больше об этой профессии.'}</p>
+                    <div class="card-stats">
+                        <div class="stat-item"><span>//</span> <span>Зарплата новичка: <b>${rec.junior_salary} ₽</b></span></div>
+                        <div class="stat-item"><span>///</span> <span>Средняя зарплата: <b>${rec.avg_salary} ₽</b></span></div>
+                        <div class="stat-item"><span>⚡️</span> <span>Темпы роста: <b>${rec.growth_rate}</b></span></div>
+                    </div>
+                </div>
+
+                <div class="card-hidden-details">
+                    <p><b>Примерные ВУЗы:</b> ${rec.university}</p>
+                    ${chartHtml}
+                    <a href="${rec.link}" target="_blank" class="card-link">Узнать больше на внешнем ресурсе</a>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <div class="card-details-toggle">Подробнее</div>
+            </div>
+        </div>`;
+}
+
+function showSavedCards() {
+    showPage('saved-cards');
+    const container = document.getElementById('saved-cards-grid');
+    const saved = JSON.parse(localStorage.getItem('savedCareers')) || [];
+    
+    container.innerHTML = '';
+    
+    if (saved.length === 0) {
+        container.innerHTML = '<p class="description empty-state-msg">Вы еще не сохранили ни одной карточки. Свайпните понравившуюся профессию вправо!</p>';
+        return;
+    }
+
+    saved.forEach(rec => {
+        const item = document.createElement('div');
+        item.className = 'explorer-block saved-item';
+        item.style.opacity = '1';
+        item.style.transform = 'none';
+        item.innerHTML = `
+            <div class="saved-item-content" onclick='openFullCardModal(${JSON.stringify(rec).replace(/'/g, "&apos;")})'>
+                <h3>${rec.name}</h3>
+                <p>${rec.industry}</p>
+            </div>
+            <div class="saved-item-actions">
+                <button class="btn-icon view" title="Посмотреть" onclick='openFullCardModal(${JSON.stringify(rec).replace(/'/g, "&apos;")})'>
+                    <span>👁</span> Посмотреть
+                </button>
+                <button class="btn-icon delete" title="Удалить" onclick="removeSavedCareer('${rec.name}')">
+                    <span>&times;</span> Удалить
+                </button>
+            </div>
+        `;
+        container.appendChild(item);
+    });
+}
+
+function openFullCardModal(rec) {
+    const modal = document.getElementById('cardModal');
+    const container = document.getElementById('modal-card-container');
+    
+    container.innerHTML = '';
+    const card = document.createElement('div');
+    card.className = 'result-card static';
+    card.innerHTML = generateCardHTML(rec);
+    
+    container.appendChild(card);
+    modal.classList.remove('hidden');
+}
+
+window.removeSavedCareer = function(name) {
+    careerNameToDelete = name;
+    deleteConfirmModal.classList.remove('hidden');
 };
 
 function spawnChildBlocks(parentTopicId) {
@@ -182,64 +306,11 @@ function renderResults(recommendations) {
         return;
     }
 
-    const scoreVectorLabels = {
-        logic: 'Логика',
-        creativity: 'Креативность',
-        social: 'Общение',
-        routine: 'Рутина',
-        art: 'Искусство'
-    };
-
     recommendations.forEach(rec => {
         const card = document.createElement('div');
         card.className = 'result-card';
-
-        let chartHtml = '<div class="chart-container"><h4>Требуемые навыки</h4>';
-        if (rec.score_vector && Object.keys(rec.score_vector).length > 0) {
-            for (const [key, value] of Object.entries(rec.score_vector)) {
-                const label = scoreVectorLabels[key] || key;
-                const barWidth = (value / 5) * 100;
-                chartHtml += `
-                    <div class="chart-bar-row">
-                        <span class="chart-label">${label}</span>
-                        <div class="chart-bar-bg">
-                            <div class="chart-bar-fill" style="width: ${barWidth}%;"></div>
-                        </div>
-                    </div>`;
-            }
-        } else {
-            chartHtml += '<p>Данные о навыках отсутствуют.</p>';
-        }
-        chartHtml += '</div>';
-
-        card.innerHTML = `
-            <div class="card-content-wrapper">
-                <div class="card-main-info">
-                    <h3>${rec.name}</h3>
-                    <p class="card-industry"><b>Отрасль:</b> ${rec.industry}</p>
-                </div>
-                
-                <div class="card-details-container">
-                    <div class="card-description-wrapper">
-                        <p class="card-ai-description"><b>Описание:</b> ${rec.description || 'Узнайте больше об этой профессии.'}</p>
-                        <div class="card-stats">
-                            <div class="stat-item"><span>//</span> <span>Зарплата новичка: <b>${rec.junior_salary} ₽</b></span></div>
-                            <div class="stat-item"><span>///</span> <span>Средняя зарплата: <b>${rec.avg_salary} ₽</b></span></div>
-                            <div class="stat-item"><span>⚡️</span> <span>Темпы роста: <b>${rec.growth_rate}</b></span></div>
-                        </div>
-                    </div>
-
-                    <div class="card-hidden-details">
-                        <p><b>Примерные ВУЗы:</b> ${rec.university}</p>
-                        ${chartHtml}
-                        <a href="${rec.link}" target="_blank" class="card-link">Узнать больше на внешнем ресурсе</a>
-                    </div>
-                </div>
-
-                <div class="card-footer">
-                    <div class="card-details-toggle">Подробнее</div>
-                </div>
-            </div>`;
+        card.dataset.careerData = JSON.stringify(rec);
+        card.innerHTML = generateCardHTML(rec);
         resultsContainer.appendChild(card);
     });
     
@@ -257,6 +328,19 @@ function setupEventListeners() {
     closeModalBtn = document.getElementById('closeModalBtn');
     showResultsBtn = document.getElementById('showResultsBtn');
     userInfoInput = document.getElementById('userInfoInput');
+
+    cardModal = document.getElementById('cardModal');
+    closeCardModalBtn = document.getElementById('closeCardModalBtn');
+    modalCardContainer = document.getElementById('modal-card-container');
+
+    deleteConfirmModal = document.getElementById('deleteConfirmModal');
+    cancelDeleteBtn = document.getElementById('cancelDeleteBtn');
+    confirmDeleteBtn = document.getElementById('confirmDeleteBtn');
+    closeDeleteModalCrossBtn = document.getElementById('closeDeleteModalCrossBtn');
+
+    noticeModal = document.getElementById('noticeModal');
+    closeNoticeBtn = document.getElementById('closeNoticeBtn');
+    closeNoticeCrossBtn = document.getElementById('closeNoticeCrossBtn');
 
     if (explorerFinishBtn) {
         explorerFinishBtn.addEventListener('click', () => {
@@ -278,6 +362,49 @@ function setupEventListeners() {
     }
     if (closeModalBtn) {
         closeModalBtn.addEventListener('click', () => userInfoModal.classList.add('hidden'));
+    }
+    if (closeCardModalBtn) {
+        closeCardModalBtn.addEventListener('click', () => cardModal.classList.add('hidden'));
+    }
+
+    if (cancelDeleteBtn) {
+        cancelDeleteBtn.addEventListener('click', () => {
+            deleteConfirmModal.classList.add('hidden');
+            careerNameToDelete = null;
+        });
+    }
+
+    if (closeDeleteModalCrossBtn) {
+        closeDeleteModalCrossBtn.addEventListener('click', () => {
+            deleteConfirmModal.classList.add('hidden');
+            careerNameToDelete = null;
+        });
+    }
+
+    if (confirmDeleteBtn) {
+        confirmDeleteBtn.addEventListener('click', () => {
+            if (careerNameToDelete) {
+                let saved = JSON.parse(localStorage.getItem('savedCareers')) || [];
+                saved = saved.filter(item => item.name !== careerNameToDelete);
+                localStorage.setItem('savedCareers', JSON.stringify(saved));
+                showSavedCards();
+            }
+            deleteConfirmModal.classList.add('hidden');
+            careerNameToDelete = null;
+        });
+    }
+
+    if (closeNoticeBtn) {
+        closeNoticeBtn.addEventListener('click', () => {
+            noticeModal.classList.add('hidden');
+            showPage('explorer');
+        });
+    }
+
+    if (closeNoticeCrossBtn) {
+        closeNoticeCrossBtn.addEventListener('click', () => {
+            noticeModal.classList.add('hidden');
+        });
     }
 
     if (showResultsBtn) {
@@ -307,6 +434,7 @@ function setupEventListeners() {
                 }
 
                 const recommendations = await response.json();
+                testCompleted = true;
                 renderResults(recommendations);
 
             } catch (error) {
@@ -315,6 +443,18 @@ function setupEventListeners() {
             }
         });
     }
+
+    // ГЛОБАЛЬНЫЙ ОБРАБОТЧИК КЛАВИШИ ESC
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            const openModals = document.querySelectorAll('.modal-overlay:not(.hidden)');
+            openModals.forEach(modal => {
+                modal.classList.add('hidden');
+            });
+            // Сброс флага удаления, если модалка была открыта
+            careerNameToDelete = null;
+        }
+    });
 }
 
 function handlePageNavigation() {
@@ -336,12 +476,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (event.target.classList.contains('card-details-toggle')) {
             const card = event.target.closest('.result-card');
             if (card) {
-                // ----- ГЛАВНОЕ ИЗМЕНЕНИЕ ЗДЕСЬ -----
-                // Переключаем класс .expanded, который ожидает ваш CSS-файл.
                 card.classList.toggle('expanded');
-
                 const button = event.target;
-                // И проверяем наличие этого же класса.
                 if (card.classList.contains('expanded')) {
                     button.textContent = 'Скрыть';
                 } else {
