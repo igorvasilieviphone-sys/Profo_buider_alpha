@@ -37,6 +37,7 @@
 .description.small-text {
   font-size: 22px;
 }
+
 .explorer-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -97,6 +98,7 @@
   padding-top: 20px;
   border-top: 1px solid #eee;
 }
+
 #results-stack-container {
   display: flex;
   justify-content: center;
@@ -106,6 +108,17 @@
   overflow: visible;
   position: relative;
   z-index: 1;
+  touch-action: none;
+}
+
+body.is-dragging {
+  user-select: none !important;
+  -webkit-user-select: none !important;
+}
+
+body.is-dragging .result-card {
+  user-select: none !important;
+  -webkit-user-select: none !important;
 }
 
 .swipe-overlay {
@@ -139,7 +152,8 @@
   overflow: hidden;
   z-index: 2;
   margin-top: 35px;
-  user-select: text;
+  user-select: none;
+  touch-action: none;
 }
 
 .result-card:active {
@@ -172,6 +186,7 @@
   flex-grow: 1;
   min-height: 0;
   position: relative;
+  user-select: text;
 }
 
 .card-description-wrapper,
@@ -306,6 +321,7 @@
   border-radius: 6px;
   transition: width 0.5s ease-out;
 }
+
 .saved-cards-container {
   margin-top: 40px;
   display: grid;
@@ -388,6 +404,7 @@
 .btn-icon.view:hover { background-color: #005fff; color: white; }
 .btn-icon.delete { background-color: #fff5f5; color: #ff4136; }
 .btn-icon.delete:hover { background-color: #ff4136; color: white; }
+
 .modal-overlay {
   position: fixed;
   top: 0; left: 0;
@@ -512,6 +529,7 @@
 }
 
 .small-text { font-size: 0.9em; color: #888; margin-top: 5px; }
+
 @media (max-width: 992px) {
   .explorer-grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -535,6 +553,7 @@
   .modal-card-view { align-items: flex-start; overflow-y: auto; }
   .result-card.static { margin-top: 60px; margin-bottom: 40px; }
 }
+
 .notice-modal {
     max-width: 450px;
 }
@@ -564,7 +583,6 @@
     font-size: 24px;
     margin-bottom: 15px;
 }
-
 
 .modal-close-btn {
   position: absolute;

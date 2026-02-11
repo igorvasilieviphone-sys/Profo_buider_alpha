@@ -2,32 +2,25 @@ function initSwipeableCards(containerSelector) {
     const container = document.querySelector(containerSelector);
     if (!container) return;
 
+    container.querySelectorAll('.swipe-overlay').forEach(el => el.remove());
     const leftOverlay = document.createElement('div');
     leftOverlay.className = 'swipe-overlay left';
-    container.appendChild(leftOverlay);
-
     const rightOverlay = document.createElement('div');
     rightOverlay.className = 'swipe-overlay right';
+    container.appendChild(leftOverlay);
     container.appendChild(rightOverlay);
 
-    const flyAwayDuration = 400;
-    const returnDuration = 300;
+    let cards = [];
 
-    const maxRotation = 15;
-    const liftScale = 1.03;
-    const decisionThreshold = window.innerWidth / 4;
-
-    let activeCard = null;
-    let startX, startY;
-    let isDragging = false;
-    let cards = Array.from(container.querySelectorAll('.result-card'));
+    window.syncCardStack = function() {
+        cards = Array.from(container.querySelectorAll('.result-card'));
+        updateCardStack();
+    };
 
     function updateCardStack() {
         cards.forEach((card, index) => {
-            const zIndex = cards.length - index + 1;
-            card.style.zIndex = zIndex;
-            card.style.transition = `transform ${returnDuration}ms cubic-bezier(0.175, 0.885, 0.32, 1.275)`;
-
+            card.style.zIndex = cards.length - index;
+            card.style.transition = 'transform 0.3s ease, opacity 0.3s ease';
             if (index < 3) {
                 card.style.transform = `translateY(${index * -15}px) scale(${1 - index * 0.05})`;
                 card.style.opacity = '1';
@@ -37,106 +30,86 @@ function initSwipeableCards(containerSelector) {
                 card.style.pointerEvents = 'none';
             }
         });
+
+        if (cards.length > 0 && cards.length < 15 && !window.isFetchingBackground) {
+            if (typeof fetchCards === 'function') fetchCards(false);
+        }
     }
 
     function onDragStart(e) {
-        if (isDragging || !cards.length) return;
         const topCard = cards[0];
-        
         if (!topCard || !topCard.contains(e.target)) return;
+        if (e.target.closest('.card-details-toggle') || e.target.closest('a')) return;
 
-        activeCard = topCard;
-        isDragging = true;
+        this.activeCard = topCard;
+        this.isDragging = true;
+        this.startX = e.pageX || e.touches[0].pageX;
+        this.startY = e.pageY || e.touches[0].pageY;
         
-        activeCard.style.transition = 'none';
-        activeCard.style.transform = `scale(${liftScale})`;
-
-        leftOverlay.style.transition = 'none';
-        rightOverlay.style.transition = 'none';
-
-        startX = e.pageX || e.touches[0].pageX;
-        startY = e.pageY || e.touches[0].pageY;
-
-        e.preventDefault();
+        this.activeCard.style.transition = 'none';
+        
+        document.body.classList.add('is-dragging');
+        window.getSelection().removeAllRanges(); 
     }
 
     function onDragMove(e) {
-        if (!isDragging || !activeCard) return;
-        const currentX = e.pageX || e.touches[0].pageX;
-        const currentY = e.pageY || e.touches[0].pageY;
-        const deltaX = currentX - startX;
-        const deltaY = currentY - startY;
-        const progress = Math.max(-1, Math.min(1, deltaX / decisionThreshold));
-        const rotation = maxRotation * progress;
+        if (!this.isDragging || !this.activeCard) return;
+        if (e.cancelable) e.preventDefault();
         
-        activeCard.style.transform = `translateX(${deltaX}px) translateY(${deltaY}px) scale(${liftScale}) rotate(${rotation}deg)`;
+        const x = (e.pageX || (e.touches && e.touches[0].pageX)) - this.startX;
+        const y = (e.pageY || (e.touches && e.touches[0].pageY)) - this.startY;
         
-        if (progress < 0) {
-            rightOverlay.style.opacity = 0;
-            leftOverlay.style.opacity = -progress;
-        } else {
-            leftOverlay.style.opacity = 0;
-            rightOverlay.style.opacity = progress;
+        this.activeCard.style.transform = `translate(${x}px, ${y}px) rotate(${x/20}deg) scale(1.05)`;
+        
+        const op = Math.min(Math.abs(x) / 200, 0.5);
+        if (x > 0) { 
+            rightOverlay.style.opacity = op; 
+            leftOverlay.style.opacity = 0; 
+        } else { 
+            leftOverlay.style.opacity = op; 
+            rightOverlay.style.opacity = 0; 
         }
+        
+        window.getSelection().removeAllRanges();
     }
 
     function onDragEnd(e) {
-        if (!isDragging || !activeCard) return;
+        if (!this.isDragging || !this.activeCard) return;
+        const x = (e.pageX || (e.changedTouches && e.changedTouches[0].pageX)) - this.startX;
+        const card = this.activeCard;
         
-        const cardToAnimate = activeCard;
-        isDragging = false;
-        activeCard = null;
+        this.isDragging = false;
+        this.activeCard = null;
+        
+        document.body.classList.remove('is-dragging');
 
-        const deltaX = (e.pageX || e.changedTouches[0].pageX) - startX;
-
-        leftOverlay.style.transition = `opacity ${returnDuration}ms ease`;
-        rightOverlay.style.transition = `opacity ${returnDuration}ms ease`;
-
-        if (Math.abs(deltaX) > decisionThreshold) {
-            const direction = deltaX > 0 ? 1 : -1;
-
-            if (direction === 1 && cardToAnimate.dataset.careerData) {
-                saveCareerToLocal(JSON.parse(cardToAnimate.dataset.careerData));
-            }
-
-            cardToAnimate.style.transition = `transform ${flyAwayDuration}ms ease-out`;
-            cardToAnimate.style.transform = `translateX(${direction * window.innerWidth}px) rotate(${direction * 30}deg)`;
-            
+        if (Math.abs(x) > 120) {
+            const dir = x > 0 ? 1 : -1;
+            if (dir === 1) saveCareerToLocal(JSON.parse(card.dataset.careerData));
+            card.style.transition = 'transform 0.5s ease-out, opacity 0.5s';
+            card.style.transform = `translate(${dir * 1000}px, 0) rotate(${dir * 45}deg)`;
+            card.style.opacity = '0';
             setTimeout(() => {
-                leftOverlay.style.opacity = 0;
-                rightOverlay.style.opacity = 0;
-            }, returnDuration);
-
-            cards.shift();
-            updateCardStack();
-
-            setTimeout(() => {
-                if (container.contains(cardToAnimate)) {
-                    container.removeChild(cardToAnimate);
-                }
-                if (cards.length === 0 && !container.querySelector('.description')) {
-                    const message = document.createElement('p');
-                    message.textContent = 'Вы просмотрели все рекомендации!';
-                    message.className = 'description';
-                    container.appendChild(message);
-                }
-            }, flyAwayDuration);
+                if (container.contains(card)) container.removeChild(card);
+                cards.shift();
+                updateCardStack();
+                if (cards.length === 0) container.innerHTML = '<p class="description">Рекомендации закончились!</p>';
+            }, 300);
         } else {
-            cardToAnimate.style.transition = `transform ${returnDuration}ms cubic-bezier(0.175, 0.885, 0.32, 1.275)`;
-            cardToAnimate.style.transform = `translateX(0) translateY(0) rotate(0deg)`;
-            leftOverlay.style.opacity = 0;
-            rightOverlay.style.opacity = 0;
+            card.style.transition = 'transform 0.3s ease';
+            card.style.transform = 'translate(0,0) rotate(0) scale(1)';
         }
+        leftOverlay.style.opacity = 0;
+        rightOverlay.style.opacity = 0;
     }
 
-    container.addEventListener('mousedown', onDragStart);
-    container.addEventListener('touchstart', onDragStart, { passive: false });
+    const state = { isDragging: false, activeCard: null, startX: 0, startY: 0 };
+    container.addEventListener('mousedown', onDragStart.bind(state));
+    container.addEventListener('touchstart', onDragStart.bind(state), { passive: false });
+    document.addEventListener('mousemove', onDragMove.bind(state), { passive: false });
+    document.addEventListener('touchmove', onDragMove.bind(state), { passive: false });
+    document.addEventListener('mouseup', onDragEnd.bind(state));
+    document.addEventListener('touchend', onDragEnd.bind(state));
 
-    document.addEventListener('mousemove', onDragMove);
-    document.addEventListener('touchmove', onDragMove, { passive: false });
-
-    document.addEventListener('mouseup', onDragEnd);
-    document.addEventListener('touchend', onDragEnd);
-
-    updateCardStack();
+    window.syncCardStack();
 }
