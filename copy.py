@@ -9,7 +9,7 @@ def combine_files_to_single_txt():
     
     # Настройки исключений
     ignored_dirs = {'.venv', 'venv', '__pycache__', '.git', '.idea', '.vscode'}
-    ignored_extensions = {'.db', '.pyc', '.exe', '.bin', '.png', '.env'}
+    ignored_extensions = {'.db', '.pyc', '.exe', '.bin', '.png', '.env', '.ttf', '.jpg'}
     ignored_files = {'generate_db.py', Path(__file__).name}
 
     # Создаем папку, если она не существует

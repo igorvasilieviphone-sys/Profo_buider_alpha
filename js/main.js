@@ -5,7 +5,6 @@ let cardModal, closeCardModalBtn, modalCardContainer;
 let deleteConfirmModal, cancelDeleteBtn, confirmDeleteBtn, closeDeleteModalCrossBtn;
 let noticeModal, closeNoticeBtn, closeNoticeCrossBtn;
 let careerNameToDelete = null;
-
 let testCompleted = false;
 
 function showPage(pageId) {
@@ -17,7 +16,6 @@ function showPage(pageId) {
             chatWidget.classList.remove('hidden');
         }
     }
-
     document.querySelectorAll('.page').forEach(page => {
         if (page.id === pageId) {
             page.classList.add('active');
@@ -75,7 +73,6 @@ const ALL_EXPLORER_TOPICS = [
 
 let selectedTopicIds = new Set();
 const MAX_PROGRESS_LEVEL = 4;
-
 const ADJACENT_PARENTS = {
     'l2_1': 'l2_2', 'l2_2': 'l2_3', 'l2_3': 'l2_1',
     'l2_4': 'l2_5', 'l2_5': 'l2_6', 'l2_6': 'l2_4',
@@ -92,93 +89,36 @@ function saveCareerToLocal(careerData) {
 }
 
 function generateCardHTML(rec) {
-    const scoreVectorLabels = {
-        logic: 'Логика',
-        creativity: 'Креативность',
-        social: 'Общение',
-        routine: 'Рутина',
-        art: 'Искусство'
-    };
-
+    const scoreVectorLabels = { logic: 'Логика', creativity: 'Креативность', social: 'Общение', routine: 'Рутина', art: 'Искусство' };
     let chartHtml = '<div class="chart-container"><h4>Требуемые навыки</h4>';
     if (rec.score_vector && Object.keys(rec.score_vector).length > 0) {
         for (const [key, value] of Object.entries(rec.score_vector)) {
             const label = scoreVectorLabels[key] || key;
             const barWidth = (value / 5) * 100;
-            chartHtml += `
-                <div class="chart-bar-row">
-                    <span class="chart-label">${label}</span>
-                    <div class="chart-bar-bg">
-                        <div class="chart-bar-fill" style="width: ${barWidth}%;"></div>
-                    </div>
-                </div>`;
+            chartHtml += `<div class="chart-bar-row"><span class="chart-label">${label}</span><div class="chart-bar-bg"><div class="chart-bar-fill" style="width: ${barWidth}%;"></div></div></div>`;
         }
     } else {
         chartHtml += '<p>Данные о навыках отсутствуют.</p>';
     }
     chartHtml += '</div>';
-
-    return `
-        <div class="card-content-wrapper">
-            <div class="card-main-info">
-                <h3>${rec.name}</h3>
-                <p class="card-industry"><b>Отрасль:</b> ${rec.industry}</p>
-            </div>
-            
-            <div class="card-details-container">
-                <div class="card-description-wrapper">
-                    <p class="card-ai-description"><b>Описание:</b> ${rec.description || 'Узнайте больше об этой профессии.'}</p>
-                    <div class="card-stats">
-                        <div class="stat-item"><span>//</span> <span>Зарплата новичка: <b>${rec.junior_salary} ₽</b></span></div>
-                        <div class="stat-item"><span>///</span> <span>Средняя зарплата: <b>${rec.avg_salary} ₽</b></span></div>
-                        <div class="stat-item"><span>⚡️</span> <span>Темпы роста: <b>${rec.growth_rate}</b></span></div>
-                    </div>
-                </div>
-
-                <div class="card-hidden-details">
-                    <p><b>Примерные ВУЗы:</b> ${rec.university}</p>
-                    ${chartHtml}
-                    <a href="${rec.link}" target="_blank" class="card-link">Узнать больше на внешнем ресурсе</a>
-                </div>
-            </div>
-
-            <div class="card-footer">
-                <div class="card-details-toggle">Подробнее</div>
-            </div>
-        </div>`;
+    return `<div class="card-content-wrapper"><div class="card-main-info"><h3>${rec.name}</h3><p class="card-industry"><b>Отрасль:</b> ${rec.industry}</p></div><div class="card-details-container"><div class="card-description-wrapper"><p class="card-ai-description"><b>Описание:</b> ${rec.description || 'Узнайте больше об этой профессии.'}</p><div class="card-stats"><div class="stat-item"><span>//</span> <span>Зарплата новичка: <b>${rec.junior_salary} ₽</b></span></div><div class="stat-item"><span>///</span> <span>Средняя зарплата: <b>${rec.avg_salary} ₽</b></span></div><div class="stat-item"><span>⚡️</span> <span>Темпы роста: <b>${rec.growth_rate}</b></span></div></div></div><div class="card-hidden-details"><p><b>Примерные ВУЗы:</b> ${rec.university}</p>${chartHtml}<a href="${rec.link}" target="_blank" class="card-link">Узнать больше на внешнем ресурсе</a></div></div><div class="card-footer"><div class="card-details-toggle">Подробнее</div></div></div>`;
 }
 
 function showSavedCards() {
     showPage('saved-cards');
     const container = document.getElementById('saved-cards-grid');
     const saved = JSON.parse(localStorage.getItem('savedCareers')) || [];
-    
     container.innerHTML = '';
-    
     if (saved.length === 0) {
         container.innerHTML = '<p class="description empty-state-msg">Вы еще не сохранили ни одной карточки. Свайпните понравившуюся профессию вправо!</p>';
         return;
     }
-
     saved.forEach(rec => {
         const item = document.createElement('div');
         item.className = 'explorer-block saved-item';
         item.style.opacity = '1';
         item.style.transform = 'none';
-        item.innerHTML = `
-            <div class="saved-item-content" onclick='openFullCardModal(${JSON.stringify(rec).replace(/'/g, "&apos;")})'>
-                <h3>${rec.name}</h3>
-                <p>${rec.industry}</p>
-            </div>
-            <div class="saved-item-actions">
-                <button class="btn-icon view" title="Посмотреть" onclick='openFullCardModal(${JSON.stringify(rec).replace(/'/g, "&apos;")})'>
-                    <span>👁</span> Посмотреть
-                </button>
-                <button class="btn-icon delete" title="Удалить" onclick="removeSavedCareer('${rec.name}')">
-                    <span>&times;</span> Удалить
-                </button>
-            </div>
-        `;
+        item.innerHTML = `<div class="saved-item-content" onclick='openFullCardModal(${JSON.stringify(rec).replace(/'/g, "&apos;")})'><h3>${rec.name}</h3><p>${rec.industry}</p></div><div class="saved-item-actions"><button class="btn-icon view" title="Посмотреть" onclick='openFullCardModal(${JSON.stringify(rec).replace(/'/g, "&apos;")})'><span>👁</span> Посмотреть</button><button class="btn-icon delete" title="Удалить" onclick="removeSavedCareer('${rec.name}')"><span>&times;</span> Удалить</button></div>`;
         container.appendChild(item);
     });
 }
@@ -186,12 +126,10 @@ function showSavedCards() {
 function openFullCardModal(rec) {
     const modal = document.getElementById('cardModal');
     const container = document.getElementById('modal-card-container');
-    
     container.innerHTML = '';
     const card = document.createElement('div');
     card.className = 'result-card static';
     card.innerHTML = generateCardHTML(rec);
-    
     container.appendChild(card);
     modal.classList.remove('hidden');
 }
@@ -218,11 +156,7 @@ function spawnChildBlocks(parentTopicId) {
         const needed = 3 - newBlocks.length;
         newBlocks.push(...availableChildren.slice(0, needed));
         if (newBlocks.length === 3) break;
-        if (ADJACENT_PARENTS[currentSearchId]) {
-            currentSearchId = ADJACENT_PARENTS[currentSearchId];
-        } else {
-            break;
-        }
+        if (ADJACENT_PARENTS[currentSearchId]) { currentSearchId = ADJACENT_PARENTS[currentSearchId]; } else { break; }
         fallbackCount++;
         if (currentSearchId === originalSearchId && fallbackCount > 2) break;
     }
@@ -233,9 +167,7 @@ function createBlockElement(block) {
     const div = document.createElement('div');
     div.className = 'explorer-block';
     div.dataset.topicId = block.id;
-    if (selectedTopicIds.has(block.id)) {
-        div.classList.add('selected');
-    }
+    if (selectedTopicIds.has(block.id)) { div.classList.add('selected'); }
     div.innerHTML = `<h3>${block.label}</h3>`;
     div.addEventListener('click', () => handleBlockClick(block.id));
     return div;
@@ -243,9 +175,7 @@ function createBlockElement(block) {
 
 function renderExplorerBlocks(blocksToRender, clearExisting = true) {
     if (!explorerContainer) return;
-    if (clearExisting) {
-        explorerContainer.innerHTML = '';
-    }
+    if (clearExisting) { explorerContainer.innerHTML = ''; }
     blocksToRender.forEach((block) => {
         const div = createBlockElement(block);
         explorerContainer.appendChild(div);
@@ -265,9 +195,7 @@ function handleBlockClick(topicId) {
         blockElement.classList.add('selected');
         if (hasChildren) {
             const newBlocks = spawnChildBlocks(topicId);
-            if (newBlocks.length > 0) {
-                renderExplorerBlocks(newBlocks, false);
-            }
+            if (newBlocks.length > 0) { renderExplorerBlocks(newBlocks, false); }
         }
     }
     updateFinishButtonState();
@@ -300,12 +228,10 @@ function renderResults(recommendations) {
     const resultsContainer = document.getElementById('results-stack-container');
     if (!resultsContainer) return;
     resultsContainer.innerHTML = '';
-
     if (!recommendations || recommendations.length === 0) {
         resultsContainer.innerHTML = '<p class="description">К сожалению, мы не смогли подобрать для вас профессии. Попробуйте пройти тест еще раз.</p>';
         return;
     }
-
     recommendations.forEach(rec => {
         const card = document.createElement('div');
         card.className = 'result-card';
@@ -313,8 +239,31 @@ function renderResults(recommendations) {
         card.innerHTML = generateCardHTML(rec);
         resultsContainer.appendChild(card);
     });
-    
     initSwipeableCards('#results-stack-container');
+}
+
+async function downloadPDF() {
+    const saved = JSON.parse(localStorage.getItem('savedCareers')) || [];
+    if (saved.length === 0) { alert("Нет сохраненных карточек для экспорта."); return; }
+    try {
+        const response = await fetch('/api/export_pdf', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ saved_careers: saved })
+        });
+        if (!response.ok) throw new Error("Ошибка генерации PDF");
+        const blob = await response.blob();
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = "ProfoBuilder_Results.pdf";
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+    } catch (e) {
+        console.error(e);
+        alert("Не удалось скачать PDF.");
+    }
 }
 
 function setupEventListeners() {
@@ -323,166 +272,66 @@ function setupEventListeners() {
     explorerResetBtn = document.getElementById('explorer-reset-btn');
     progressBarFill = document.getElementById('progress-bar-fill');
     startAssessmentBtnHomepage = document.getElementById('start-assessment-btn-homepage');
-
     userInfoModal = document.getElementById('userInfoModal');
     closeModalBtn = document.getElementById('closeModalBtn');
     showResultsBtn = document.getElementById('showResultsBtn');
     userInfoInput = document.getElementById('userInfoInput');
-
     cardModal = document.getElementById('cardModal');
     closeCardModalBtn = document.getElementById('closeCardModalBtn');
     modalCardContainer = document.getElementById('modal-card-container');
-
     deleteConfirmModal = document.getElementById('deleteConfirmModal');
     cancelDeleteBtn = document.getElementById('cancelDeleteBtn');
     confirmDeleteBtn = document.getElementById('confirmDeleteBtn');
     closeDeleteModalCrossBtn = document.getElementById('closeDeleteModalCrossBtn');
-
     noticeModal = document.getElementById('noticeModal');
     closeNoticeBtn = document.getElementById('closeNoticeBtn');
     closeNoticeCrossBtn = document.getElementById('closeNoticeCrossBtn');
-
-    if (explorerFinishBtn) {
-        explorerFinishBtn.addEventListener('click', () => {
-            if (selectedTopicIds.size < 3) {
-                alert("Пожалуйста, выберите как минимум 3 темы.");
-                return;
-            }
-            userInfoModal.classList.remove('hidden');
-        });
-    }
-    if (explorerResetBtn) {
-        explorerResetBtn.addEventListener('click', () => initExplorerPage());
-    }
-    if (startAssessmentBtnHomepage) {
-        startAssessmentBtnHomepage.addEventListener('click', (e) => {
-            e.preventDefault();
-            showPage('explorer');
-        });
-    }
-    if (closeModalBtn) {
-        closeModalBtn.addEventListener('click', () => userInfoModal.classList.add('hidden'));
-    }
-    if (closeCardModalBtn) {
-        closeCardModalBtn.addEventListener('click', () => cardModal.classList.add('hidden'));
-    }
-
-    if (cancelDeleteBtn) {
-        cancelDeleteBtn.addEventListener('click', () => {
-            deleteConfirmModal.classList.add('hidden');
-            careerNameToDelete = null;
-        });
-    }
-
-    if (closeDeleteModalCrossBtn) {
-        closeDeleteModalCrossBtn.addEventListener('click', () => {
-            deleteConfirmModal.classList.add('hidden');
-            careerNameToDelete = null;
-        });
-    }
-
-    if (confirmDeleteBtn) {
-        confirmDeleteBtn.addEventListener('click', () => {
-            if (careerNameToDelete) {
-                let saved = JSON.parse(localStorage.getItem('savedCareers')) || [];
-                saved = saved.filter(item => item.name !== careerNameToDelete);
-                localStorage.setItem('savedCareers', JSON.stringify(saved));
-                showSavedCards();
-            }
-            deleteConfirmModal.classList.add('hidden');
-            careerNameToDelete = null;
-        });
-    }
-
-    if (closeNoticeBtn) {
-        closeNoticeBtn.addEventListener('click', () => {
-            noticeModal.classList.add('hidden');
-            showPage('explorer');
-        });
-    }
-
-    if (closeNoticeCrossBtn) {
-        closeNoticeCrossBtn.addEventListener('click', () => {
-            noticeModal.classList.add('hidden');
-        });
-    }
-
+    const downloadPdfBtn = document.getElementById('download-pdf-btn');
+    if (downloadPdfBtn) { downloadPdfBtn.addEventListener('click', (e) => { e.preventDefault(); downloadPDF(); }); }
+    if (explorerFinishBtn) { explorerFinishBtn.addEventListener('click', () => { if (selectedTopicIds.size < 3) { alert("Пожалуйста, выберите как минимум 3 темы."); return; } userInfoModal.classList.remove('hidden'); }); }
+    if (explorerResetBtn) { explorerResetBtn.addEventListener('click', () => initExplorerPage()); }
+    if (startAssessmentBtnHomepage) { startAssessmentBtnHomepage.addEventListener('click', (e) => { e.preventDefault(); showPage('explorer'); }); }
+    if (closeModalBtn) { closeModalBtn.addEventListener('click', () => userInfoModal.classList.add('hidden')); }
+    if (closeCardModalBtn) { closeCardModalBtn.addEventListener('click', () => cardModal.classList.add('hidden')); }
+    if (cancelDeleteBtn) { cancelDeleteBtn.addEventListener('click', () => { deleteConfirmModal.classList.add('hidden'); careerNameToDelete = null; }); }
+    if (closeDeleteModalCrossBtn) { closeDeleteModalCrossBtn.addEventListener('click', () => { deleteConfirmModal.classList.add('hidden'); careerNameToDelete = null; }); }
+    if (confirmDeleteBtn) { confirmDeleteBtn.addEventListener('click', () => { if (careerNameToDelete) { let saved = JSON.parse(localStorage.getItem('savedCareers')) || []; saved = saved.filter(item => item.name !== careerNameToDelete); localStorage.setItem('savedCareers', JSON.stringify(saved)); showSavedCards(); } deleteConfirmModal.classList.add('hidden'); careerNameToDelete = null; }); }
+    if (closeNoticeBtn) { closeNoticeBtn.addEventListener('click', () => { noticeModal.classList.add('hidden'); showPage('explorer'); }); }
+    if (closeNoticeCrossBtn) { closeNoticeCrossBtn.addEventListener('click', () => { noticeModal.classList.add('hidden'); }); }
     if (showResultsBtn) {
         showResultsBtn.addEventListener('click', async () => {
             const additionalInfo = userInfoInput.value;
             const selectedTopics = ALL_EXPLORER_TOPICS.filter(topic => selectedTopicIds.has(topic.id));
             userInfoModal.classList.add('hidden');
             showPage('results');
-
             const resultsContainer = document.getElementById('results-stack-container');
             resultsContainer.innerHTML = `<div class="loader-container"><div class="spinner"></div><p class="description">Подбираем профессии для вас...</p><p class="description small-text">AI-ассистент генерирует персональные рекомендации. Обычно это занимает не более 30 секунд.</p></div>`;
-
             try {
-                const response = await fetch('/api/generate_cards', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        selected_topics: selectedTopics,
-                        additional_info: additionalInfo,
-                    }),
-                });
-
-                if (!response.ok) {
-                    throw new Error(`Ошибка сервера: ${response.statusText}`);
-                }
-
+                const response = await fetch('/api/generate_cards', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ selected_topics: selectedTopics, additional_info: additionalInfo }) });
+                if (!response.ok) { throw new Error(`Ошибка сервера: ${response.statusText}`); }
                 const recommendations = await response.json();
                 testCompleted = true;
                 renderResults(recommendations);
-
             } catch (error) {
                 console.error('Не удалось получить рекомендации:', error);
                 resultsContainer.innerHTML = `<p class="description">Произошла ошибка при загрузке рекомендаций. Пожалуйста, попробуйте еще раз.</p>`;
             }
         });
     }
-
-    // ГЛОБАЛЬНЫЙ ОБРАБОТЧИК КЛАВИШИ ESC
-    document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape') {
-            const openModals = document.querySelectorAll('.modal-overlay:not(.hidden)');
-            openModals.forEach(modal => {
-                modal.classList.add('hidden');
-            });
-            // Сброс флага удаления, если модалка была открыта
-            careerNameToDelete = null;
-        }
-    });
+    document.addEventListener('keydown', (event) => { if (event.key === 'Escape') { const openModals = document.querySelectorAll('.modal-overlay:not(.hidden)'); openModals.forEach(modal => { modal.classList.add('hidden'); }); careerNameToDelete = null; } });
 }
 
-function handlePageNavigation() {
-    const hash = window.location.hash;
-    if (hash === '#explorer') {
-        showPage('explorer');
-    } else {
-        showPage('homepage');
-    }
-}
+function handlePageNavigation() { const hash = window.location.hash; if (hash === '#explorer') { showPage('explorer'); } else { showPage('homepage'); } }
 
 document.addEventListener('DOMContentLoaded', () => {
-    if (document.getElementById('homepage')) {
-        setupEventListeners();
-        handlePageNavigation();
-    }
-
+    if (document.getElementById('homepage')) { setupEventListeners(); handlePageNavigation(); }
     document.body.addEventListener('click', (event) => {
         if (event.target.classList.contains('card-details-toggle')) {
             const card = event.target.closest('.result-card');
             if (card) {
                 card.classList.toggle('expanded');
                 const button = event.target;
-                if (card.classList.contains('expanded')) {
-                    button.textContent = 'Скрыть';
-                } else {
-                    button.textContent = 'Подробнее';
-                }
+                if (card.classList.contains('expanded')) { button.textContent = 'Скрыть'; } else { button.textContent = 'Подробнее'; }
             }
         }
     });
